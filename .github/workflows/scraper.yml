@@ -1,0 +1,45 @@
+name: Scraper
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-jobs:
+    runs-on: ubuntu-latest
+
+    # === THIS IS THE IMPORTANT PART ===
+    env:
+      MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+      SHEET_ID: ${{ secrets.SHEET_ID }}
+      WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
+      WP_USERNAME: ${{ secrets.WP_USERNAME }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download NLTK data
+        run: |
+          python -c "import nltk; nltk.download('punkt_tab', quiet=True); nltk.download('averaged_perceptron_tagger', quiet=True)"
+
+      - name: Run job script
+        run: python mw.py
+
+      - name: Upload tracker CSV
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-jobs-tracker
+          path: malawi_processed_job_ids.csv
+          retention-days: 30
