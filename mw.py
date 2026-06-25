@@ -11,7 +11,12 @@ from datetime import datetime, timedelta
 from urllib.parse import urljoin, urlparse, urlsplit, urlunsplit, parse_qsl, urlencode
 
 import requests
+import urllib3
 from bs4 import BeautifulSoup
+
+# Suppress InsecureRequestWarning that fires on every verify=False call —
+# we accept the risk for internal WP API calls on self-hosted servers.
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 try:
     from dotenv import load_dotenv
@@ -46,9 +51,9 @@ REQUEST_TIMEOUT = int(os.environ.get("REQUEST_TIMEOUT", "25"))
 RESOLVE_APPLY_URLS = os.environ.get("RESOLVE_APPLY_URLS", "1") != "0"
 RESOLVE_DELAY      = float(os.environ.get("RESOLVE_DELAY", "0.5"))
 
-OUTPUT_FILE          = "malawi_jobs.xlsx"
-PROCESSED_IDS_FILE   = "malawi_processed_job_ids.csv"
-FLAGGED_FILE         = "malawi_flagged_no_apply.csv"   # FIX: was missing entirely
+OUTPUT_FILE          = "jobs_output.xlsx"
+PROCESSED_IDS_FILE   = "processed_jobs.csv"
+FLAGGED_FILE         = "flagged_no_apply.csv"
 
 _TRACKER_FIELDS = ["Job ID", "Job URL", "Job Title", "Company Name",
                    "Status", "Timestamp", "WP ID"]
@@ -57,13 +62,17 @@ _FLAGGED_FIELDS = ["Job ID", "Job URL", "Job Title", "Company Name",
                    "Reason", "Timestamp"]
 
 # ── WordPress ─────────────────────────────────────────────────────────────────
-WP_URL      = os.environ.get("WP_BASE_URL", "")
+# Set WP_BASE_URL to the full URL of your WordPress site, e.g.:
+#   export WP_BASE_URL="https://malawi.mimusjobs.com"
+# The REST API base and endpoint paths are derived from it automatically.
+# probe_wp_api() in main() will test the endpoint and correct it if needed
+# (e.g. if the REST API lives on the root domain instead of the subdomain).
+WP_URL      = os.environ.get("WP_BASE_URL", "").rstrip("/")
 WP_USER     = os.environ.get("WP_USERNAME", "")
 WP_PASSWORD = os.environ.get("WP_APP_PASSWORD", "")
-WP_BASE      = WP_URL.rstrip("/")
-# FIX: use the proper WP REST API namespace path, not a bare slug
-WP_API_BASE  = f"{WP_BASE}/wp-json/wp/v2"
-WP_JOBS_URL  = f"{WP_API_BASE}/posts"        # standard posts with JSON-LD schema
+WP_BASE      = WP_URL                          # alias used throughout
+WP_API_BASE  = f"{WP_BASE}/wp-json/wp/v2"     # reassigned by probe_wp_api() if needed
+WP_JOBS_URL    = f"{WP_BASE}/job-listings"
 WP_MEDIA_URL = f"{WP_API_BASE}/media"
 
 # ── Mistral ───────────────────────────────────────────────────────────────────
@@ -765,12 +774,7 @@ def parse_job_page(url):
                 deadline = val
                 break
 
-    # Stage 2: scan full page text for deadline sentence in job description body
-    # (most employers on jobsearchmalawi.com embed the closing date in the body copy)
-    if not deadline:
-        # Use the raw page text for scanning so we catch it even before desc_el is parsed
-        page_text = soup.get_text(" ", strip=True)
-        deadline = extract_deadline_from_text(page_text)
+    # Stage 2 deadline scan happens after description is extracted — see below.
 
     # ── Company ───────────────────────────────────────────────────────────────
     # FIX: WP Job Manager renders company in several ways depending on theme.
@@ -849,6 +853,12 @@ def parse_job_page(url):
             if len(t) > len(description) and len(t) > 200:
                 description = t
         description = clean_description(description)
+
+    # Stage 2 deadline scan: most employers on jobsearchmalawi.com embed the
+    # closing date inside the vacancy body text rather than a dedicated field.
+    # Scan description only (not full page) to avoid nav/footer false matches.
+    if not deadline:
+        deadline = extract_deadline_from_text(description)
 
     # ── Application link ──────────────────────────────────────────────────────
     raw_apply      = ""
@@ -1061,6 +1071,65 @@ def _wp_post(path, json_data):
         timeout=20, verify=False,
     )
 
+def _wp_json(r, context=""):
+    """
+    Safely parse a WP REST API response.
+    Raises a clear error (logged) if the body is empty or not JSON —
+    which happens on 401 Unauthorized, 403 Forbidden, or OLS/nginx redirects
+    that return an HTML page instead of JSON.
+    Returns None on failure so callers can skip gracefully.
+    """
+    if not r.content:
+        log_.error(f"WP API empty response [{r.status_code}] {context} — check credentials/endpoint")
+        return None
+    try:
+        return r.json()
+    except Exception:
+        snippet = r.text[:200].replace("\n", " ")
+        log_.error(f"WP API non-JSON response [{r.status_code}] {context}: {snippet}")
+        return None
+
+def probe_wp_api():
+    """
+    Discover the correct WP REST API base URL for this site.
+    Tries the configured WP_API_BASE first, then the root domain (in case
+    WP_BASE_URL is a multisite subdomain but REST API is on the network root).
+
+    Common reasons for 404 on /wp-json/wp/v2/posts:
+      - WP_BASE_URL is a multisite subdomain; REST API served from root domain
+      - Pretty permalinks are disabled (REST API requires them)
+      - A security plugin or .htaccess rule is blocking /wp-json/
+    Returns the working api base URL, or empty string.
+    """
+    root_domain = re.sub(r"^https?://[^.]+\.", lambda m: m.group(0).split("//")[0] + "//", WP_BASE)
+    candidates = list(dict.fromkeys(filter(None, [
+        WP_API_BASE,                              # as configured
+        f"{root_domain.rstrip('/')}/wp-json/wp/v2",  # root domain fallback
+        f"{WP_BASE.rstrip('/')}/?rest_route=/wp/v2",  # no-permalink fallback
+    ])))
+    for base in candidates:
+        test_url = f"{base}/posts"
+        try:
+            r = requests.get(test_url, params={"per_page": 1},
+                             headers=_wp_auth_headers(),
+                             auth=(WP_USER, WP_PASSWORD),
+                             timeout=10, verify=False)
+            if r.status_code in (200, 401):
+                log_.info(f"✅ WP REST API reachable: {base} [{r.status_code}]")
+                return base
+            log_.debug(f"WP probe {r.status_code}: {test_url}")
+        except Exception as e:
+            log_.debug(f"WP probe error {test_url}: {e}")
+    log_.error(
+        "❌ WP REST API unreachable. Check:\n"
+        "   1. WP_BASE_URL is correct (currently: %s)\n"
+        "   2. Pretty permalinks are enabled in WP Settings → Permalinks\n"
+        "   3. /wp-json/ is not blocked by a security plugin or .htaccess",
+        WP_BASE,
+    )
+    return ""
+
+
 def get_or_create_term(taxonomy_url, name):
     if not name or not name.strip():
         return None
@@ -1068,17 +1137,19 @@ def get_or_create_term(taxonomy_url, name):
     slug = re.sub(r"-{2,}", "-", slug).strip("-")
     try:
         r = _wp_get(taxonomy_url, params={"slug": slug})
-        terms = r.json()
-        if isinstance(terms, list) and terms:
-            return terms[0]["id"]
-    except Exception:
-        pass
+        data = _wp_json(r, f"GET {taxonomy_url}?slug={slug}")
+        if isinstance(data, list) and data:
+            return data[0]["id"]
+    except Exception as e:
+        log_.debug(f"Term lookup failed '{name}': {e}")
     try:
         r = _wp_post(taxonomy_url, {"name": name, "slug": slug})
-        return r.json().get("id")
+        data = _wp_json(r, f"POST {taxonomy_url} name={name}")
+        if data and isinstance(data, dict):
+            return data.get("id")
     except Exception as e:
         log_.error(f"Term create error '{name}': {e}")
-        return None
+    return None
 
 def build_jsonld(job):
     """Build a JSON-LD JobPosting schema block to embed in post content."""
@@ -1131,7 +1202,7 @@ def post_job_to_wordpress(job):
     # Duplicate check by slug
     try:
         r = _wp_get(WP_JOBS_URL, params={"slug": slug, "status": "publish"})
-        posts = r.json()
+        posts = _wp_json(r, f"duplicate check slug={slug}")
         if isinstance(posts, list) and posts:
             log_.info(f"⏭ Already on WP: {title}")
             return posts[0]["id"], posts[0].get("link")
@@ -1180,7 +1251,9 @@ def post_job_to_wordpress(job):
                     auth=(WP_USER, WP_PASSWORD), timeout=20, verify=False,
                 )
                 if up_r.status_code in (200, 201):
-                    attachment_id = up_r.json().get("id")
+                    up_data = _wp_json(up_r, "media upload")
+                    if up_data:
+                        attachment_id = up_data.get("id")
         except Exception as e:
             log_.warning(f"Logo upload failed: {e}")
 
@@ -1234,7 +1307,9 @@ def post_job_to_wordpress(job):
                 auth=(WP_USER, WP_PASSWORD), timeout=20, verify=False,
             )
             r.raise_for_status()
-            post = r.json()
+            post = _wp_json(r, f"create post '{title}'")
+            if not post:
+                raise ValueError("Empty/invalid JSON in post response")
             log_.info(f"✅ Posted: '{title}' → WP ID {post.get('id')}")
             return post.get("id"), post.get("link")
         except Exception as e:
@@ -1296,6 +1371,18 @@ def main():
     print(f"  WP API base     : {WP_API_BASE or '(not configured)'}")
     print(f"  Started         : {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(C_HEADER("=" * 80))
+
+    # Probe and auto-correct WP REST API endpoint before doing any work
+    global WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL
+    if WP_USER and WP_PASSWORD:
+        discovered = probe_wp_api()
+        if discovered and discovered != WP_API_BASE:
+            log(C_BLUE(f"  ℹ️  WP API base corrected to: {discovered}"))
+            WP_API_BASE  = discovered
+            WP_JOBS_URL  = f"{WP_API_BASE}/posts"
+            WP_MEDIA_URL = f"{WP_API_BASE}/media"
+        elif not discovered:
+            log(C_RED("  ⚠️  WP posting will be skipped — REST API unreachable"))
 
     _init_tracker()
     processed_ids, processed_urls = load_processed_ids()
