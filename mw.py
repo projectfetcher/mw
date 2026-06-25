@@ -1356,6 +1356,7 @@ def _save_excel(jobs):
 # =============================================================================
 
 def main():
+    global WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL
     start_time = datetime.now()
     print()
     print(C_HEADER("=" * 80))
@@ -1373,13 +1374,13 @@ def main():
     print(C_HEADER("=" * 80))
 
     # Probe and auto-correct WP REST API endpoint before doing any work
-    global WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL
+    #global WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL
     if WP_USER and WP_PASSWORD:
         discovered = probe_wp_api()
         if discovered and discovered != WP_API_BASE:
             log(C_BLUE(f"  ℹ️  WP API base corrected to: {discovered}"))
             WP_API_BASE  = discovered
-            WP_JOBS_URL  = f"{WP_API_BASE}/posts"
+            WP_JOBS_URL  = f"{WP_API_BASE}/job-listings"
             WP_MEDIA_URL = f"{WP_API_BASE}/media"
         elif not discovered:
             log(C_RED("  ⚠️  WP posting will be skipped — REST API unreachable"))
