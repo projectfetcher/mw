@@ -136,6 +136,43 @@ BOILERPLATE_PATTERNS = [
     re.compile(r"Subscribe to our newsletter.*", re.I),
 ]
 
+# Deadline extraction from body text
+# Matches all label variants seen on jobsearchmalawi.com in the wild:
+#   "Closing Date:", "Closing date for receiving applications is", "Closure Date :",
+#   "The closing date for receiving applications is", "Application Deadline:", etc.
+_DEADLINE_LABEL_RE = re.compile(
+    r'(?:the\s+)?'
+    r'(?:closing\s+date(?:\s+for\s+(?:receipt|receiving)\s+(?:of\s+)?applications)?'
+    r'|closure\s+date'
+    r'|application\s+deadline'
+    r'|apply\s+by'
+    r'|deadline(?:\s+for\s+applications)?'
+    r')'
+    r'\s*(?:is\s+(?:(?:on\s+or\s+before|on)\s+)?|:\s*(?:(?:on\s+or\s+before|on)\s+)?|[:\-–]\s*)',
+    re.I,
+)
+# Strip a repeated label from the remainder (e.g. "Closing Date: The closing date ... is")
+_DEADLINE_NOISE_RE = re.compile(
+    r'^(?:the\s+)?(?:closing\s+date|closure\s+date|application\s+deadline)'
+    r'(?:\s+for\s+(?:receipt|receiving)\s+(?:of\s+)?applications)?'
+    r'\s*(?:is\s+(?:(?:on\s+or\s+before|on)\s+)?|:\s*)',
+    re.I,
+)
+# Extract a date value after the label has been removed
+_DEADLINE_DATE_RE = re.compile(
+    r'^((?:[A-Za-z]+,?\s+)?'                       # optional day name
+    r'(?:close\s+of\s+business[, ]+)?'             # "Close of Business, "
+    r'(?:applications?\s+close\s+\S+\s+\S+\s+\S+\s+on\s+)?'  # "Applications close ... on "
+    r'(?:\d{1,2}(?:st|nd|rd|th)?\s+\w+\s+\d{4}'  # 23rd June 2026
+    r'|\d{1,2}/\w+/\d{4}'                          # 24/Apr/2026
+    r'|\d{1,2}/\d{1,2}/\d{4}'                      # 28/04/2026
+    r'|\d{4}-\d{2}-\d{2}'                          # 2026-06-23
+    r'|\w+\s+\d{1,2},?\s+\d{4}'                   # April 25, 2026
+    r'|\d{1,2}\s+\w+\s+\d{4}'                     # 15 April 2026
+    r')(?:[, ]+(?:at\s+)?[\d:]+\s*(?:am|pm|CAT|EAT|GMT|UTC)?)?)',
+    re.I,
+)
+
 _MOJIBAKE = [
     ("Â", ""), ("â€™", "'"), ("â€œ", '"'), ("â€\x9d", '"'), ("â€", '"'),
     ("â€¢", "•"), ("â„¢", "™"), ("\u00a0", " "), ("\u200b", ""), ("\ufeff", ""),
@@ -181,7 +218,36 @@ def clean_description(text):
         text = pattern.sub("", text)
     return re.sub(r"[ \t]+", " ", text).strip()
 
-def strip_tracking_params(url):
+def extract_deadline_from_text(text):
+    """
+    Scan body text for a deadline sentence and return the date value only.
+    Handles all formats observed on jobsearchmalawi.com:
+      "Closing Date: 28/04/2026"
+      "Closing date for receiving applications is Friday, 28th April, 2026"
+      "The closing date for receiving applications is Thursday 30th April 2026, at 5 pm"
+      "Closure Date : 24/Apr/2026, 11:59:00 PM"
+      "Application Deadline: 25th March 2026"
+      "Closing Date: Close of Business, 29 May 2026"
+    Returns '' if nothing found.
+    """
+    if not text:
+        return ""
+    m = _DEADLINE_LABEL_RE.search(text)
+    if not m:
+        return ""
+    remainder = text[m.end():].strip()
+    # Strip a repeated label clause (e.g. label was "Closing Date:" but value starts
+    # with "The closing date for receiving applications is 20th June 2026")
+    remainder = _DEADLINE_NOISE_RE.sub("", remainder).strip()
+    # Try to extract a clean date token
+    dm = _DEADLINE_DATE_RE.match(remainder)
+    if dm:
+        return dm.group(1).strip().rstrip(",")
+    # Fallback: everything up to the first full stop or newline, capped at 80 chars
+    fallback = re.split(r"[.\n]", remainder)[0].strip()
+    return fallback[:80] if fallback else ""
+
+
     if not url:
         return url
     parts = urlsplit(url)
@@ -678,19 +744,33 @@ def parse_job_page(url):
     date_posted = resolve_relative_date(date_posted)
 
     # ── Deadline ──────────────────────────────────────────────────────────────
+    # TWO-STAGE strategy:
+    #   Stage 1 — WP meta sidebar field (only set when employer fills it in).
+    #   Stage 2 — Regex scan of the full description body text, which is where
+    #             the MAJORITY of deadlines appear on jobsearchmalawi.com
+    #             (employers paste the closing date inside the vacancy text).
     deadline = ""
-    for sel in ["div.cfwjm_output", ".job-deadline", ".deadline", "li.closing-date"]:
+    # Stage 1: dedicated meta field / sidebar elements
+    for sel in ["div.cfwjm_output", ".job-deadline", ".deadline", "li.closing-date",
+                "li.job-expiry", ".job-expiry"]:
         el = soup.select_one(sel)
         if el:
-            deadline = clean_text(el)
-            # FIX: broader regex to strip all common label variants
-            deadline = re.sub(
+            val = clean_text(el)
+            val = re.sub(
                 r"^(closes?\s*:?|closing\s*date\s*:?|deadline\s*:?|"
-                r"application\s*deadline\s*:?|apply\s*by\s*:?)\s*",
-                "", deadline, flags=re.I,
+                r"application\s*deadline\s*:?|apply\s*by\s*:?|expir(?:y|es)\s*:?)\s*",
+                "", val, flags=re.I,
             ).strip()
-            if deadline:
+            if val:
+                deadline = val
                 break
+
+    # Stage 2: scan full page text for deadline sentence in job description body
+    # (most employers on jobsearchmalawi.com embed the closing date in the body copy)
+    if not deadline:
+        # Use the raw page text for scanning so we catch it even before desc_el is parsed
+        page_text = soup.get_text(" ", strip=True)
+        deadline = extract_deadline_from_text(page_text)
 
     # ── Company ───────────────────────────────────────────────────────────────
     # FIX: WP Job Manager renders company in several ways depending on theme.
