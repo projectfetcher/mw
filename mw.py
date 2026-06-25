@@ -47,7 +47,7 @@ RESOLVE_APPLY_URLS = os.environ.get("RESOLVE_APPLY_URLS", "1") != "0"
 RESOLVE_DELAY      = float(os.environ.get("RESOLVE_DELAY", "0.5"))
 
 OUTPUT_FILE          = "malawi_jobs.xlsx"
-PROCESSED_IDS_FILE   = "malawi_processed.csv"
+PROCESSED_IDS_FILE   = "malawi_processed_job_ids.csv"
 
 _TRACKER_FIELDS = ["Job ID", "Job URL", "Job Title", "Company Name",
                    "Status", "Timestamp", "WP ID"]
