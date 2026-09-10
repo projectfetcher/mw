@@ -17,6 +17,7 @@ jobs:
       WP_USERNAME: ${{ secrets.WP_USERNAME }}
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
 
+      INTERNAL_BOT_KEY: ${{ secrets.INTERNAL_BOT_KEY }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
