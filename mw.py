@@ -85,10 +85,15 @@ WP_URL      = os.environ.get("WP_BASE_URL", "").rstrip("/")
 WP_USER     = os.environ.get("WP_USERNAME", "")
 WP_PASSWORD = os.environ.get("WP_APP_PASSWORD", "")
 INTERNAL_BOT_KEY = os.environ.get("INTERNAL_BOT_KEY", "")
+# REST base of the job post type. Auto-discovered by wp_preflight() if this guess is wrong.
+WP_JOB_REST_BASE = os.environ.get("WP_JOB_REST_BASE", "job-listings").strip("/")
+# 1 = stop the run (exit code 2) when WordPress preflight fails, so no jobs are consumed.
+WP_ABORT_ON_PREFLIGHT_FAIL = os.environ.get("WP_ABORT_ON_PREFLIGHT_FAIL", "1") != "0"
 WP_BASE      = WP_URL
-WP_API_BASE  = f"{WP_BASE}/wp-json/wp/v2"     # reassigned by probe_wp_api() if needed
-WP_JOBS_URL  = f"{WP_API_BASE}/job-listings"
+WP_API_BASE  = f"{WP_BASE}/wp-json/wp/v2"     # may be reassigned by wp_preflight()
+WP_JOBS_URL  = f"{WP_API_BASE}/{WP_JOB_REST_BASE}"
 WP_MEDIA_URL = f"{WP_API_BASE}/media"
+WP_PREFLIGHT_ERROR = ""                        # human-readable reason when WP posting is disabled
 
 # Cloudflare Bot Fight Mode allow-list header, only attached to requests to the WP host
 if INTERNAL_BOT_KEY:
@@ -109,6 +114,8 @@ MISTRAL_API_KEY = os.environ.get("MISTRAL_API_KEY", "")
 MISTRAL_MODEL   = "mistral-small-latest"
 MISTRAL_URL     = "https://api.mistral.ai/v1/chat/completions"
 ENABLE_PARAPHRASE = os.environ.get("ENABLE_PARAPHRASE", "1") != "0"
+MISTRAL_MIN_INTERVAL = float(os.environ.get("MISTRAL_MIN_INTERVAL", "1.2"))   # seconds between calls
+MISTRAL_PAUSE_SECS   = int(os.environ.get("MISTRAL_PAUSE_SECS", "300"))       # pause after repeated 429s
 
 JOB_TYPE_MAPPING = {
     "full-time": "full-time", "full time": "full-time", "fulltime": "full-time",
@@ -556,8 +563,10 @@ def resolve_apply_url(raw, base):
 
 def resolve_application_contact(raw_apply_url, description, raw_anchor_text="", base=JSM_BASE):
     result = {"apply_url": "", "apply_email": "", "apply_raw": raw_apply_url}
-    if raw_apply_url and re.match(r"^[A-Za-z0-9.+_-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", raw_apply_url):
-        result["apply_email"] = clean_email(raw_apply_url)
+    # "hr@x.org" and "hr@x.org?subject=Application%20via..." are both emails, not URLs
+    bare = re.sub(r"^mailto:", "", (raw_apply_url or "").strip(), flags=re.I).split("?")[0]
+    if bare and re.match(r"^[A-Za-z0-9.+_-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", bare):
+        result["apply_email"] = clean_email(bare)
         return result
     if raw_apply_url and RESOLVE_APPLY_URLS:
         result["apply_url"] = resolve_apply_url(raw_apply_url, base)
@@ -664,21 +673,50 @@ def clean_output(text):
     text = re.sub(r"[ \t]+", " ", text)
     return re.sub(r"\n{3,}", "\n\n", text).strip()
 
+_mistral_paused_until = 0.0
+_mistral_last_call    = 0.0
+
+def mistral_available():
+    """False when no key is set or we are in a rate-limit cool-down (originals are used instead)."""
+    return bool(MISTRAL_API_KEY) and time.time() >= _mistral_paused_until
+
 def mistral_generate(prompt, max_tokens=400, temperature=0.7):
-    if not MISTRAL_API_KEY:
+    global _mistral_paused_until, _mistral_last_call
+    if not mistral_available():
         return ""
-    try:
-        response = requests.post(
-            MISTRAL_URL,
-            headers={"Authorization": f"Bearer {MISTRAL_API_KEY}", "Content-Type": "application/json"},
-            json={"model": MISTRAL_MODEL, "messages": [{"role": "user", "content": prompt}],
-                  "max_tokens": max_tokens, "temperature": temperature},
-            timeout=30)
-        response.raise_for_status()
-        return response.json()["choices"][0]["message"]["content"].strip()
-    except Exception as e:
-        log_.error(f"Mistral API error: {e}")
-        return ""
+    for attempt in (1, 2):
+        # throttle: Mistral's free tier allows roughly 1 request/second
+        gap = MISTRAL_MIN_INTERVAL - (time.time() - _mistral_last_call)
+        if gap > 0:
+            time.sleep(gap)
+        _mistral_last_call = time.time()
+        try:
+            response = requests.post(
+                MISTRAL_URL,
+                headers={"Authorization": f"Bearer {MISTRAL_API_KEY}", "Content-Type": "application/json"},
+                json={"model": MISTRAL_MODEL, "messages": [{"role": "user", "content": prompt}],
+                      "max_tokens": max_tokens, "temperature": temperature},
+                timeout=30)
+            if response.status_code == 429:
+                try:
+                    wait = int(float(response.headers.get("Retry-After", "")))
+                except ValueError:
+                    wait = 0
+                wait = min(max(wait, 5 * attempt), 30)
+                if attempt == 1:
+                    log_.warning(f"Mistral 429 (rate limit) — waiting {wait}s, retrying once")
+                    time.sleep(wait)
+                    continue
+                _mistral_paused_until = time.time() + MISTRAL_PAUSE_SECS
+                log_.error(f"Mistral still rate-limited (429) — paraphrasing PAUSED for "
+                           f"{MISTRAL_PAUSE_SECS}s, original text will be used meanwhile")
+                return ""
+            response.raise_for_status()
+            return response.json()["choices"][0]["message"]["content"].strip()
+        except Exception as e:
+            log_.error(f"Mistral API error: {e}")
+            return ""
+    return ""
 
 def paraphrase_title(title):
     if not ENABLE_PARAPHRASE or not MISTRAL_API_KEY:
@@ -688,6 +726,8 @@ def paraphrase_title(title):
         return title
     best_result, best_sim = None, 0.0
     for attempt in range(4):
+        if not mistral_available():
+            break
         temp = round(0.68 + attempt * 0.06, 2)
         prompt = (f"Rewrite this job title professionally using different words. "
                   f"Output ONLY the rewritten title, nothing else. "
@@ -714,7 +754,7 @@ def paraphrase_description(text):
     blocks = [b.strip() for b in re.split(r"\n\s*\n", clean) if b.strip()] or [clean]
     rewritten = []
     for i, block in enumerate(blocks, 1):
-        if _is_heading(block):
+        if _is_heading(block) or not mistral_available():
             rewritten.append(block)
             continue
         has_bullets = block.lstrip().startswith("•")
@@ -730,6 +770,8 @@ def paraphrase_description(text):
                   f"Original:\n{block}")
         best_result, best_sim, accepted = None, 0.0, None
         for attempt in range(3):
+            if not mistral_available():
+                break
             raw    = mistral_generate(prompt, max_tokens=700, temperature=round(0.65 + attempt * 0.08, 2))
             result = clean_output(raw).strip()
             rw     = len(result.split()) if result else 0
@@ -780,6 +822,9 @@ def load_processed_ids():
     try:
         with open(PROCESSED_IDS_FILE, newline="", encoding="utf-8") as f:
             for row in csv.DictReader(f):
+                # jobs whose WordPress post FAILED are not "done" — retry them next run
+                if str(row.get("Status", "")).startswith("failed"):
+                    continue
                 if row.get("Job ID"):
                     ids.add(row["Job ID"].strip())
                 if row.get("Job URL"):
@@ -1736,27 +1781,131 @@ def _wp_json(r, context=""):
         log_.error(f"WP API non-JSON response [{r.status_code}] {context}: {r.text[:200].replace(chr(10), ' ')}")
         return None
 
-def probe_wp_api():
-    host = urlparse(WP_BASE).netloc
-    parts = host.split(".")
-    root_host = ".".join(parts[1:]) if len(parts) > 2 else host
-    scheme = urlparse(WP_BASE).scheme or "https"
-    candidates = list(dict.fromkeys(filter(None, [
-        WP_API_BASE,
-        f"{scheme}://{root_host}/wp-json/wp/v2",
-        f"{WP_BASE.rstrip('/')}/?rest_route=/wp/v2",
-    ])))
-    for base in candidates:
+def explain_wp_response(r):
+    """Turn a failed WordPress HTTP response into ONE readable line:
+       status | most likely cause | WordPress error code/message (if any)."""
+    sc = r.status_code
+    raw = (r.text or "").strip()
+    is_html = raw[:15].lower().startswith(("<!doctype", "<html"))
+    code = msg = ""
+    try:
+        j = r.json()
+        if isinstance(j, dict):
+            code, msg = str(j.get("code", "")), str(j.get("message", ""))
+    except Exception:
+        pass
+    title_m = re.search(r"<title>(.*?)</title>", raw, re.I | re.S) if is_html else None
+    page_title = re.sub(r"\s+", " ", title_m.group(1)).strip() if title_m else ""
+    hdr = {k.lower(): v for k, v in r.headers.items()}
+    behind_cf = "cf-ray" in hdr or "cloudflare" in hdr.get("server", "").lower()
+
+    if sc == 401:
+        why = ("AUTH FAILED - wrong WP_USERNAME / WP_APP_PASSWORD, application passwords disabled for that "
+               "user, or the server/proxy strips the Authorization header")
+    elif sc == 403:
+        if is_html or (behind_cf and not code):
+            why = ("BLOCKED by firewall/Cloudflare bot protection - check the INTERNAL_BOT_KEY / "
+                   "X-Internal-Auth allow rule")
+        else:
+            why = "FORBIDDEN - this user is not allowed to create job listings (role/capabilities)"
+    elif sc == 404:
+        if code == "rest_no_route":
+            why = ("ROUTE NOT FOUND - job post type is not exposed in the REST API "
+                   "(show_in_rest) or WP_JOB_REST_BASE is wrong")
+        elif is_html:
+            why = ("HTML 404 PAGE - request is not reaching the WordPress REST API "
+                   "(wrong WP_BASE_URL / subdomain, /wp-json blocked, or permalinks)")
+        else:
+            why = "NOT FOUND"
+    elif sc in (400, 422):
+        why = "REJECTED - WordPress did not accept the payload (invalid field/meta/term)"
+    elif sc == 413:
+        why = "PAYLOAD TOO LARGE - server body-size limit"
+    elif sc == 429:
+        why = "RATE LIMITED by the server/WAF"
+    elif sc >= 500:
+        why = "SERVER ERROR on the WordPress side (PHP error / plugin / timeout)"
+    else:
+        why = "UNEXPECTED STATUS"
+
+    parts = [f"HTTP {sc}", why]
+    if code:
+        parts.append(f"wp_code={code}")
+    if msg:
+        parts.append(f"msg={msg[:140]}")
+    elif page_title:
+        parts.append(f"page_title='{page_title[:80]}'")
+    return " | ".join(parts)
+
+def _preflight_at(api):
+    """Check one REST base. Returns (ok, reason, jobs_url)."""
+    hdrs, auth = _wp_auth_headers(), (WP_USER, WP_PASSWORD)
+    try:
+        r = requests.get(f"{api}/types", headers=hdrs, auth=auth, timeout=15, verify=False)
+    except requests.RequestException as e:
+        return False, f"CONNECTION ERROR reaching {api}: {type(e).__name__}: {e}", ""
+    if r.status_code != 200:
+        return False, f"{api}/types -> {explain_wp_response(r)}", ""
+    try:
+        types = r.json()
+    except Exception:
+        return False, (f"{api}/types returned HTTP 200 but NOT JSON - this is not a WordPress REST "
+                       f"endpoint (check WP_BASE_URL)"), ""
+
+    try:
+        me = requests.get(f"{api}/users/me", params={"context": "edit"}, headers=hdrs,
+                          auth=auth, timeout=15, verify=False)
+    except requests.RequestException as e:
+        return False, f"CONNECTION ERROR on {api}/users/me: {type(e).__name__}: {e}", ""
+    if me.status_code != 200:
+        return False, f"AUTH CHECK {api}/users/me -> {explain_wp_response(me)}", ""
+    try:
+        who = me.json()
+        log(C_DIM(f"  authenticated as '{who.get('name', '?')}' roles={who.get('roles', [])}"))
+    except Exception:
+        pass
+
+    rest_bases = []
+    if isinstance(types, dict):
+        for slug, t in types.items():
+            rest_bases.append((t or {}).get("rest_base") or slug)
+    candidates = ([WP_JOB_REST_BASE]
+                  + [b for b in rest_bases if re.search(r"job", str(b), re.I)]
+                  + ["job-listings", "job_listing", "job-listing", "jobs"])
+    seen, tried = set(), []
+    for rb in candidates:
+        if rb in seen:
+            continue
+        seen.add(rb)
         try:
-            r = requests.get(f"{base}/posts", params={"per_page": 1}, headers=_wp_auth_headers(),
-                             auth=(WP_USER, WP_PASSWORD), timeout=10, verify=False)
-            if r.status_code in (200, 401):
-                log_.info(f"✅ WP REST API reachable: {base} [{r.status_code}]")
-                return base
-        except Exception as e:
-            log_.debug(f"WP probe error {base}: {e}")
-    log_.error("❌ WP REST API unreachable. Check WP_BASE_URL, pretty permalinks, and /wp-json/ blocking.")
-    return ""
+            rr = requests.get(f"{api}/{rb}", params={"per_page": 1}, headers=hdrs,
+                              auth=auth, timeout=15, verify=False)
+        except requests.RequestException as e:
+            tried.append(f"{rb}: {type(e).__name__}")
+            continue
+        if rr.status_code == 200:
+            return True, "", f"{api}/{rb}"
+        tried.append(f"{rb}: HTTP {rr.status_code}")
+    return False, (f"JOB ENDPOINT NOT FOUND at {api} (tried {', '.join(tried)}). "
+                   f"Post types exposed in REST: {', '.join(sorted({str(b) for b in rest_bases})) or 'none'}. "
+                   f"Set WP_JOB_REST_BASE to the right one, or enable show_in_rest on the job post type."), ""
+
+def wp_preflight():
+    """Verify host + auth + job endpoint BEFORE scraping. Returns (ok, reason).
+       On success it sets WP_API_BASE / WP_JOBS_URL / WP_MEDIA_URL to the working URLs."""
+    global WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL
+    log(C_DIM(f"  WordPress preflight: {WP_API_BASE}"))
+    candidates = list(dict.fromkeys([WP_API_BASE, f"{WP_BASE.rstrip('/')}/?rest_route=/wp/v2"]))
+    reasons = []
+    for api in candidates:
+        ok, reason, jobs_url = _preflight_at(api)
+        if ok:
+            WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL = api, jobs_url, f"{api}/media"
+            return True, ""
+        reasons.append(reason)
+        if reason.startswith(("AUTH", "JOB ENDPOINT")):
+            break          # host IS WordPress; the alternate URL form will not fix this
+    return False, " || ".join(reasons)
 
 def get_or_create_term(taxonomy_url, name):
     if not name or not name.strip():
@@ -1804,23 +1953,35 @@ def build_jsonld(job):
     return f'\n\n<script type="application/ld+json">\n{json.dumps(schema, indent=2, ensure_ascii=False)}\n</script>\n'
 
 def post_job_to_wordpress(job):
+    """Returns (wp_id, link, error). `error` is '' on success, otherwise ONE readable reason."""
     if not WP_USER or not WP_PASSWORD or not WP_BASE:
-        return None, None
+        return None, None, "SKIPPED - WP_BASE_URL / WP_USERNAME / WP_APP_PASSWORD not set"
     h = _wp_auth_headers()
     title       = sanitize_text(job.get("jobTitle", ""))
     description = sanitize_text(job.get("jobDescription", ""))
     if not title or not description:
-        log_.warning("Skipping WP post — missing title or description")
-        return None, None
+        return None, None, "SKIPPED - title or description is empty after scraping/paraphrasing"
 
     slug = re.sub(r"-{2,}", "-", re.sub(r"[^a-z0-9-]", "-", title.lower())).strip("-")[:80]
+
+    # ── duplicate check ───────────────────────────────────────────────────
     try:
-        posts = _wp_json(_wp_get(WP_JOBS_URL, params={"slug": slug, "status": "publish"}), f"duplicate check slug={slug}")
+        dr = _wp_get(WP_JOBS_URL, params={"slug": slug, "status": "publish"})
+    except requests.RequestException as e:
+        return None, None, f"CONNECTION ERROR on duplicate check: {type(e).__name__}: {e}"
+    if dr.status_code == 200:
+        try:
+            posts = dr.json()
+        except Exception:
+            posts = None
         if isinstance(posts, list) and posts:
             log_.info(f"⏭ Already on WP: {title}")
-            return posts[0]["id"], posts[0].get("link")
-    except Exception:
-        pass
+            return posts[0]["id"], posts[0].get("link"), ""
+    else:
+        err = f"duplicate check failed - {explain_wp_response(dr)}"
+        if dr.status_code in (401, 403, 404):
+            return None, None, err            # permanent: the POST would fail identically
+        log_.warning(err)
 
     logo_url    = sanitize_text(job.get("companyLogo", ""), is_url=True)
     location    = sanitize_text(job.get("jobLocation", ""))
@@ -1842,6 +2003,7 @@ def post_job_to_wordpress(job):
         application = blank_if_linkedin(application)
     co_website  = blank_if_linkedin(co_website)
 
+    # ── logo upload (never fatal) ─────────────────────────────────────────
     attachment_id = None
     if logo_url and logo_url.startswith("http"):
         try:
@@ -1860,11 +2022,11 @@ def post_job_to_wordpress(job):
                     if up_data:
                         attachment_id = up_data.get("id")
                 else:
-                    log_.warning(f"Logo upload HTTP {up_r.status_code} for {logo_url}")
+                    log_.warning(f"Logo upload failed (post continues without logo) - {explain_wp_response(up_r)}")
             else:
-                log_.warning(f"Logo download HTTP {img_r.status_code}: {logo_url}")
+                log_.warning(f"Logo download failed HTTP {img_r.status_code}: {logo_url}")
         except Exception as e:
-            log_.warning(f"Logo upload failed: {e}")
+            log_.warning(f"Logo upload failed: {type(e).__name__}: {e}")
 
     cat_term_id = get_or_create_term(f"{WP_API_BASE}/categories", location) if location else None
     tag_names = list(filter(None, [
@@ -1891,21 +2053,39 @@ def post_job_to_wordpress(job):
     if tag_ids:
         payload["tags"] = tag_ids
 
+    # ── create the post ───────────────────────────────────────────────────
+    last_err = "unknown error"
     for attempt in range(3):
         try:
             r = requests.post(WP_JOBS_URL, json=payload, headers=h, auth=(WP_USER, WP_PASSWORD),
                               timeout=20, verify=False)
-            r.raise_for_status()
-            post = _wp_json(r, f"create post '{title}'")
-            if not post:
-                raise ValueError("Empty/invalid JSON in post response")
-            log_.info(f"✅ Posted: '{title}' → WP ID {post.get('id')}")
-            return post.get("id"), post.get("link")
-        except Exception as e:
-            log_.error(f"WP post attempt {attempt+1} failed: {e}")
-            if attempt < 2:
-                time.sleep(2 ** attempt)
-    return None, None
+        except requests.RequestException as e:
+            last_err = f"CONNECTION ERROR: {type(e).__name__}: {e}"
+            log_.error(f"WP post attempt {attempt+1}/3 - {last_err}")
+            time.sleep(2 ** attempt)
+            continue
+
+        if r.status_code in (200, 201):
+            try:
+                post = r.json()
+            except Exception:
+                post = None
+            if isinstance(post, dict) and post.get("id"):
+                log_.info(f"✅ Posted: '{title}' → WP ID {post.get('id')}")
+                return post.get("id"), post.get("link"), ""
+            # do NOT retry: the post may already exist and a retry would duplicate it
+            last_err = (f"HTTP {r.status_code} but body is not WordPress JSON "
+                        f"(a plugin/WAF may be rewriting output): {(r.text or '')[:120]!r}")
+            log_.error(f"WP post attempt {attempt+1}/3 - {last_err}")
+            break
+
+        last_err = explain_wp_response(r)
+        log_.error(f"WP post attempt {attempt+1}/3 failed - {last_err}")
+        if r.status_code in (400, 401, 403, 404, 413, 422):
+            break                                  # permanent: retrying cannot help
+        if attempt < 2:
+            time.sleep(2 ** attempt)
+    return None, None, last_err
 
 # =============================================================================
 #  EXCEL EXPORT
@@ -2032,21 +2212,24 @@ def run_source(name, src, state, stats):
         if WP_USER and WP_PASSWORD and state["wp_ok"]:
             print(C_BLUE("\n  📤 Posting to WordPress …"))
             try:
-                wp_id, wp_url = post_job_to_wordpress(job)
+                wp_id, wp_url, wp_err = post_job_to_wordpress(job)
             except Exception as e:
-                wp_id, wp_url = None, None
-                log(C_RED(f"  WP exception: {e}"))
+                wp_id, wp_url, wp_err = None, None, f"EXCEPTION {type(e).__name__}: {e}"
             if wp_id:
                 mark_posted(job["_jobId"], wp_id)
                 st["posted"] += 1
                 print(C_GREEN(f"  ✅ WP ID={wp_id}  🔗 {wp_url}"))
             else:
-                mark_failed(job["_jobId"], "wp_post_failed_or_skipped")
+                reason = wp_err or "unknown reason"
+                mark_failed(job["_jobId"], reason[:200])
                 st["wp_failed"] += 1
-                print(C_RED("  ❌ WordPress post failed / skipped"))
+                state["wp_reasons"][" | ".join(reason.split(" | ")[:2])] += 1
+                print(C_RED(f"  ❌ WordPress post FAILED — {reason}"))
         else:
-            mark_failed(job["_jobId"], "wp_post_failed_or_skipped")
-            print(C_DIM("  WordPress posting disabled / unreachable"))
+            reason = WP_PREFLIGHT_ERROR or "WordPress posting disabled (credentials not set)"
+            mark_failed(job["_jobId"], reason[:200])
+            state["wp_reasons"][reason[:120]] += 1
+            print(C_RED(f"  ❌ WordPress post SKIPPED — {reason}"))
 
         if len(state["jobs"]) % 25 == 0:
             _save_excel(state["jobs"])
@@ -2059,7 +2242,7 @@ def run_source(name, src, state, stats):
 # =============================================================================
 
 def main():
-    global WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL, MAX_JOBS, MAX_JOBS_PER_SOURCE
+    global WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL, WP_PREFLIGHT_ERROR, MAX_JOBS, MAX_JOBS_PER_SOURCE
 
     ap = argparse.ArgumentParser(description="Multi-source Malawi jobs scraper")
     ap.add_argument("--sources", default=os.environ.get("SOURCES", DEFAULT_SOURCES),
@@ -2090,22 +2273,26 @@ def main():
 
     wp_ok = False
     if WP_USER and WP_PASSWORD and WP_BASE:
-        discovered = probe_wp_api()
-        if discovered:
-            wp_ok = True
-            if discovered != WP_API_BASE:
-                log(C_BLUE(f"  ℹ️  WP API base corrected to: {discovered}"))
-                WP_API_BASE = discovered
-                WP_JOBS_URL = f"{WP_API_BASE}/job-listings"
-                WP_MEDIA_URL = f"{WP_API_BASE}/media"
+        wp_ok, reason = wp_preflight()
+        if wp_ok:
+            log(C_GREEN(f"  ✅ WordPress ready → {WP_JOBS_URL}"))
         else:
-            log(C_RED("  ⚠️  WP posting will be skipped — REST API unreachable"))
+            WP_PREFLIGHT_ERROR = reason
+            log(C_RED("  ❌ WordPress preflight FAILED — posting is disabled:"))
+            log(C_RED(f"     {reason}"))
+            if WP_ABORT_ON_PREFLIGHT_FAIL:
+                log(C_RED("  Aborting BEFORE scraping so no jobs are consumed. Fix the issue above "
+                          "(or set WP_ABORT_ON_PREFLIGHT_FAIL=0 to scrape to Excel only)."))
+                sys.exit(2)
+    else:
+        WP_PREFLIGHT_ERROR = "WP_BASE_URL / WP_USERNAME / WP_APP_PASSWORD not set"
 
     _init_tracker()
     processed_ids, processed_urls = load_processed_ids()
     print(f"  Tracker loaded: {len(processed_ids)} previously processed job IDs\n")
 
-    state = {"jobs": [], "ids": processed_ids, "urls": processed_urls, "seen": set(), "wp_ok": wp_ok}
+    state = {"jobs": [], "ids": processed_ids, "urls": processed_urls, "seen": set(),
+             "wp_ok": wp_ok, "wp_reasons": Counter()}
     stats = {}
 
     for name in selected:
@@ -2142,6 +2329,11 @@ def main():
     total_posted = sum(s["posted"] for s in stats.values())
     total_flagged = sum(s["flagged"] for s in stats.values())
     print()
+    if state["wp_reasons"]:
+        print(f"  {C_LABEL('WordPress failure reasons')}:")
+        for reason, n in state["wp_reasons"].most_common():
+            print(f"    {C_RED(str(n))} × {reason}")
+        print()
     print(f"  {C_LABEL('New jobs processed')}    : {C_GREEN(str(len(state['jobs'])))}")
     print(f"  {C_LABEL('Posted to WordPress')}   : {C_GREEN(str(total_posted))}")
     print(f"  {C_LABEL('Flagged (no apply)')}    : {C_RED(str(total_flagged)) if total_flagged else '0'}")
