@@ -8,16 +8,19 @@ on:
 jobs:
   run-jobs:
     runs-on: ubuntu-latest
+    timeout-minutes: 350
 
-    # === THIS IS THE IMPORTANT PART ===
     env:
       MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
       SHEET_ID: ${{ secrets.SHEET_ID }}
+      # Must be the site that hosts the jobs, e.g. https://malawi.mimusjobs.com (no trailing slash, no /wp-json)
       WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
       WP_USERNAME: ${{ secrets.WP_USERNAME }}
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
-
       INTERNAL_BOT_KEY: ${{ secrets.INTERNAL_BOT_KEY }}
+      # REST base of the job post type (see https://malawi.mimusjobs.com/wp-json/wp/v2/types)
+      WP_JOB_ENDPOINT: job-listings
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,15 +35,40 @@ jobs:
 
       - name: Download NLTK data
         run: |
-          python -c "import nltk; nltk.download('punkt_tab', quiet=True); nltk.download('averaged_perceptron_tagger', quiet=True)"
+          python -c "import nltk; nltk.download('punkt_tab', quiet=True); nltk.download('averaged_perceptron_tagger', quiet=True)" || true
+
+      # Restore the tracker from the last run so already-posted jobs are not reposted
+      - name: Restore tracker
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            processed_jobs.csv
+            flagged_no_apply.csv
+          key: tracker-${{ github.run_id }}
+          restore-keys: |
+            tracker-
 
       - name: Run job script
         run: python mw.py
+
+      # Save the updated tracker (new key each run; the newest one is restored next time)
+      - name: Save tracker
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            processed_jobs.csv
+            flagged_no_apply.csv
+          key: tracker-${{ github.run_id }}
 
       - name: Upload tracker CSV
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: processed-jobs-tracker
-          path: malawi_processed_job_ids.csv
+          path: |
+            processed_jobs.csv
+            flagged_no_apply.csv
+            jobs_output.xlsx
+          if-no-files-found: warn
           retention-days: 30
