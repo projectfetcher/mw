@@ -1,39 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-mw.py — Multi-source Malawi job scraper + (optional) paraphrase + WordPress posting
-
-SOURCES (each one is isolated: if a source is blocked / down / returns nothing
-(403, 404, 5xx, timeouts, empty listings) it is logged and SKIPPED, and the run
-continues with the next source):
-
-    jobsearchmalawi  -> https://jobsearchmalawi.com   (XML sitemap)
-    careersmw        -> https://careersmw.com         (WP REST API / sitemap / homepage)
-    careeradmw       -> https://www.careeradmw.com    (paginated /jobs listing)
-    linkedin         -> LinkedIn guest jobs API       (location = Malawi by default)
-
-ENV VARS
-    WP_BASE_URL, WP_USERNAME, WP_APP_PASSWORD   WordPress target (posting skipped if user/pass missing)
-    INTERNAL_BOT_KEY                            Cloudflare allow-list header (X-Internal-Auth)
-    MISTRAL_API_KEY                             optional; paraphrasing only runs when set
-    ENABLE_PARAPHRASE=0                         force paraphrasing off even if key is set
-    SOURCES=jobsearchmalawi,careersmw,careeradmw,linkedin
-    MAX_JOBS=0                                  total new jobs cap for the run (0 = unlimited)
-    MAX_JOBS_PER_SOURCE=0                       new jobs cap per source (0 = unlimited)
-    REQUEST_DELAY=1.5   REQUEST_TIMEOUT=25
-    RESOLVE_APPLY_URLS=1   RESOLVE_DELAY=0.5
-    SOURCE_MAX_CONSECUTIVE_ERRORS=8             abort a source after N errors in a row
-    CAREERADMW_MAX_PAGES=60   CAREERSMW_MAX_PAGES=40
-    LINKEDIN_LOCATION=Malawi
-    LINKEDIN_KEYWORDS=                          comma separated, empty = all jobs
-    LINKEDIN_TIME_RANGE=r604800                 r86400 = 24h, r604800 = 7d, r2592000 = 30d
-    LINKEDIN_MAX_PAGES=0                        0 = unlimited (LinkedIn caps at ~40 pages)
-    LINKEDIN_DEFAULT_EXPIRY_DAYS=30             estimated deadline when none is found
-
-CLI
-    python mw.py --sources careersmw,careeradmw
-"""
-
 import os
 import re
 import csv
