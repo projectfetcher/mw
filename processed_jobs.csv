@@ -1,27 +1,932 @@
 Job ID,Job URL,Job Title,Company Name,Status,Timestamp,WP ID,Source
-7dfd375e38231689,https://jobsearchmalawi.com/job/accounts-assistant/,Accounts Assistant,BURN,failed|wp_post_failed_or_skipped,2026-10-20T13:05:40.548258,,JobSearchMalawi
-40dd88b2598e1724,https://jobsearchmalawi.com/job/territory-sales-manager-malawi/,Territory Sales Manager – Malawi,BURN,failed|wp_post_failed_or_skipped,2026-10-20T13:06:16.984587,,JobSearchMalawi
-d4219407a8292eb1,https://jobsearchmalawi.com/job/teachers/,Teachers,FACE-Project Ministry,failed|wp_post_failed_or_skipped,2026-10-20T13:06:51.553569,,JobSearchMalawi
-b639f02c88ca098f,https://jobsearchmalawi.com/job/malawi-extension-lead/,Malawi Extension Lead,One Acre Fund,failed|wp_post_failed_or_skipped,2026-10-20T13:07:36.646192,,JobSearchMalawi
-1da83c956b98fc0a,https://jobsearchmalawi.com/job/client-service-executive/,Client Service Executive,ETG,failed|wp_post_failed_or_skipped,2026-10-20T13:08:03.837213,,JobSearchMalawi
-d32f4fef2f784f80,https://jobsearchmalawi.com/job/bidding-assistant-tenders/,Bidding Assistant – Tenders,Outple,failed|wp_post_failed_or_skipped,2026-10-20T13:10:01.491333,,JobSearchMalawi
-265953c4fa2abef0,https://jobsearchmalawi.com/job/agribusiness-development-officer/,Agribusiness Development Officer,YONECO,failed|wp_post_failed_or_skipped,2026-10-20T13:10:39.936763,,JobSearchMalawi
-ed2db1d9d9d5a3e0,https://jobsearchmalawi.com/job/strategic-sales-and-merchandising-services-limited-lilongwe-malawi-full-time-data-administrator/,Data Administrator,Website Strategic Sales and Merchandising Services Limited,failed|wp_post_failed_or_skipped,2026-10-20T13:11:13.305635,,JobSearchMalawi
-80cddf979ad9b424,https://jobsearchmalawi.com/job/program-manager-x2/,Program Manager (x2),GiveDirectly,failed|wp_post_failed_or_skipped,2026-10-20T13:11:43.924557,,JobSearchMalawi
-7c34ffa2af07a039,https://jobsearchmalawi.com/job/project-officer/,Project Officer,CARE,failed|wp_post_failed_or_skipped,2026-10-20T13:12:19.352126,,JobSearchMalawi
-8085b6dac4a5767c,https://jobsearchmalawi.com/job/private-sector-engagement-and-partnerships-manager/,Private Sector Engagement and Partnerships Manager,CARE Malawi,failed|wp_post_failed_or_skipped,2026-10-20T13:12:53.798346,,JobSearchMalawi
-1faac48b94191587,https://jobsearchmalawi.com/job/safeguarding-officer-wca-and-esa/,Safeguarding Officer – WCA AND ESA,CARE,failed|wp_post_failed_or_skipped,2026-10-20T13:13:24.257532,,JobSearchMalawi
-26ba33f298176023,https://jobsearchmalawi.com/job/sales-team/,Sales Team,Fox Limited,failed|wp_post_failed_or_skipped,2026-10-20T13:13:55.620103,,JobSearchMalawi
-fd3a4affd03525c3,https://jobsearchmalawi.com/job/sr-policy-manager-embedded-labs-program/,"Sr. Policy Manager, Embedded Labs Program",Innovations for Poverty Action,failed|wp_post_failed_or_skipped,2026-10-20T13:14:41.169293,,JobSearchMalawi
-18c673ff803272aa,https://jobsearchmalawi.com/job/wala-clean-energy-lilongwe-full-time-credit-recoveries-officer-4/,Credit & Recoveries Officer,Website Wala Clean Energy,failed|wp_post_failed_or_skipped,2026-10-20T13:15:09.395917,,JobSearchMalawi
-9523cc7cd0d69505,https://jobsearchmalawi.com/job/livestock-care-centre-ltd-lilongwe-full-time-animal-health-technician/,Animal Health Technician,Livestock Care Centre Ltd,failed|wp_post_failed_or_skipped,2026-10-20T13:17:00.334227,,JobSearchMalawi
-7b7efb40eb8046a1,https://jobsearchmalawi.com/job/principal/,Principal,Hillview International School,failed|wp_post_failed_or_skipped,2026-10-20T13:17:37.218852,,JobSearchMalawi
-8f107923614920e9,https://jobsearchmalawi.com/job/lecturer/,Lecturer,Emmanuel University,failed|wp_post_failed_or_skipped,2026-10-20T13:18:15.055164,,JobSearchMalawi
-2385e17d79106da8,https://jobsearchmalawi.com/job/vision-paint-building-services-vpbs-mzuzu-full-time-site-supervisor-foreman/,Site Supervisor/Foreman,Website Vision Paint & Building Services (VPBS),failed|wp_post_failed_or_skipped,2026-10-20T13:18:55.251501,,JobSearchMalawi
-b473fe2c08aa04d0,https://jobsearchmalawi.com/job/elmac-security-services-blantyre-full-time-receptionist/,Receptionist,Website ELMAC Security Services,failed|wp_post_failed_or_skipped,2026-10-20T13:19:39.007910,,JobSearchMalawi
-3f28826399652fb6,https://jobsearchmalawi.com/job/elmac-security-services-blantyre-full-time-human-resources-officer-hro/,Human Resources Officer – HRO,Website ELMAC Security Services,failed|wp_post_failed_or_skipped,2026-10-20T13:20:29.417857,,JobSearchMalawi
-456f1f7766d6b6d1,https://jobsearchmalawi.com/job/security-operations-supervisor/,Security Operations Supervisor,GardaWorld,failed|wp_post_failed_or_skipped,2026-10-20T13:21:20.329350,,JobSearchMalawi
-cacde0be6fa50846,https://jobsearchmalawi.com/job/procurement-manager-malawi-activity/,Procurement Manager – Malawi Activity,Abt Global,failed|wp_post_failed_or_skipped,2026-10-20T13:22:01.176630,,JobSearchMalawi
-9c85ef35d01302bf,https://jobsearchmalawi.com/job/core-network-engineer/,Core Network Engineer,Huawei Consumer Business Group,failed|wp_post_failed_or_skipped,2026-10-20T13:22:47.404475,,JobSearchMalawi
-e5d06e0f6d544664,https://jobsearchmalawi.com/job/commissioned-financial-advisor/,Commissioned Financial Advisor,Old Mutual South Africa,failed|wp_post_failed_or_skipped,2026-10-20T13:23:27.634293,,JobSearchMalawi
+7dfd375e38231689,https://jobsearchmalawi.com/job/accounts-assistant/,Accounts Assistant,BURN,posted,2026-10-20T13:25:51.086380,193,JobSearchMalawi
+40dd88b2598e1724,https://jobsearchmalawi.com/job/territory-sales-manager-malawi/,Territory Sales Manager – Malawi,BURN,posted,2026-10-20T13:25:56.210552,195,JobSearchMalawi
+d4219407a8292eb1,https://jobsearchmalawi.com/job/teachers/,Teachers,FACE-Project Ministry,posted,2026-10-20T13:25:59.872968,197,JobSearchMalawi
+b639f02c88ca098f,https://jobsearchmalawi.com/job/malawi-extension-lead/,Malawi Extension Lead,One Acre Fund,posted,2026-10-20T13:26:05.001215,199,JobSearchMalawi
+1da83c956b98fc0a,https://jobsearchmalawi.com/job/client-service-executive/,Client Service Executive,ETG,posted,2026-10-20T13:26:08.862986,201,JobSearchMalawi
+d32f4fef2f784f80,https://jobsearchmalawi.com/job/bidding-assistant-tenders/,Bidding Assistant – Tenders,Outple,posted,2026-10-20T13:26:13.658553,203,JobSearchMalawi
+265953c4fa2abef0,https://jobsearchmalawi.com/job/agribusiness-development-officer/,Agribusiness Development Officer,YONECO,posted,2026-10-20T13:26:18.870548,205,JobSearchMalawi
+ed2db1d9d9d5a3e0,https://jobsearchmalawi.com/job/strategic-sales-and-merchandising-services-limited-lilongwe-malawi-full-time-data-administrator/,Data Administrator,Website Strategic Sales and Merchandising Services Limited,posted,2026-10-20T13:26:22.515661,207,JobSearchMalawi
+80cddf979ad9b424,https://jobsearchmalawi.com/job/program-manager-x2/,Program Manager (x2),GiveDirectly,posted,2026-10-20T13:26:26.098976,209,JobSearchMalawi
+7c34ffa2af07a039,https://jobsearchmalawi.com/job/project-officer/,Project Officer,CARE,posted,2026-10-20T13:26:29.877169,211,JobSearchMalawi
+8085b6dac4a5767c,https://jobsearchmalawi.com/job/private-sector-engagement-and-partnerships-manager/,Private Sector Engagement and Partnerships Manager,CARE Malawi,posted,2026-10-20T13:26:33.189418,213,JobSearchMalawi
+1faac48b94191587,https://jobsearchmalawi.com/job/safeguarding-officer-wca-and-esa/,Safeguarding Officer – WCA AND ESA,CARE,posted,2026-10-20T13:26:37.126402,215,JobSearchMalawi
+26ba33f298176023,https://jobsearchmalawi.com/job/sales-team/,Sales Team,Fox Limited,posted,2026-10-20T13:26:40.184526,217,JobSearchMalawi
+fd3a4affd03525c3,https://jobsearchmalawi.com/job/sr-policy-manager-embedded-labs-program/,"Sr. Policy Manager, Embedded Labs Program",Innovations for Poverty Action,posted,2026-10-20T13:26:43.889598,219,JobSearchMalawi
+18c673ff803272aa,https://jobsearchmalawi.com/job/wala-clean-energy-lilongwe-full-time-credit-recoveries-officer-4/,Credit & Recoveries Officer,Website Wala Clean Energy,posted,2026-10-20T13:26:46.746260,221,JobSearchMalawi
+9523cc7cd0d69505,https://jobsearchmalawi.com/job/livestock-care-centre-ltd-lilongwe-full-time-animal-health-technician/,Animal Health Technician,Livestock Care Centre Ltd,posted,2026-10-20T13:26:57.579135,223,JobSearchMalawi
+7b7efb40eb8046a1,https://jobsearchmalawi.com/job/principal/,Principal,Hillview International School,posted,2026-10-20T13:27:08.124305,225,JobSearchMalawi
+8f107923614920e9,https://jobsearchmalawi.com/job/lecturer/,Lecturer,Emmanuel University,posted,2026-10-20T13:27:18.069296,227,JobSearchMalawi
+2385e17d79106da8,https://jobsearchmalawi.com/job/vision-paint-building-services-vpbs-mzuzu-full-time-site-supervisor-foreman/,Site Supervisor/Foreman,Website Vision Paint & Building Services (VPBS),posted,2026-10-20T13:27:29.096369,229,JobSearchMalawi
+b473fe2c08aa04d0,https://jobsearchmalawi.com/job/elmac-security-services-blantyre-full-time-receptionist/,Receptionist,Website ELMAC Security Services,posted,2026-10-20T13:27:39.794745,231,JobSearchMalawi
+3f28826399652fb6,https://jobsearchmalawi.com/job/elmac-security-services-blantyre-full-time-human-resources-officer-hro/,Human Resources Officer – HRO,Website ELMAC Security Services,posted,2026-10-20T13:27:48.885437,233,JobSearchMalawi
+456f1f7766d6b6d1,https://jobsearchmalawi.com/job/security-operations-supervisor/,Security Operations Supervisor,GardaWorld,posted,2026-10-20T13:27:59.671638,235,JobSearchMalawi
+cacde0be6fa50846,https://jobsearchmalawi.com/job/procurement-manager-malawi-activity/,Procurement Manager – Malawi Activity,Abt Global,posted,2026-10-20T13:28:11.683805,237,JobSearchMalawi
+9c85ef35d01302bf,https://jobsearchmalawi.com/job/core-network-engineer/,Core Network Engineer,Huawei Consumer Business Group,posted,2026-10-20T13:28:24.599350,239,JobSearchMalawi
+e5d06e0f6d544664,https://jobsearchmalawi.com/job/commissioned-financial-advisor/,Commissioned Financial Advisor,Old Mutual South Africa,posted,2026-10-20T13:28:35.857942,241,JobSearchMalawi
 d14254b5872cd20c,https://jobsearchmalawi.com/job/student-advisors/,Student Advisors,UNICAF,scraped,2026-10-20T13:23:30.097314,,JobSearchMalawi
+d53a9f5ef753cb25,https://jobsearchmalawi.com/job/open-call-for-consultants-health-policy-advocacy-and-communications/,Open Call for Consultants – Health Policy Advocacy and Communications,PATH,posted,2026-10-20T13:28:46.799319,243,JobSearchMalawi
+9138dd103a21d035,https://jobsearchmalawi.com/job/electrical-engineer/,Electrical Engineer,EasyLinks Limited,posted,2026-10-20T13:28:58.871485,245,JobSearchMalawi
+48020a9141262395,https://jobsearchmalawi.com/job/full-stack-developer/,Full Stack Developer,EasyLinks Limited,posted,2026-10-20T13:29:10.304140,247,JobSearchMalawi
+321366eddf96b556,https://jobsearchmalawi.com/job/ulemu-bus-services-several-depots-in-malawi-full-time-customer-service-officer-ticket-seller/,Customer Service Officer/Ticket Seller,Ulemu Bus Services,posted,2026-10-20T13:29:22.050376,249,JobSearchMalawi
+7211895ea2895563,https://jobsearchmalawi.com/job/deputy-registrar-marketing-and-communication/,Deputy Registrar (Marketing and Communication),Malawi University of Business and Applied Sciences (MUBAS),posted,2026-10-20T13:29:33.959973,251,JobSearchMalawi
+4132d1548a3aeec5,https://jobsearchmalawi.com/job/head-of-research-and-innovation/,Head of Research and Innovation,Malawi University of Business and Applied Sciences (MUBAS),posted,2026-10-20T13:29:45.208862,253,JobSearchMalawi
+c921d1054378229b,https://jobsearchmalawi.com/job/head-of-academic-quality-assurance/,Head of Academic Quality Assurance,Malawi University of Business and Applied Sciences (MUBAS),posted,2026-10-20T13:29:53.832423,255,JobSearchMalawi
+4fbb3cce25959caf,https://jobsearchmalawi.com/job/head-of-information-communication-and-technology/,Head of Information Communication and Technology,Malawi University of Business and Applied Sciences (MUBAS),posted,2026-10-20T13:30:05.791019,257,JobSearchMalawi
+cc1f7a660afa95ec,https://jobsearchmalawi.com/job/chief-elections-officer/,Chief Elections Officer,Malawi Electoral Commission (MEC),posted,2026-10-20T13:30:14.843293,259,JobSearchMalawi
+a9b6a466c79cc821,https://jobsearchmalawi.com/job/safeguarding-associate-field-manager/,Safeguarding Associate Field Manager,GiveDirectly,posted,2026-10-20T13:30:23.644833,261,JobSearchMalawi
+5efb42fb9babf800,https://jobsearchmalawi.com/job/conditional-salaried-financial-advisor/,Conditional Salaried Financial Advisor,Conditional Salaried Financial Advisor,posted,2026-10-20T13:30:34.324390,263,JobSearchMalawi
+0bbf298dd962a8cd,https://jobsearchmalawi.com/job/director-of-nursing/,Director of Nursing,Beit-CURE Children's Hospital Malawi (BCHM),posted,2026-10-20T13:30:45.207551,265,JobSearchMalawi
+0d7a01448369c040,https://jobsearchmalawi.com/job/senior-leather/,Senior Leather,SMEDCO,posted,2026-10-20T13:30:54.158424,267,JobSearchMalawi
+f9bf8b71b7a83079,https://jobsearchmalawi.com/job/leather-technician-assistant-4-posts/,Leather Technician Assistant (4 Posts),SMEDCO,posted,2026-10-20T13:31:10.483559,269,JobSearchMalawi
+fcfbba84e9cbea14,https://jobsearchmalawi.com/job/qub-solutions-lilongwe-malawi-part-time-policy-advocacy-research-communications-officer/,"Policy, Advocacy, Research & Communications Officer",Website Qub Solutions,posted,2026-10-20T13:31:21.210584,271,JobSearchMalawi
+72b7d9ef8688ff44,https://jobsearchmalawi.com/job/deputy-farm-manager-cattle/,Deputy Farm Manager (Cattle,Precision Recruitment International,posted,2026-10-20T13:31:34.429694,273,JobSearchMalawi
+9347a28d416a3140,https://jobsearchmalawi.com/job/open-eye-private-schools-machinjiri-blantyre-full-time-security-guards-2-positions/,Security Guards (2 Positions),Open Eye Private Schools,posted,2026-10-20T13:31:44.119134,275,JobSearchMalawi
+c0f908471c14a1b6,https://jobsearchmalawi.com/job/open-eye-private-schools-machinjiri-blantyre-full-time-primary-school-teachers-2-positions/,Primary School Teachers (2 Positions),Open Eye Private Schools,posted,2026-10-20T13:31:51.812695,277,JobSearchMalawi
+9b7dd90cf6a9b839,https://jobsearchmalawi.com/job/security-guard/,Security Guard,Lilongwe Water Board,posted,2026-10-20T13:32:00.414502,279,JobSearchMalawi
+93018d4292a6899d,https://jobsearchmalawi.com/job/assistant-plant-operator/,Assistant Plant Operator,Lilongwe Water Board,posted,2026-10-20T13:32:09.332535,281,JobSearchMalawi
+396395804c7aa86b,https://jobsearchmalawi.com/job/motor-vehicle-driver/,Motor Vehicle Driver,Lilongwe Water Board,posted,2026-10-20T13:32:17.465507,283,JobSearchMalawi
+f5f59c1966abab2f,https://jobsearchmalawi.com/job/duplicating-machine-operator/,Duplicating Machine Operator,Lilongwe Water Board,posted,2026-10-20T13:32:26.078405,285,JobSearchMalawi
+041c62d7458e2211,https://jobsearchmalawi.com/job/laboratory-attendant/,Laboratory Attendant,Lilongwe Water Board,posted,2026-10-20T13:32:35.869129,287,JobSearchMalawi
+4ff24e4f1b05ea9b,https://jobsearchmalawi.com/job/distribution-and-maintenance-assistant-plumber/,Distribution and Maintenance Assistant (Plumber),Lilongwe Water Board,posted,2026-10-20T13:32:44.379441,289,JobSearchMalawi
+8986ff35812d0bde,https://jobsearchmalawi.com/job/electrician-2/,Electrician,Lilongwe Water Board,posted,2026-10-20T13:32:52.438833,291,JobSearchMalawi
+8e7efd8bdd8286e3,https://jobsearchmalawi.com/job/billing-assistant/,Billing Assistant,Lilongwe Water Board,posted,2026-10-20T13:33:00.908746,293,JobSearchMalawi
+b01bc8370ab586ba,https://jobsearchmalawi.com/job/customer-care-assistant/,Customer Care Assistant,Lilongwe Water Board,posted,2026-10-20T13:33:10.170493,295,JobSearchMalawi
+3dbe9d69c681f78f,https://jobsearchmalawi.com/job/procurement-assistant/,Procurement Assistant,Lilongwe Water Board,posted,2026-10-20T13:33:18.972235,297,JobSearchMalawi
+38db4da0fa84d3b2,https://jobsearchmalawi.com/job/plant-operator/,Plant Operator,Lilongwe Water Board,posted,2026-10-20T13:33:27.033710,299,JobSearchMalawi
+71d9ba96222467b2,https://jobsearchmalawi.com/job/assistant-human-resources-management-officer/,Assistant Human Resources Management Officer,Lilongwe Water Board,posted,2026-10-20T13:33:35.004284,301,JobSearchMalawi
+bef89a2381a67284,https://jobsearchmalawi.com/job/assistant-procurement-disposal-officer/,Assistant Procurement & Disposal Officer,Lilongwe Water Board,posted,2026-10-20T13:33:43.155649,303,JobSearchMalawi
+8743e82a9e849482,https://jobsearchmalawi.com/job/network-engineer/,Network Engineer,Lilongwe Water Board,posted,2026-10-20T13:33:51.260843,305,JobSearchMalawi
+9f048a4f5c096b05,https://jobsearchmalawi.com/job/information-technology-officer-systems-administrator/,Information Technology Officer (Systems Administrator),Lilongwe Water Board,posted,2026-10-20T13:33:59.730864,307,JobSearchMalawi
+e981597e0bf98b8c,https://jobsearchmalawi.com/job/senior-internal-auditor/,Senior Internal Auditor,Lilongwe Water Board,posted,2026-10-20T13:34:10.719060,309,JobSearchMalawi
+1328fca0af74fae2,https://jobsearchmalawi.com/job/water-quality-and-environmental-manager/,Water Quality and Environmental Manager,Lilongwe Water Board,posted,2026-10-20T13:34:19.062714,311,JobSearchMalawi
+2c40c57cac8550a1,https://jobsearchmalawi.com/job/sewerage-attendants/,Sewerage Attendants,Lilongwe Water Board,posted,2026-10-20T13:34:27.693734,313,JobSearchMalawi
+2785d19dea185e35,https://jobsearchmalawi.com/job/loans-and-grants-disbursement-manager/,Loans and Grants Disbursement Manager,Higher Education Students Loans and Grants Board (HESLGB),posted,2026-10-20T13:34:37.887285,315,JobSearchMalawi
+e09768f79d42afdf,https://jobsearchmalawi.com/job/ministry-resource-mobilization-officer/,Ministry Resource Mobilization Officer,Chief's Ministry,posted,2026-10-20T13:34:49.608383,317,JobSearchMalawi
+9affa5fe1e19c830,https://jobsearchmalawi.com/job/third-party-monitoring-experts-for-disaster-response-audits-in-eastern-and-southern-africa/,Third-Party Monitoring Experts for Disaster Response Audits in Eastern and Southern Africa,Development Expertise Lab (DEL),posted,2026-10-20T13:35:01.133495,319,JobSearchMalawi
+74d23ad61e67038b,https://jobsearchmalawi.com/job/human-resources-officer-dwangwa-project/,Human Resources Officer (DWANGWA PROJECT),GardaWorld,posted,2026-10-20T13:35:12.002547,321,JobSearchMalawi
+dc31ddd31d7a9af2,https://jobsearchmalawi.com/job/accounts-intern/,Accounts Intern,Sustainable Fashion Women Empowerment,posted,2026-10-20T13:35:23.654479,323,JobSearchMalawi
+f3d263b5f301f51c,https://jobsearchmalawi.com/job/business-development-intern/,Business Development Intern,Sustainable Fashion Women Empowerment,posted,2026-10-20T13:35:33.611901,325,JobSearchMalawi
+6df4b7f177bf12e0,https://jobsearchmalawi.com/job/chief-security-officer/,Chief Security Officer,Speedy's Food Industries Ltd,posted,2026-10-20T13:35:43.745317,327,JobSearchMalawi
+f5144492a9ee0a76,https://jobsearchmalawi.com/job/administration-manager/,Administration Manager,Speedy's Food Industries Ltd,posted,2026-10-20T13:35:52.501791,329,JobSearchMalawi
+99faa79361f2488d,https://jobsearchmalawi.com/job/human-resource-manager/,Human Resource Manager,Speedy's Food Industries Ltd,posted,2026-10-20T13:36:02.669860,331,JobSearchMalawi
+faa437f20bbc31e1,https://jobsearchmalawi.com/job/media-production-officer-country-media-person/,Media Production Officer (Country Media Person),Muslim Hands Malawi,posted,2026-10-20T13:36:18.925676,333,JobSearchMalawi
+715199e8752cd07c,https://jobsearchmalawi.com/job/driver-4/,Driver,"Clinton Health Access Initiative, Inc.",posted,2026-10-20T13:36:30.680093,335,JobSearchMalawi
+d956bdb95180a1d7,https://jobsearchmalawi.com/job/malawi-case-investigation-senior-coordinator/,Malawi Case Investigation Senior Coordinator,One Acre Fund,posted,2026-10-20T13:36:40.498609,337,JobSearchMalawi
+fedae32eea23d140,https://jobsearchmalawi.com/job/head-of-procurement-and-disposal/,Head of Procurement and Disposal,National AIDS Commission (NAC),posted,2026-10-20T13:36:49.705138,339,JobSearchMalawi
+2678eb5533fe4f8c,https://jobsearchmalawi.com/job/head-of-administration-and-human-resource/,Head of Administration and Human Resource,National AIDS Commission (NAC) ·,posted,2026-10-20T13:36:57.772045,341,JobSearchMalawi
+6a19718248f6633c,https://jobsearchmalawi.com/job/coordination-and-capacity-building-officer/,Coordination and Capacity Building Officer,National AIDS Commission (NAC),posted,2026-10-20T13:37:06.389637,343,JobSearchMalawi
+6954cbd6843c5fbd,https://jobsearchmalawi.com/job/administrative-assistant/,Administrative Assistant,National AIDS Commission (NAC),posted,2026-10-20T13:37:14.580798,345,JobSearchMalawi
+12c4b9532d15ffb2,https://jobsearchmalawi.com/job/driver-x3/,Driver (x3),National AIDS Commission (NAC),posted,2026-10-20T13:37:22.998864,347,JobSearchMalawi
+a251b2ac4c78cc94,https://jobsearchmalawi.com/job/office-assistant/,Office Assistant,National AIDS Commission (NAC),posted,2026-10-20T13:37:31.249112,349,JobSearchMalawi
+68c1a4347e174e3f,https://jobsearchmalawi.com/job/deal-origination-investment-specialist/,Deal Origination & Investment Specialist,Export Development Fund (EDF) Limited,posted,2026-10-20T13:37:40.008455,351,JobSearchMalawi
+72bcf1f1e8f61e4d,https://jobsearchmalawi.com/job/programme-officer-investment-facilitation-and-infrastructure/,Programme Officer – Investment Facilitation and Infrastructure,EU Delegation to Malawi,posted,2026-10-20T13:37:50.602686,353,JobSearchMalawi
+8b0b8b861de037de,https://jobsearchmalawi.com/job/head-of-corporate-institutional-banking/,Head of Corporate & Institutional Banking,First Capital Bank,posted,2026-10-20T13:37:59.537086,355,JobSearchMalawi
+bbfd26d738c13e5d,https://jobsearchmalawi.com/job/maternal-and-child-health-nurse/,Maternal and Child Health Nurse,Partners In Health,posted,2026-10-20T13:38:09.349985,357,JobSearchMalawi
+fd5239efe425582b,https://jobsearchmalawi.com/job/senior-project-procurement-specialist/,Senior Project Procurement Specialist,Ministry of Health and Sanitation,posted,2026-10-20T13:38:20.142362,359,JobSearchMalawi
+0957e9697dbcd883,https://jobsearchmalawi.com/job/justice-and-peace-desk-intern/,Justice and Peace Desk Intern,Catholic Commission for Justice and Peace (CCJP),posted,2026-10-20T13:38:32.179034,361,JobSearchMalawi
+944c8615893f6c71,https://jobsearchmalawi.com/job/trident-security-company-limited-blantyre-malawi-full-time-sales-manager/,Sales Manager,Website Trident Security Company Limited,posted,2026-10-20T13:38:42.145637,363,JobSearchMalawi
+24199e14e0d3e4ce,https://jobsearchmalawi.com/job/human-resources-and-administration-officer/,Human Resources and Administration Officer,Sucoma Sacco,posted,2026-10-20T13:38:51.600236,365,JobSearchMalawi
+169b452e0d9e4d88,https://jobsearchmalawi.com/job/finance-intern-2/,Finance Intern,Catholic Relief Services,posted,2026-10-20T13:39:04.036026,367,JobSearchMalawi
+871d3ec86a24477c,https://jobsearchmalawi.com/job/deputy-finance-manager-field-only/,Deputy Finance Manager – (Field Only),Catholic Relief Services,posted,2026-10-20T13:39:14.018123,369,JobSearchMalawi
+c67bc07bf92de48e,https://jobsearchmalawi.com/job/anesthesia-clinical-officers-x2/,Anesthesia Clinical Officers (x2),Baylor Foundation Malawi (BFM),posted,2026-10-20T13:39:23.075350,371,JobSearchMalawi
+df1a65a2960bb519,https://jobsearchmalawi.com/job/medical-officers-x3/,Medical Officers (x3),Baylor Foundation Malawi (BFM),posted,2026-10-20T13:39:31.646600,373,JobSearchMalawi
+ef3dd80b6567438b,https://jobsearchmalawi.com/job/bartender-receptionist/,Bartender & Receptionist,Private,posted,2026-10-20T13:39:42.302532,375,JobSearchMalawi
+b91f9df309590404,https://jobsearchmalawi.com/job/purchase-clerk/,Purchase Clerk,Shayona Cement Corporation,posted,2026-10-20T13:39:51.757978,377,JobSearchMalawi
+a1759e9788782989,https://jobsearchmalawi.com/job/private-chef/,Private Chef,Bluestar Tourism and Hospitality,posted,2026-10-20T13:40:00.131600,379,JobSearchMalawi
+7a8c76168f47ced0,https://jobsearchmalawi.com/job/multiple-positions-7/,Multiple Positions,Bluestar Tourism and Hospitality,posted,2026-10-20T13:40:09.805234,381,JobSearchMalawi
+29cfcce46eb045b9,https://jobsearchmalawi.com/job/country-lead-market-insights/,Country Lead: Market Insights,Coca-Cola Beverages Africa,posted,2026-10-20T13:40:21.536978,383,JobSearchMalawi
+f69d586a872bd33b,https://jobsearchmalawi.com/job/esg-officer/,ESG Officer,Malawi Agricultural and Industrial Investment Corporation (MAIIC) Plc,posted,2026-10-20T13:40:34.160382,385,JobSearchMalawi
+b35c3fa05f68e0d0,https://jobsearchmalawi.com/job/bodyguard/,BodyGuard,US Embassy,posted,2026-10-20T13:40:45.941085,387,JobSearchMalawi
+b1f9b3b142d4064f,https://jobsearchmalawi.com/job/temporary-finance-officer/,Temporary Finance Officer,Nurses and Midwives Council of Malawi (NMCM),posted,2026-10-20T13:41:00.288858,389,JobSearchMalawi
+b55c77a564fcc8e8,https://jobsearchmalawi.com/job/director-of-professional-practice-and-conduct/,Director of Professional Practice and Conduct,Nurses and Midwives Council of Malawi (NMCM),posted,2026-10-20T13:41:10.696954,391,JobSearchMalawi
+2d1e882fac0db838,https://jobsearchmalawi.com/job/director-of-education-and-training/,Director of Education and Training,Nurses and Midwives Council of Malawi (NMCM),posted,2026-10-20T13:41:27.440433,393,JobSearchMalawi
+7781b56b840c0fda,https://jobsearchmalawi.com/job/communications-officer/,Communications Officer,Life Ministry Malawi,posted,2026-10-20T13:41:41.450703,395,JobSearchMalawi
+4b9199df7f0166fc,https://jobsearchmalawi.com/job/government-relations-lead/,Government Relations Lead,BURN Manufacturing,posted,2026-10-20T13:41:51.582748,397,JobSearchMalawi
+8c2ddf4d451ce8db,https://jobsearchmalawi.com/job/protection-project-officer/,Protection Project Officer,IsraAID,posted,2026-10-20T13:42:05.906323,399,JobSearchMalawi
+26604422c84db369,https://jobsearchmalawi.com/job/root-rise-agribusiness-mzuzu-full-time-sales-and-marketing-intern/,Sales and Marketing Intern,Root-Rise Agribusiness,posted,2026-10-20T13:42:15.809699,401,JobSearchMalawi
+45d4b660c017ea9c,https://jobsearchmalawi.com/job/customer-care-clerk/,Customer Care Clerk,Combine Cargo Malawi Ltd,posted,2026-10-20T13:42:24.384136,403,JobSearchMalawi
+e1f5c80681465ccf,https://jobsearchmalawi.com/job/cashier-4/,Cashier,Combine Cargo Malawi Ltd,posted,2026-10-20T13:42:32.146542,405,JobSearchMalawi
+a14b73d8b9e8b45e,https://jobsearchmalawi.com/job/multiple-positions-8/,Multiple Positions,"St. Theresa Health Centre,",posted,2026-10-20T13:42:34.774292,381,JobSearchMalawi
+c39a952b4db5d463,https://jobsearchmalawi.com/job/translation-and-localization-lead/,Translation and Localization Lead,Edunite2Serve,posted,2026-10-20T13:42:44.636929,407,JobSearchMalawi
+e4b57574cc4caec5,https://jobsearchmalawi.com/job/cleaner/,Cleaner,Lilongwe Wildlife Trust (LWT),posted,2026-10-20T13:42:54.400161,409,JobSearchMalawi
+8ee0d8655cd9c2dc,https://jobsearchmalawi.com/job/photographer/,Photographer,Lawrify Visuals,posted,2026-10-20T13:43:03.335941,411,JobSearchMalawi
+9d038dfddff52867,https://jobsearchmalawi.com/job/audit-associates/,Audit Associates,BDO Malawi,posted,2026-10-20T13:43:11.888675,413,JobSearchMalawi
+42a04fd795f98c1f,https://jobsearchmalawi.com/job/marketing-client-liaison-officer/,Marketing & Client Liaison Officer,BDO Malawi,posted,2026-10-20T13:43:19.824848,415,JobSearchMalawi
+64ff6a4bc01e07df,https://jobsearchmalawi.com/job/general-fitter/,General Fitter,Malawi Assemblies Of God University,posted,2026-10-20T13:43:29.001110,417,JobSearchMalawi
+8864e66dc5673d42,https://jobsearchmalawi.com/job/e-nyasa-solar-and-gas-ltd-blantyre-and-lilongwe-only-part-time-temporary-data-collectors/,Data Collectors,E-Nyasa Solar and Gas Ltd,posted,2026-10-20T13:43:38.408008,419,JobSearchMalawi
+09d9dc89ccbcf565,https://jobsearchmalawi.com/job/courier-08/,Courier- 08,FedEx,posted,2026-10-20T13:43:48.045740,421,JobSearchMalawi
+0d9d35180473a4a2,https://jobsearchmalawi.com/job/global-social-and-behaviour-change-sbc-manager/,Global Social and Behaviour Change (SBC) Manager,MSI Reproductive Choices,posted,2026-10-20T13:43:58.587054,423,JobSearchMalawi
+a122bc94da52d065,https://jobsearchmalawi.com/job/agricultural-intern/,Agricultural Intern,ROOT-RISE Agribusiness,posted,2026-10-20T13:44:09.949557,425,JobSearchMalawi
+1914344602592d98,https://jobsearchmalawi.com/job/procurement-and-logistics-officer/,Procurement and Logistics Officer,Pact,posted,2026-10-20T13:44:20.171186,427,JobSearchMalawi
+675563bd80137b35,https://jobsearchmalawi.com/job/head-of-branch-experience/,Head of Branch Experience,First Capital Bank,posted,2026-10-20T13:44:30.451524,429,JobSearchMalawi
+3bbfb0ce559e65f3,https://jobsearchmalawi.com/job/harvestglow-lilongwe-part-time-invitation-to-tender-quickbooks-accounting-system-implementation-and-training-services/,QuickBooks Accounting System Implementation and Training Services,Website HarvestGlow,posted,2026-10-20T13:44:39.465205,431,JobSearchMalawi
+c6fe2531947a3ed1,https://jobsearchmalawi.com/job/community-manager-2/,Community Manager,Astria Learning,posted,2026-10-20T13:44:48.608088,433,JobSearchMalawi
+66968a21e53e0686,https://jobsearchmalawi.com/job/hualong-construction-private-limited-mzuzu-malawi-full-time-civil-engineer/,Civil Engineer,Website Hualong Construction Private Limited,posted,2026-10-20T13:45:01.566746,435,JobSearchMalawi
+23a41f0cb5db3286,https://jobsearchmalawi.com/job/secondary-school-teachers-2/,Secondary School Teachers,Rays of Hope Ministries,posted,2026-10-20T13:45:12.897943,437,JobSearchMalawi
+7e3e761161e5fc53,https://jobsearchmalawi.com/job/care-manager/,Care Manager,Stephanos Foundation,posted,2026-10-20T13:45:23.670697,439,JobSearchMalawi
+3da6d3f23668cfa9,https://jobsearchmalawi.com/job/principal-internal-auditor/,Principal Internal Auditor,Local Government Service Commission,posted,2026-10-20T13:45:34.429947,441,JobSearchMalawi
+f36ffd093ecd874c,https://jobsearchmalawi.com/job/principal-procurement-officer/,Principal Procurement Officer,Local Government Service Commission,posted,2026-10-20T13:45:46.123671,443,JobSearchMalawi
+c7f3c225c64f39cc,https://jobsearchmalawi.com/job/principal-planning-officer/,Principal Planning Officer,Local Government Service Commission,posted,2026-10-20T13:45:56.642448,445,JobSearchMalawi
+852400ce0540b9f3,https://jobsearchmalawi.com/job/chief-internal-auditor/,Chief Internal Auditor,Local Government Service Commission,posted,2026-10-20T13:46:07.194049,447,JobSearchMalawi
+03ad729cfd5e5de1,https://jobsearchmalawi.com/job/chief-procurement-officer/,Chief Procurement Officer,Local Government Service Commission,posted,2026-10-20T13:46:16.739167,449,JobSearchMalawi
+5abc14f95b92a331,https://jobsearchmalawi.com/job/chief-planning-officer/,Chief Planning Officer,Local Government Service Commission,posted,2026-10-20T13:46:32.947179,451,JobSearchMalawi
+8fb66698b7420690,https://jobsearchmalawi.com/job/chief-administrative-officer/,Chief Administrative Officer,Local Government Service Commission,posted,2026-10-20T13:46:41.547471,453,JobSearchMalawi
+612cfa31c7316d77,https://jobsearchmalawi.com/job/chief-environmental-affairs-officer/,Chief Environmental Affairs Officer,Local Government Service Commission,posted,2026-10-20T13:46:51.039311,455,JobSearchMalawi
+45546fb368582d04,https://jobsearchmalawi.com/job/chief-human-resource-management-officer/,Chief Human Resource Management Officer,Local Government Service Commission,posted,2026-10-20T13:47:00.691192,457,JobSearchMalawi
+9665b395ab7bea82,https://jobsearchmalawi.com/job/chief-accountant/,Chief Accountant,Local Government Service Commission,posted,2026-10-20T13:47:10.601314,459,JobSearchMalawi
+3f38aa794b2d23cd,https://jobsearchmalawi.com/job/yangazu-incorporated-limited-freelance-part-time-temporary-credihub-sales-representative/,Credihub Sales Representative,Website Yangazu Incorporated Limited,posted,2026-10-20T13:47:23.641658,461,JobSearchMalawi
+9eea6224864e904f,https://jobsearchmalawi.com/job/cashier-5/,Cashier,Maranet Trading Company,posted,2026-10-20T13:47:27.360545,405,JobSearchMalawi
+c62a90efda7631bd,https://jobsearchmalawi.com/job/marketing-pr-communications-director/,"Marketing, PR & Communications Director",Vision Pageantry Malawi,posted,2026-10-20T13:47:38.261193,463,JobSearchMalawi
+da376d5014f59b6d,https://jobsearchmalawi.com/job/social-protection-specialist/,Social Protection Specialist,Diocese of Mangochi,posted,2026-10-20T13:47:49.863445,465,JobSearchMalawi
+a57444438f47d7af,https://jobsearchmalawi.com/job/field-officer/,Field Officer,Diocese of Mangochi,posted,2026-10-20T13:47:52.624398,190,JobSearchMalawi
+8633f127b4991a35,https://jobsearchmalawi.com/job/accountant-administrator/,Accountant & Administrator,Drone Link,posted,2026-10-20T13:48:07.432938,467,JobSearchMalawi
+9639bae29266eea4,https://jobsearchmalawi.com/job/gender-expert/,Gender Expert,AFIDEP,posted,2026-10-20T13:48:21.154334,469,JobSearchMalawi
+b1a97ad735b1c3cc,https://jobsearchmalawi.com/job/ict-officer-odel/,ICT Officer (ODeL),Montessori College of Education,posted,2026-10-20T13:48:31.118124,471,JobSearchMalawi
+b634259a8045fcea,https://jobsearchmalawi.com/job/dean-of-faculty/,Dean of Faculty,Montessori College of Education,posted,2026-10-20T13:48:39.574377,473,JobSearchMalawi
+e6f11563fcac0b46,https://jobsearchmalawi.com/job/librarian/,Librarian,Montessori College of Education,posted,2026-10-20T13:48:49.646889,475,JobSearchMalawi
+94c8f71ae3b9c943,https://jobsearchmalawi.com/job/lecturers-early-childhood-education/,Lecturers – Early Childhood Education,Montessori College of Education,posted,2026-10-20T13:48:57.732830,477,JobSearchMalawi
+678276a9b43cf87e,https://jobsearchmalawi.com/job/acf-namadzi-malawi-full-time-coffee-manager-commercial-agricultural-business/,Coffee Manager — Commercial Agricultural Business,ACF,posted,2026-10-20T13:49:09.247500,479,JobSearchMalawi
+d7b64995e6449bed,https://jobsearchmalawi.com/job/acf-blantyre-namadzi-namwera-full-time-diesel-mechanic-commercial-agricultural-business/,Diesel Mechanic,ACF,posted,2026-10-20T13:49:18.429166,481,JobSearchMalawi
+deb16b6ac70b6f41,https://jobsearchmalawi.com/job/acf-blantyre-with-some-travel-in-southern-malawi-required-full-time-accountant-commercial-agricultural-business/,Accountant,ACF,posted,2026-10-20T13:49:27.621768,483,JobSearchMalawi
+65c5a026cfbc5a30,https://jobsearchmalawi.com/job/acf-namadzi-and-namwera-full-time-veterinarian-commercial-agricultural-business/,Veterinarian,ACF,posted,2026-10-20T13:49:36.664432,485,JobSearchMalawi
+a2ef031c919c63df,https://jobsearchmalawi.com/job/acf-blantyre-with-some-travel-in-southern-malawi-required-full-time-personal-assistant-commercial-agricultural-business/,Personal Assistant,ACF,posted,2026-10-20T13:49:44.977957,487,JobSearchMalawi
+dfb4814dcfb8ff8f,https://jobsearchmalawi.com/job/harvestglow-lilongwe-temporary-volunteer/,Volunteers,Website HarvestGlow,posted,2026-10-20T13:49:53.196223,489,JobSearchMalawi
+f2ff5cb87593adb6,https://jobsearchmalawi.com/job/associate-director-financial-planning-and-analysis-fpa/,Associate Director – Financial Planning and Analysis (FP&A),World Vision,posted,2026-10-20T13:50:06.654014,491,JobSearchMalawi
+e21c6c4bff2b8d5f,https://jobsearchmalawi.com/job/deputy-head-teacher/,Deputy Head Teacher,Mount View International Primary School and Early Years Centre,posted,2026-10-20T13:50:18.381681,493,JobSearchMalawi
+3d1a629ea1f11de5,https://jobsearchmalawi.com/job/marketing-coordinator/,Marketing Coordinator,Malawi – Liverpool – Wellcome - Programme (MLW),posted,2026-10-20T13:50:31.712871,495,JobSearchMalawi
+7872a2bbc78849f7,https://jobsearchmalawi.com/job/mixer-truck-drivers/,Mixer Truck Drivers,Instacrete,posted,2026-10-20T13:50:41.982840,497,JobSearchMalawi
+f7d1edde709c486f,https://jobsearchmalawi.com/job/harvestglow-full-time-field-officer/,Field Officer,Website HarvestGlow,posted,2026-10-20T13:50:44.894119,190,JobSearchMalawi
+c61455928079392e,https://jobsearchmalawi.com/job/parts-stores-representative-intern/,Parts Stores Representative Intern,Farming and Engineering Services Limited (FES),posted,2026-10-20T13:50:55.086710,499,JobSearchMalawi
+ec4d304683f45d9c,https://jobsearchmalawi.com/job/temporary-enumerators/,Temporary Enumerators,Invest in Knowledge Initiative (IKI,posted,2026-10-20T13:51:06.922398,501,JobSearchMalawi
+6c5d02ba5876ae66,https://jobsearchmalawi.com/job/informatics-intern/,Informatics Intern,Global Health Informatics Institute (GHII),posted,2026-10-20T13:51:19.414705,503,JobSearchMalawi
+45da46e729ff255a,https://jobsearchmalawi.com/job/fleet-management-officer/,Fleet Management Officer,CRC Recruiting,posted,2026-10-20T13:51:30.867047,505,JobSearchMalawi
+b63485614a7b725e,https://jobsearchmalawi.com/job/social-worker/,Social Worker,Life Awakening Ministries,posted,2026-10-20T13:51:47.768261,507,JobSearchMalawi
+508d780fbe84530f,https://jobsearchmalawi.com/job/product-manager-tours-and-packages/,Product Manager – Tours and Packages,Kwenda,posted,2026-10-20T13:51:58.751272,509,JobSearchMalawi
+c36cb3c6836f06a0,https://jobsearchmalawi.com/job/director-of-engineering/,Director of Engineering,Malawi Broadcasting Corporation (MBC),posted,2026-10-20T13:52:09.629901,511,JobSearchMalawi
+a3a8a9e920869515,https://jobsearchmalawi.com/job/insurance-officer/,Insurance Officer,Malawi Revenue Authority (MRA),posted,2026-10-20T13:52:22.101386,513,JobSearchMalawi
+5db03258e0cd379e,https://jobsearchmalawi.com/job/head-of-growth/,Head of Growth,Vwaza,posted,2026-10-20T13:52:34.217982,515,JobSearchMalawi
+783e54ecfaaa577f,https://jobsearchmalawi.com/job/commercial-director-2/,Commercial Director,Vwaza,posted,2026-10-20T13:52:44.437033,517,JobSearchMalawi
+acb69c2d6a665e20,https://jobsearchmalawi.com/job/driver-5/,Driver,Evidence Action,posted,2026-10-20T13:52:47.894753,335,JobSearchMalawi
+81d4037dfffe3a27,https://jobsearchmalawi.com/job/mbulo-enterprises-ltd-gateway-mall-lilongwe-full-time-filling-station-attendant/,Filling Station Attendant,Mbulo Enterprises Ltd,posted,2026-10-20T13:52:57.978873,519,JobSearchMalawi
+49e65413f0d9ff9b,https://careersmw.com/job/216999/,Projects Quantity Surveyor / Site Agent,Afribuild Construction,posted,2026-10-20T13:53:13.063732,521,CareersMW
+8d465ff483661b7e,https://careersmw.com/job/216990/,Various Positions,Concern Worldwide,posted,2026-10-20T13:53:26.433922,523,CareersMW
+c3d95736a67697d3,https://careersmw.com/job/216958/,Insurance Officer,Malawi Revenue Authority (MRA),posted,2026-10-20T13:53:29.433902,513,CareersMW
+3d45748f7ed6d202,https://careersmw.com/job/216959/,Commissioned Financial Advisor,Old Mutual,posted,2026-10-20T13:53:32.450351,241,CareersMW
+eb7cf11d2204a28f,https://careersmw.com/job/216976/,Marketing Coordinator,Malawi – Liverpool – Wellcome - Programme (MLW),posted,2026-10-20T13:53:35.002264,495,CareersMW
+fc4ba401d52b36e6,https://careersmw.com/job/216968/,Director of Engineering,Malawi Broadcasting Corporation (MBC),posted,2026-10-20T13:53:37.857550,511,CareersMW
+3e71c032ee8ac92d,https://careersmw.com/job/216971/,Machine Sales Executive,Gestetner Limited,posted,2026-10-20T13:53:48.486223,524,CareersMW
+4ab2c47de08d38aa,https://careersmw.com/job/216955/,Quantity Surveyor,Unik Construction Engineering (M) Ltd,posted,2026-10-20T13:54:00.604683,526,CareersMW
+7d1b0df8777b72c3,https://careersmw.com/job/216941/,Associate Director – Financial Planning and Analysis (FP&A),World Vision International,posted,2026-10-20T13:54:03.699025,491,CareersMW
+87ed4bf3f28e20c7,https://careersmw.com/job/216925/,Accounts Officer,Malawi Epidemiology and Intervention Research Unit (MEIRU),posted,2026-10-20T13:54:16.187940,528,CareersMW
+eb847df31662db01,https://careersmw.com/job/216940/,Driver,EU Delegation to Malawi,posted,2026-10-20T13:54:19.205994,335,CareersMW
+87f97d6d3bdb547f,https://careersmw.com/job/216938/,Fleet Management Officer,Corporate Recruitment and Cleaning Services,posted,2026-10-20T13:54:22.050141,505,CareersMW
+9698bad99b4c9961,https://careersmw.com/job/216907/,Auto Electricians,Mike Appel and Gatto Limited,posted,2026-10-20T13:54:34.721559,530,CareersMW
+1bed6f0e71a40201,https://careersmw.com/job/216908/,Motorcycle and Small Engine Technicians,Mike Appel and Gatto Limited,posted,2026-10-20T13:54:44.350407,532,CareersMW
+43c3d33593141e07,https://careersmw.com/job/216909/,Sales Executives,Mike Appel and Gatto Limited,posted,2026-10-20T13:54:53.875889,534,CareersMW
+a682818992a21deb,https://careersmw.com/job/216910/,Service Advisors,Mike Appel and Gatto Limited,posted,2026-10-20T13:55:03.831307,536,CareersMW
+195122fed704d937,https://careersmw.com/job/216894/,Motor Vehicle Mechanics,Mike Appel and Gatto Limited,posted,2026-10-20T13:55:14.878768,538,CareersMW
+d1b144dd825a757c,https://careersmw.com/job/216892/,Production Manager,Polyone Limited,posted,2026-10-20T13:55:24.956155,539,CareersMW
+10351409d4b7de1b,https://careersmw.com/job/216893/,Quality Control Manager,Crown Pharmaceuticals and Research Laboratories Limited,posted,2026-10-20T13:55:35.186017,540,CareersMW
+b998827262f81a46,https://careersmw.com/job/216867/,Primary School Teacher (2),Kawale SDA Private Primary School,posted,2026-10-20T13:55:48.011895,542,CareersMW
+c967e0e16296691f,https://careersmw.com/job/216835/,Field Facilitators (3 Positions),Floresta in Malawi,posted,2026-10-20T13:56:01.020114,544,CareersMW
+fd7308f69fa26ea2,https://careersmw.com/job/216834/,National Director,Floresta in Malawi,posted,2026-10-20T13:56:39.006559,546,CareersMW
+c437c714125bcfbe,https://careersmw.com/job/216798/,Branch Accountant,JCDecaux Africa,posted,2026-10-20T13:56:48.544561,185,CareersMW
+89873313c41b9b1c,https://careersmw.com/job/216793/,Global Social and Behaviour Change Manager,MSI Reproductive Choices,posted,2026-10-20T13:57:00.132791,548,CareersMW
+1ee7834790e89e53,https://careersmw.com/job/216840/,Principal Internal Auditor (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:57:11.786217,550,CareersMW
+fb33054696fa90fc,https://careersmw.com/job/216839/,Principal Procurement Officer (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:57:22.437809,552,CareersMW
+c7fcee0acd499fd4,https://careersmw.com/job/216838/,Principal Planning Officer (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:57:32.571852,554,CareersMW
+cfe063a975802153,https://careersmw.com/job/216842/,Chief Internal Auditor (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:57:42.319199,556,CareersMW
+83a848736346f294,https://careersmw.com/job/216841/,Chief Procurement Officer (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:57:51.935229,558,CareersMW
+38476b9c4170f235,https://careersmw.com/job/216843/,Chief Planning Officer (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:58:02.934852,560,CareersMW
+62158ce5281c1952,https://careersmw.com/job/216846/,Chief Administrative Officer (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:58:40.502739,562,CareersMW
+b6587934ca887f38,https://careersmw.com/job/216844/,Chief Environmental Affairs Officer (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:58:49.688866,564,CareersMW
+415e8e9672d1f5cb,https://careersmw.com/job/216845/,Chief Human Resource Management Officer (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:58:59.088659,566,CareersMW
+fefaa024a73d7a8c,https://careersmw.com/job/216829/,Chief Accountant (Serving Officers Only),Local Government Service Commission,posted,2026-10-20T13:59:09.364556,568,CareersMW
+723599cafec3f07d,https://careersmw.com/job/216785/,Cashier,Maranet Trading Company,posted,2026-10-20T13:59:40.023632,405,CareersMW
+13f90d6e994a9fc3,https://careersmw.com/job/216784/,Independent Sales and Marketing Personnel,Wealthnet Finance PLC,posted,2026-10-20T13:59:50.911992,570,CareersMW
+a3c91e2b01565a8d,https://careersmw.com/job/216777/,ART Clerk,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:00:04.468014,572,CareersMW
+bea6980920a04930,https://careersmw.com/job/216778/,HR Clerk,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:00:17.403929,574,CareersMW
+cab7e699746c217e,https://careersmw.com/job/216779/,HTC Counsellor,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:00:27.166165,576,CareersMW
+a5c6166ebc0cb5bc,https://careersmw.com/job/216756/,Anaesthetist,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:00:37.026439,578,CareersMW
+d7081e5988e68078,https://careersmw.com/job/216751/,Office Van Driver /Delivery Driver,Savenda International Limited,posted,2026-10-20T14:00:50.280403,580,CareersMW
+0b002e1890586ff4,https://careersmw.com/job/216750/,Office Driver & General Office Assistant,Savenda International Limited,posted,2026-10-20T14:01:01.203562,582,CareersMW
+55c4a1b7a4e94458,https://careersmw.com/job/216722/,Procurement and Logistics Officer,Pact,posted,2026-10-20T14:01:04.367709,427,CareersMW
+1ddb7f5369ab93b6,https://careersmw.com/job/216723/,Courier,Federal Express Corporation (FedEx),posted,2026-10-20T14:01:18.219332,584,CareersMW
+5d35a37994572e36,https://careersmw.com/job/216712/,Care Manager,Stephanos Foundation,posted,2026-10-20T14:01:22.889609,439,CareersMW
+08a49d7511024041,https://careersmw.com/job/216568/,Security Officer,Careers Consulting Limited,posted,2026-10-20T14:01:36.350270,586,CareersMW
+38dc21a8bab5b426,https://careersmw.com/job/216699/,Artisan Fitter,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:01:47.247838,588,CareersMW
+c25bf4686daab28a,https://careersmw.com/job/216695/,Protection Project Officer,IsraAID,posted,2026-10-20T14:01:57.195035,399,CareersMW
+28b8753c0525f0aa,https://careersmw.com/job/216671/,ESG Officer,Malawi Agricultural and Industrial Investment Corporation (MAIIC) Plc,posted,2026-10-20T14:02:00.507610,385,CareersMW
+dd9d514efe94c521,https://careersmw.com/job/216645/,Country Lead: Market Insights,Coca-Cola Beverages Africa,posted,2026-10-20T14:02:04.131886,383,CareersMW
+3988ed616f32727c,https://careersmw.com/job/216644/,Government Relations Lead,BURN,posted,2026-10-20T14:02:07.151747,397,CareersMW
+a804d36b9be64182,https://careersmw.com/job/216674/,Temporary Finance Officer,Nurses and Midwives Council of Malawi (NMCM),posted,2026-10-20T14:02:10.319289,389,CareersMW
+1142b87ba8376946,https://careersmw.com/job/216678/,Director of Professional Practice and Conduct,Nurses and Midwives Council of Malawi (NMCM),posted,2026-10-20T14:02:13.550534,391,CareersMW
+85081397a981dea7,https://careersmw.com/job/216677/,Director of Education and Training,Nurses and Midwives Council of Malawi (NMCM),posted,2026-10-20T14:02:16.508863,393,CareersMW
+0d2220e86e997c0c,https://careersmw.com/job/216622/,Business Development Coordinator,Concern Worldwide,posted,2026-10-20T14:02:26.045310,590,CareersMW
+4152aabee165fc67,https://careersmw.com/job/216634/,Finance Intern,Catholic Relief Services (CRS) Malawi,posted,2026-10-20T14:02:29.001025,367,CareersMW
+930874d692bb3f7b,https://careersmw.com/job/216633/,Deputy Finance Manager,Catholic Relief Services (CRS) Malawi,posted,2026-10-20T14:02:39.424689,592,CareersMW
+7748ae087adf0528,https://careersmw.com/job/216629/,Health & Safety Officer,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:02:48.604292,594,CareersMW
+9f8c7eb49c2311f8,https://careersmw.com/job/216631/,HSE Compliance Officer,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:02:57.153198,596,CareersMW
+c9abf0c15bd131f1,https://careersmw.com/job/216624/,Medical Officers (3),Baylor Foundation Malawi (BFM),posted,2026-10-20T14:03:07.331795,598,CareersMW
+442666254311db43,https://careersmw.com/job/216625/,Anesthesia Clinical Officers (2),Baylor Foundation Malawi (BFM),posted,2026-10-20T14:03:16.702320,600,CareersMW
+2ee78bed7a8b2fc5,https://careersmw.com/job/216598/,Regional Sales Manager (3),Agventure Resources Limited,posted,2026-10-20T14:03:27.385055,602,CareersMW
+23400d124d2e87b4,https://careersmw.com/job/216601/,District Field Officer (5),Agventure Resources Limited,posted,2026-10-20T14:03:38.640518,604,CareersMW
+4e9bb9a7a1304b44,https://careersmw.com/job/216588/,Construction Coordinator – Quantity Surveying Focus,Let's Build Foundation,posted,2026-10-20T14:03:48.709002,606,CareersMW
+45fbf2863b14a615,https://careersmw.com/job/216551/,Senior Project Procurement Specialist,Ministry of Health and Sanitation,posted,2026-10-20T14:03:51.478270,359,CareersMW
+460d3225309d959c,https://careersmw.com/job/216544/,Programme Officer – Investment Facilitation and Infrastructure,EU Delegation to Malawi,posted,2026-10-20T14:03:53.967266,353,CareersMW
+554a5c804f01e10a,https://careersmw.com/job/216556/,Head of Corporate & Institutional Banking,First Capital Bank Malawi,posted,2026-10-20T14:03:56.795522,355,CareersMW
+2622d009536a4ace,https://careersmw.com/job/216557/,Call for Mental Health Volunteers,PHUKIRA Mental Health Organisation,posted,2026-10-20T14:04:14.082330,608,CareersMW
+2bff9cac63f13407,https://careersmw.com/job/216523/,Clinic Nurse,Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:04:24.410247,610,CareersMW
+de0956d90729f259,https://careersmw.com/job/216532/,Pharmacy Technician,Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:04:33.820381,612,CareersMW
+3ce6e83bdd5685c4,https://careersmw.com/job/216525/,Psychosocial Counsellor,Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:04:43.494154,614,CareersMW
+d68af8be084d18f5,https://careersmw.com/job/216528/,HIV Diagnostic Assistants,Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:04:53.510109,616,CareersMW
+73073e1760af869c,https://careersmw.com/job/216530/,Clinical Officer,Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:05:04.011193,618,CareersMW
+60881494708cbb75,https://careersmw.com/job/216439/,Head of Procurement and Disposal,National AIDS Commission (NAC),posted,2026-10-20T14:05:06.921040,339,CareersMW
+4335342eedc551ce,https://careersmw.com/job/216489/,Head of Administration and Human Resource,National AIDS Commission (NAC),posted,2026-10-20T14:05:10.044805,341,CareersMW
+26c34cafc6251ba2,https://careersmw.com/job/216491/,Coordination and Capacity Building Officer,National AIDS Commission (NAC),posted,2026-10-20T14:05:13.195647,343,CareersMW
+3b93b6ce4092acc8,https://careersmw.com/job/216493/,Administrative Assistant,National AIDS Commission (NAC),posted,2026-10-20T14:05:16.042171,345,CareersMW
+e95f43bc6474fc00,https://careersmw.com/job/216494/,Driver (3),National AIDS Commission (NAC),posted,2026-10-20T14:05:25.751832,620,CareersMW
+65e8c39ea0c2347f,https://careersmw.com/job/216497/,Office Assistant,National AIDS Commission (NAC),posted,2026-10-20T14:05:28.544442,349,CareersMW
+59b866138393919c,https://careersmw.com/job/216503/,Assistant Accountant,Choice Products Limited,posted,2026-10-20T14:05:38.230723,621,CareersMW
+74f1b02d4f711656,https://careersmw.com/job/216502/,Transport Officer,Choice Products Limited,posted,2026-10-20T14:05:46.812118,622,CareersMW
+5e1054119e179ca2,https://careersmw.com/job/216501/,General Fitter,Choice Products Limited,posted,2026-10-20T14:05:49.958344,417,CareersMW
+be5294f2550b5647,https://careersmw.com/job/216448/,Deal Origination & Investment Specialist,Export Development Fund (EDF) Limited,posted,2026-10-20T14:05:52.972488,351,CareersMW
+5fe19506c9a08100,https://careersmw.com/job/216437/,Legal Services Manager,ADMARC Limited,posted,2026-10-20T14:06:05.603875,624,CareersMW
+bbf9035d053d757b,https://careersmw.com/job/216422/,Head of Security,Kawandama Hills Plantation,posted,2026-10-20T14:06:16.402626,626,CareersMW
+0915775c35377bf3,https://careersmw.com/job/216443/,Truck Driver,Kawandama Hills Plantation,posted,2026-10-20T14:06:25.915592,628,CareersMW
+050f9a6a2dcc3426,https://careersmw.com/job/216440/,Auto Electrician,Kawandama Hills Plantation,posted,2026-10-20T14:07:03.845633,630,CareersMW
+ce8cbc0216674a74,https://careersmw.com/job/216405/,Artisan Boilermaker,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:07:19.867531,632,CareersMW
+5ac17e4f9f27111d,https://careersmw.com/job/216401/,Artisan Electrician,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:07:29.631877,634,CareersMW
+729d8b9e01b6290d,https://careersmw.com/job/216398/,Artisan Turner,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:07:38.791870,636,CareersMW
+88d70acd52b15ec7,https://careersmw.com/job/216395/,Instruments Technician,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:07:47.967844,638,CareersMW
+0e63c9c76a37e529,https://careersmw.com/job/216392/,Painter,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:07:57.288470,640,CareersMW
+4d64a72e5750e11a,https://careersmw.com/job/216388/,Health and Safety Business Partner,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:08:08.414137,642,CareersMW
+b20b135f8bff397a,https://careersmw.com/job/216236/,Haukeland House Manager,Lilongwe Institute of Orthopaedics and Neurosurgery (LION),posted,2026-10-20T14:08:22.087306,644,CareersMW
+f87df946844ab2a0,https://careersmw.com/job/216192/,Environmental Officer,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:08:31.165233,646,CareersMW
+d75d7a438645c401,https://careersmw.com/job/216187/,Health Safety & Environmental Compliance Officer,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:08:41.276787,648,CareersMW
+9f82e9fef1b527dd,https://careersmw.com/job/216186/,Health & Safety Officer,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:08:43.891534,594,CareersMW
+3aa4a316022ff9fb,https://careersmw.com/job/216134/,Loans and Grants Disbursement Manager,Higher Education Students Loans and Grants Board (HESLGB),posted,2026-10-20T14:08:46.797192,315,CareersMW
+7ed30deac2fb2b39,https://careersmw.com/job/216159/,Water Quality and Environmental Manager,Lilongwe Water Board,posted,2026-10-20T14:08:49.767492,311,CareersMW
+9a6a3213f4fb3e12,https://careersmw.com/job/216160/,Senior Internal Auditor,Lilongwe Water Board,posted,2026-10-20T14:08:52.621964,309,CareersMW
+2597811b2ab73226,https://careersmw.com/job/216157/,Information Technology Officer (Systems Administrator),Lilongwe Water Board,posted,2026-10-20T14:08:55.443267,307,CareersMW
+a28c47285ec8c9ac,https://careersmw.com/job/216154/,Network Engineer,Lilongwe Water Board,posted,2026-10-20T14:08:58.232402,305,CareersMW
+20cf96a673adcb85,https://careersmw.com/job/216155/,Assistant Procurement & Disposal Officer,Lilongwe Water Board,posted,2026-10-20T14:09:01.261345,303,CareersMW
+9e6fd3aed44d7763,https://careersmw.com/job/216156/,Assistant Human Resources Management Officer,Lilongwe Water Board,posted,2026-10-20T14:09:04.292853,301,CareersMW
+748b766f5830c908,https://careersmw.com/job/216153/,Plant Operator,Lilongwe Water Board,posted,2026-10-20T14:09:07.207842,299,CareersMW
+b02c37e5797b9f78,https://careersmw.com/job/216149/,Procurement Assistant,Lilongwe Water Board,posted,2026-10-20T14:09:10.233647,297,CareersMW
+ca3bde1769f6fda5,https://careersmw.com/job/216150/,Customer Care Assistant,Lilongwe Water Board,posted,2026-10-20T14:09:13.178085,295,CareersMW
+ec049f9a657e8406,https://careersmw.com/job/216151/,Billing Assistant,Lilongwe Water Board,posted,2026-10-20T14:09:16.121926,293,CareersMW
+6ece620200167db1,https://careersmw.com/job/216148/,Electrician,Lilongwe Water Board,posted,2026-10-20T14:09:19.119126,291,CareersMW
+57c9aa6af47f02a1,https://careersmw.com/job/216147/,Distribution and Maintenance Assistant (Plumber),Lilongwe Water Board,posted,2026-10-20T14:09:22.137552,289,CareersMW
+e426e6864b83708b,https://careersmw.com/job/216146/,Laboratory Attendant,Lilongwe Water Board,posted,2026-10-20T14:09:25.206896,287,CareersMW
+ea0e822cc669bbb7,https://careersmw.com/job/216145/,Duplicating Machine Operator,Lilongwe Water Board,posted,2026-10-20T14:09:28.094998,285,CareersMW
+39101dde0bd20671,https://careersmw.com/job/216143/,Motor Vehicle Driver,Lilongwe Water Board,posted,2026-10-20T14:09:31.071275,283,CareersMW
+16210b8e8bc79830,https://careersmw.com/job/216144/,Assistant Plant Operator,Lilongwe Water Board,posted,2026-10-20T14:10:02.229939,281,CareersMW
+995a478d6abe7efd,https://careersmw.com/job/216142/,Security Guard,Lilongwe Water Board,posted,2026-10-20T14:10:05.500640,279,CareersMW
+49ea646b1557f81a,https://careersmw.com/job/216135/,Sewerage Attendants,Lilongwe Water Board,posted,2026-10-20T14:10:08.649649,313,CareersMW
+10273b4638e4ddb7,https://careersmw.com/job/216038/,Medical Assistant (ART/TB),Illovo Sugar (Malawi) plc,posted,2026-10-20T14:10:19.501885,650,CareersMW
+80d07683048ec15f,https://careersmw.com/job/216037/,Pharmacy Assistant,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:10:29.852242,652,CareersMW
+0dcfe50deb866dae,https://careersmw.com/job/216036/,Laboratory Technician,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:10:39.995064,654,CareersMW
+2c4c56e3b70b544d,https://careersmw.com/job/216035/,Counsellor HTC,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:10:50.121812,656,CareersMW
+731847a144c2d0a8,https://careersmw.com/job/216027/,HSE Contractor Specialist,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:11:02.397041,658,CareersMW
+3426d9a938d80aba,https://careersmw.com/job/216028/,RDO Analyst,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:11:12.807685,660,CareersMW
+bfa4073b15b9e356,https://careersmw.com/job/216029/,HSE Systems & Data Specialist,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:11:22.929078,662,CareersMW
+afb96ce3fb97fc44,https://careersmw.com/job/216030/,HSE Optimization Manager,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:11:32.650809,664,CareersMW
+344ad70569418866,https://careersmw.com/job/216003/,Environmental Compliance Manager,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:11:41.928612,666,CareersMW
+9f7ce20a82479154,https://careersmw.com/job/215983/,Part-Time Consultant Gynaecologist/Obstetrician,Likuni Mission Hospital (LMH),posted,2026-10-20T14:11:51.169588,667,CareersMW
+85be44fc05807e0b,https://careersmw.com/job/215908/,Health and Safety Business Partner,Illovo Sugar (Malawi) plc,duplicate,2026-10-20T14:11:53.346498,,CareersMW
+49f65620d0d87b91,https://careersmw.com/job/215907/,Various Off Crop Positions,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:12:03.938358,669,CareersMW
+8c81f535b71b960e,https://careersmw.com/job/215889/,Occupational Health Practioner,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:12:13.643571,671,CareersMW
+5c5d9bb83988c7a9,https://careersmw.com/job/215890/,Nurse Midwife,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:12:31.102099,673,CareersMW
+c59f27d3e88900ad,https://careersmw.com/job/215895/,Medical Services Administrator,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:12:41.491667,675,CareersMW
+ebb5cfaf51c0a65d,https://careersmw.com/job/public-health-officer/,Public Health Officer,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:12:51.422564,677,CareersMW
+fd8b415dbd56c1ab,https://careersmw.com/job/laboratory-officer-2/,Laboratory Officer,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:13:01.860273,679,CareersMW
+86ad130d5e96243f,https://careersmw.com/job/pharmacy-technologist-2/,Pharmacy Technologist,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:13:11.503412,681,CareersMW
+43ac57e693b2f94c,https://careersmw.com/job/nursing-manager-2/,Nursing Manager,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:13:22.520588,683,CareersMW
+e7ec3b13b80e81c4,https://careersmw.com/job/medical-clinician-2/,Medical Clinician,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:13:33.213888,685,CareersMW
+f9c0e9a2fd1559e0,https://careersmw.com/job/215816/,Deputy Registrar – Marketing and Communication,Malawi University of Business and Applied Sciences (MUBAS),posted,2026-10-20T14:13:36.571042,251,CareersMW
+53a2d72b755630f5,https://careersmw.com/job/215820/,Head of Information Communication and Technology,Malawi University of Business and Applied Sciences (MUBAS),posted,2026-10-20T14:13:40.212086,257,CareersMW
+04628d726ebd577a,https://careersmw.com/job/215818/,Head of Research and Innovation,Malawi University of Business and Applied Sciences (MUBAS),posted,2026-10-20T14:13:43.117830,253,CareersMW
+9bdedce37ef61808,https://careersmw.com/job/215819/,Head of Academic Quality Assurance,Malawi University of Business and Applied Sciences (MUBAS),posted,2026-10-20T14:14:13.268289,255,CareersMW
+dc3089a5dd13c617,https://careersmw.com/job/sales-representative/,Sales Representative,Brands Africa,posted,2026-10-20T14:14:23.815081,687,CareersMW
+86800c0dd830cf5b,https://careersmw.com/job/human-resource-and-administration-manager/,Human Resource and Administration Manager,Malawi School of Government (MSG),posted,2026-10-20T14:14:35.973423,689,CareersMW
+5bb673113fc9c25d,https://careersmw.com/job/science-teacher/,Science Teacher,Omar Farooq Trust,posted,2026-10-20T14:14:48.953861,691,CareersMW
+cfa10d2644dae47c,https://careersmw.com/job/215310/,Principal,Hillview International School,posted,2026-10-20T14:14:52.319198,225,CareersMW
+a96247a053b1745f,https://www.careeradmw.com/jobs/primary-school-teacher-2-positions,PRIMARY SCHOOL TEACHER (2 POSITIONS),KAWALE SDA PRIVATE PRIMARY SCHOOL,posted,2026-10-20T14:15:29.449942,692,CareerAdMW
+458afef6a43704e1,https://www.careeradmw.com/jobs/projects-quantity-surveyor-site-agent,PROJECTS QUANTITY SURVEYOR / SITE AGENT,AFRIBUILD CONSTRUCTION,posted,2026-10-20T14:15:32.558706,521,CareerAdMW
+f2a8daac3c536474,https://www.careeradmw.com/jobs/driver-1792502936,Driver,EVIDENCE ACTION,duplicate,2026-10-20T14:15:34.540166,,CareerAdMW
+c41910e74020db47,https://www.careeradmw.com/jobs/multiple-positions-1792502798,MULTIPLE POSITIONS,WOMEN'S LEGAL RESOURCES CENTRE (WOLREC),posted,2026-10-20T14:15:37.643806,381,CareerAdMW
+c413815bcffcd9b5,https://www.careeradmw.com/jobs/temporary-enumerators,TEMPORARY ENUMERATORS,INVEST IN KNOWLEDGE INITIATIVE (IKI),posted,2026-10-20T14:15:40.484772,501,CareerAdMW
+56043c6fd143d115,https://www.careeradmw.com/jobs/informatics-intern,INFORMATICS INTERN,Global Health Informatics Institute (GHII),duplicate,2026-10-20T14:15:42.354731,,CareerAdMW
+eadf666fcb6849c5,https://www.careeradmw.com/jobs/social-worker,SOCIAL WORKER,LIFE AWAKENING MINISTRIES,duplicate,2026-10-20T14:15:44.216792,,CareerAdMW
+2f48a7c8a343fa55,https://www.careeradmw.com/jobs/product-manager-tours-and-packages,PRODUCT MANAGER – TOURS AND PACKAGES,KWENDA,duplicate,2026-10-20T14:15:46.407739,,CareerAdMW
+c7f08370ef8bf95b,https://www.careeradmw.com/jobs/machine-sales-executive,Machine Sales Executive,GESTETNER LTD (RICOTEC),posted,2026-10-20T14:15:49.407177,524,CareerAdMW
+ba615d87d956bccd,https://www.careeradmw.com/jobs/director-of-engineering-1792478774,Director of Engineering,Malawi Broadcasting Corporation (MBC),posted,2026-10-20T14:15:52.189190,511,CareerAdMW
+ebeed748ce98fa83,https://www.careeradmw.com/jobs/marketing-coordinator,Marketing Coordinator,Malawi – Liverpool – Wellcome – Programme (MLW),posted,2026-10-20T14:15:54.921477,495,CareerAdMW
+9a1c6e6798760b22,https://www.careeradmw.com/jobs/commissioned-financial-advisor-1792478491,Commissioned Financial Advisor,Old Mutual,posted,2026-10-20T14:15:57.651397,241,CareerAdMW
+6ea7082654508f53,https://www.careeradmw.com/jobs/insurance-officer,Insurance Officer,MALAWI REVENUE AUTHORITY (MRA),duplicate,2026-10-20T14:15:59.491141,,CareerAdMW
+e1a52723263d7c3c,https://www.careeradmw.com/jobs/marketing-pr-communications-director,"MARKETING, PR & COMMUNICATIONS DIRECTOR",VISION PAGEANTRY MALAWI,posted,2026-10-20T14:16:03.056032,463,CareerAdMW
+390492ddfae5de6d,https://www.careeradmw.com/jobs/coffee-manager,COFFEE MANAGER,ACF,posted,2026-10-20T14:16:13.027627,693,CareerAdMW
+792a62efe4b0a8d0,https://www.careeradmw.com/jobs/multiple-vacancies-1792441270,Multiple vacancies,DIOCESE OF MANGOCHI – CADECOM,posted,2026-10-20T14:16:26.712733,694,CareerAdMW
+6f62b93961854b2b,https://www.careeradmw.com/jobs/accountant-administrator,ACCOUNTANT & ADMINISTRATOR,Drone Link,duplicate,2026-10-20T14:16:28.552485,,CareerAdMW
+2a731e0e04dbe49c,https://www.careeradmw.com/jobs/gender-expert-consultancy,GENDER EXPERT (CONSULTANCY),AFIDEP,posted,2026-10-20T14:16:39.712921,695,CareerAdMW
+1d44c5d288f995c5,https://www.careeradmw.com/jobs/ict-officer-odel,ICT OFFICER (ODeL),Montessori College of Education,duplicate,2026-10-20T14:16:41.582418,,CareerAdMW
+714cba5470dc1a25,https://www.careeradmw.com/jobs/dean-of-faculty-1792440670,DEAN OF FACULTY,Montessori College of Education,duplicate,2026-10-20T14:16:43.406122,,CareerAdMW
+a8f760ad1b971f84,https://www.careeradmw.com/jobs/librarian-1792440590,LIBRARIAN,Montessori College of Education,duplicate,2026-10-20T14:16:45.209550,,CareerAdMW
+1882f68bd587374c,https://www.careeradmw.com/jobs/driver-1792440453,Driver,EUROPEAN UNION DELEGATION TO THE REPUBLIC OF MALAWI,posted,2026-10-20T14:16:47.969879,335,CareerAdMW
+7858d161600cdc7f,https://www.careeradmw.com/jobs/lecturers-early-childhood-education,LECTURERS – EARLY CHILDHOOD EDUCATION,Montessori College of Education,duplicate,2026-10-20T14:16:49.815849,,CareerAdMW
+88dfb38888c162b2,https://www.careeradmw.com/jobs/personal-assistant-commercial-agricultural-business,PERSONAL ASSISTANT – Commercial Agricultural Business,ACF,posted,2026-10-20T14:17:03.565934,696,CareerAdMW
+749e454c4525d8a9,https://www.careeradmw.com/jobs/veterinarian-commercial-agricultural-business,VETERINARIAN – Commercial Agricultural Business,ACF,posted,2026-10-20T14:17:35.010130,697,CareerAdMW
+72512c81c3ff861f,https://www.careeradmw.com/jobs/accountant-commercial-agricultural-business,ACCOUNTANT – Commercial Agricultural Business,ACF,posted,2026-10-20T14:17:59.449915,698,CareerAdMW
+763febafba729bc2,https://www.careeradmw.com/jobs/diesel-mechanic-commercial-agricultural-business,DIESEL MECHANIC – Commercial Agricultural Business,ACF,posted,2026-10-20T14:18:17.353798,699,CareerAdMW
+37481e49d630e9aa,https://www.careeradmw.com/jobs/parts-stores-representative-intern,PARTS STORES REPRESENTATIVE INTERN,Farming and Engineering Services Limited (FES),duplicate,2026-10-20T14:18:19.670342,,CareerAdMW
+feb26969bff7f77b,https://www.careeradmw.com/jobs/mixer-truck-drivers,MIXER TRUCK DRIVERS,INSTACRETE,posted,2026-10-20T14:18:22.744206,497,CareerAdMW
+bbd0d2ca574d91c3,https://www.careeradmw.com/jobs/filling-station-attendants,FILLING STATION ATTENDANTS,MBULO ENTERPRISES LTD,posted,2026-10-20T14:18:34.562773,700,CareerAdMW
+275f3744e051b8db,https://www.careeradmw.com/jobs/fleet-management-officer,Fleet Management Officer,Corporate Recruitment and Cleaning Services,posted,2026-10-20T14:18:37.629295,505,CareerAdMW
+b15631a3eaf4a226,https://www.careeradmw.com/jobs/accounts-officer-1792438896,Accounts Officer,Malawi Epidemiology and Intervention Research Unit (MEIRU),posted,2026-10-20T14:18:40.540683,528,CareerAdMW
+fc48dba209a84a98,https://www.careeradmw.com/jobs/associate-director-financial-planning-and-analysis-fpa,ASSOCIATE DIRECTOR – FINANCIAL PLANNING AND ANALYSIS (FP&A),World Vision International,posted,2026-10-20T14:18:43.632579,491,CareerAdMW
+9a7396175546314f,https://www.careeradmw.com/jobs/deputy-head-teacher,DEPUTY HEAD TEACHER,MOUNT VIEW INTERNATIONAL PRIMARY SCHOOL AND EARLY YEARS CENTRE,duplicate,2026-10-20T14:18:45.440077,,CareerAdMW
+89a460d4fbe628fc,https://www.careeradmw.com/jobs/quantity-surveyor-1792438535,Quantity Surveyor,UNIK CONSTRUCTION ENGINEERING (M) LTD,posted,2026-10-20T14:18:48.550685,526,CareerAdMW
+68723db2c1dac24f,https://www.careeradmw.com/jobs/quality-control-manager,Quality Control Manager,CROWN PHARMACEUTICALS AND RESEARCH LABORATORY,posted,2026-10-20T14:18:51.332217,540,CareerAdMW
+e4ac9813d6e7f48a,https://www.careeradmw.com/jobs/production-manager,Production Manager,Polyone Limited,posted,2026-10-20T14:18:54.333151,539,CareerAdMW
+35338f0cec971a26,https://www.careeradmw.com/jobs/motor-vehicle-mechanics,Motor Vehicle Mechanics,Mike Appel and Gatto Limited,posted,2026-10-20T14:18:57.206716,538,CareerAdMW
+34ec01cd63eff207,https://www.careeradmw.com/jobs/service-advisors,Service Advisors,Mike Appel and Gatto Limited,posted,2026-10-20T14:19:00.489257,536,CareerAdMW
+f11a114ae69f6fc3,https://www.careeradmw.com/jobs/sales-executives-1792397568,Sales Executives,Mike Appel and Gatto Limited,posted,2026-10-20T14:19:03.557434,534,CareerAdMW
+574355fc5bd544da,https://www.careeradmw.com/jobs/motorcycle-and-small-engine-technicians,Motorcycle and Small Engine Technicians,Mike Appel and Gatto Limited,posted,2026-10-20T14:19:06.356756,532,CareerAdMW
+5aca4aaae3a81d40,https://www.careeradmw.com/jobs/auto-electricians,Auto Electricians,Mike Appel and Gatto Limited,posted,2026-10-20T14:19:09.347968,530,CareerAdMW
+d0fc72edfa8c3772,https://www.careeradmw.com/jobs/chief-accountant-1792233030,Chief Accountant,Local Government Service Commission,posted,2026-10-20T14:19:12.535244,459,CareerAdMW
+e1d674819ce42780,https://www.careeradmw.com/jobs/chief-human-resource-management-officer,Chief Human Resource Management Officer,Local Government Service Commission,posted,2026-10-20T14:19:15.523505,457,CareerAdMW
+45892e7f29ff1ba8,https://www.careeradmw.com/jobs/chief-environmental-affairs-officer,Chief Environmental Affairs Officer,Local Government Service Commission,posted,2026-10-20T14:19:18.451819,455,CareerAdMW
+bfe0ecdc8bca7da9,https://www.careeradmw.com/jobs/chief-administrative-officer,Chief Administrative Officer,Local Government Service Commission,posted,2026-10-20T14:19:21.558486,453,CareerAdMW
+ef96290a8d2173a9,https://www.careeradmw.com/jobs/chief-planning-officer,Chief Planning Officer,Local Government Service Commission,posted,2026-10-20T14:19:24.512232,451,CareerAdMW
+9e9b3ea28fd22778,https://www.careeradmw.com/jobs/chief-procurement-officer,Chief Procurement Officer,Local Government Service Commission,posted,2026-10-20T14:19:27.377558,449,CareerAdMW
+725ca28c8c8e6e2d,https://www.careeradmw.com/jobs/chief-internal-auditor-1792232602,Chief Internal Auditor,Local Government Service Commission,posted,2026-10-20T14:19:30.306362,447,CareerAdMW
+1a2d9f054cca98cc,https://www.careeradmw.com/jobs/principal-planning-officer,Principal Planning Officer,Local Government Service Commission,posted,2026-10-20T14:19:33.062234,445,CareerAdMW
+300de63b687a2b2b,https://www.careeradmw.com/jobs/principal-procurement-officer,Principal Procurement Officer,Local Government Service Commission,posted,2026-10-20T14:19:35.714626,443,CareerAdMW
+0a003d5d5c4a7b04,https://www.careeradmw.com/jobs/principal-internal-auditor,Principal Internal Auditor,Local Government Service Commission,posted,2026-10-20T14:19:38.438595,441,CareerAdMW
+d58784e4b0e82618,https://www.careeradmw.com/jobs/branch-accountant,Branch Accountant,JCDecaux Africa,posted,2026-10-20T14:19:41.199500,185,CareerAdMW
+038ce6439ef02e5a,https://www.careeradmw.com/jobs/national-director-1792232171,National Director,Floresta in Malawi,posted,2026-10-20T14:19:43.966818,546,CareerAdMW
+2a63c09be0438441,https://www.careeradmw.com/jobs/field-facilitators-3-positions,Field Facilitators (3 Positions),Floresta in Malawi,posted,2026-10-20T14:19:46.883463,544,CareerAdMW
+ac3f8cfd35a79d92,https://www.careeradmw.com/jobs/cashier-1792218178,Cashier,Maranet Trading Company,duplicate,2026-10-20T14:19:48.740234,,CareerAdMW
+3317ec649b5c1052,https://www.careeradmw.com/jobs/programme-manager,Programme Manager,Federer Foundation,posted,2026-10-20T14:20:02.405444,701,CareerAdMW
+5d0cbfaba7a97a09,https://www.careeradmw.com/jobs/dean-of-faculty-1792188463,DEAN OF FACULTY,Montessori College of Education,duplicate,2026-10-20T14:20:04.316881,,CareerAdMW
+a319480800f3029d,https://www.careeradmw.com/jobs/gender-expert,GENDER EXPERT,AFIDEP,posted,2026-10-20T14:20:07.279521,469,CareerAdMW
+8cefcdd2b691a03a,https://www.careeradmw.com/jobs/field-officers,FIELD OFFICERS,HARVESTGLOW,posted,2026-10-20T14:20:19.456530,702,CareerAdMW
+7c832537398f89c4,https://www.careeradmw.com/jobs/quickbooks-accounting-system-implementation-and-training-consultant,QUICKBOOKS ACCOUNTING SYSTEM IMPLEMENTATION AND TRAINING CONSULTANT,HARVESTGLOW,posted,2026-10-20T14:20:29.417526,703,CareerAdMW
+40048379d1941438,https://www.careeradmw.com/jobs/volunteers-multiple-opportunities,VOLUNTEERS – MULTIPLE OPPORTUNITIES,HARVESTGLOW,posted,2026-10-20T14:20:39.163029,704,CareerAdMW
+323b3fe6a92a259c,https://www.careeradmw.com/jobs/project-manager-glide-project-deputy-director,Project Manager (GLIDE Project) / Deputy Director,KODO,posted,2026-10-20T14:20:55.478338,705,CareerAdMW
+574b17ddc8fc490f,https://www.careeradmw.com/jobs/marketing-and-communications-officer-1792173667,Marketing and Communications Officer,KODO,posted,2026-10-20T14:21:11.457807,706,CareerAdMW
+334ea72dd2f68ccd,https://www.careeradmw.com/jobs/head-of-branch-experience,Head of Branch Experience,First Capital Bank,duplicate,2026-10-20T14:21:13.773611,,CareerAdMW
+5fab6b04067d7f7a,https://www.careeradmw.com/jobs/community-manager-1792171560,Community Manager,Astria Learning,posted,2026-10-20T14:21:16.841178,433,CareerAdMW
+7c6fc15b2676a8cf,https://www.careeradmw.com/jobs/secondary-school-teachers-1792169770,Secondary School Teachers,RAYS OF HOPE MALAWI,posted,2026-10-20T14:21:19.536954,437,CareerAdMW
+681992003ea25884,https://www.careeradmw.com/jobs/htc-counsellor-2,HTC Counsellor (2),ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:21:31.675268,707,CareerAdMW
+31e9fa35ddd8602e,https://www.careeradmw.com/jobs/art-clerk,Art clerk,ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:21:34.428315,572,CareerAdMW
+0ce17034cba424a2,https://www.careeradmw.com/jobs/hr-clerk,HR Clerk,ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:21:37.256966,574,CareerAdMW
+ca4d672d7c24411d,https://www.careeradmw.com/jobs/independent-sales-and-marketing-personnel,Independent Sales and Marketing Personnel,WEALTHNET FINANCE PLC,posted,2026-10-20T14:21:40.067105,570,CareerAdMW
+c7f3caa69c89634d,https://www.careeradmw.com/jobs/hospital-attendant-1792139713,Hospital Attendant,ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:21:49.863902,708,CareerAdMW
+ee28e7e583dedfc5,https://www.careeradmw.com/jobs/laundry-attendant,Laundry Attendant,ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:22:02.339745,709,CareerAdMW
+3613729640f1e1a2,https://www.careeradmw.com/jobs/ambulance-driver,Ambulance Driver,ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:22:12.264001,710,CareerAdMW
+27c333076e14f3d3,https://www.careeradmw.com/jobs/anaesthetist,ANAESTHETIST,ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:22:15.303294,578,CareerAdMW
+3e89635ec3186f06,https://www.careeradmw.com/jobs/agricultural-intern,Agricultural Intern,ROOT-RISE AGRIBUSINESS,posted,2026-10-20T14:22:18.702422,425,CareerAdMW
+3a3cbdce72a63230,https://www.careeradmw.com/jobs/procurement-and-logistics-officer-1792130615,Procurement and Logistics Officer,Pact,posted,2026-10-20T14:22:21.603069,427,CareerAdMW
+d6a8f8b5f93c3e83,https://www.careeradmw.com/jobs/office-van-driver-delivery-driver,Office Van Driver /Delivery Driver,Savenda International Limited,posted,2026-10-20T14:22:24.407347,580,CareerAdMW
+81a70df2dbb56de0,https://www.careeradmw.com/jobs/office-driver-general-office-assistant,Office Driver & General Office Assistant,Savenda International Limited,posted,2026-10-20T14:22:27.197576,582,CareerAdMW
+325685062bb2d0cd,https://www.careeradmw.com/jobs/care-manager,Care Manager,Stephanos Foundation,duplicate,2026-10-20T14:22:29.013818,,CareerAdMW
+8574d5d400c9ab6f,https://www.careeradmw.com/jobs/courier-08,Courier – 08,FEDEX,posted,2026-10-20T14:22:31.787602,421,CareerAdMW
+dbb83ea4c25cda40,https://www.careeradmw.com/jobs/civil-engineer,Civil Engineer,HUALONG CONSTRUCTION PRIVATE LIMITED,posted,2026-10-20T14:22:34.611515,435,CareerAdMW
+1d4e640087fd72cc,https://www.careeradmw.com/jobs/global-social-and-behaviour-change-sbc-manager,Global Social and Behaviour Change (SBC) Manager,MSI REPRODUCTIVE CHOICES,posted,2026-10-20T14:22:37.268886,423,CareerAdMW
+4ff2bd48bcfaa37e,https://www.careeradmw.com/jobs/business-development-coordinator,BUSINESS DEVELOPMENT COORDINATOR,Concern Worldwide,posted,2026-10-20T14:22:40.075378,590,CareerAdMW
+e90a1cacf5ee65e3,https://www.careeradmw.com/jobs/protection-project-officer,PROTECTION PROJECT OFFICER,IsraAID,posted,2026-10-20T14:22:42.888076,399,CareerAdMW
+18b166bcebe83d47,https://www.careeradmw.com/jobs/call-for-applications-volunteers,CALL FOR APPLICATIONS (VOLUNTEERS),YOUTH CLIMATE MOVEMENT,posted,2026-10-20T14:23:03.348310,711,CareerAdMW
+9b02311f0bbe2a34,https://www.careeradmw.com/jobs/sales-and-marketing-intern,SALES AND MARKETING INTERN,ROOT-RISE AGRIBUSINESS,posted,2026-10-20T14:23:06.503646,401,CareerAdMW
+d3e03d605b24db42,https://www.careeradmw.com/jobs/customer-care-clerk,CUSTOMER CARE CLERK,COMBINE CARGO MALAWI LTD,duplicate,2026-10-20T14:23:08.348103,,CareerAdMW
+2dd2c2464c2a7b63,https://www.careeradmw.com/jobs/position-cashier-1791985496,POSITION: CASHIER,COMBINE CARGO MALAWI LTD,posted,2026-10-20T14:23:18.252882,712,CareerAdMW
+a9439a509744b1ac,https://www.careeradmw.com/jobs/government-relations-lead,GOVERNMENT RELATIONS LEAD,BURN,posted,2026-10-20T14:23:21.076954,397,CareerAdMW
+6108e5d09b9f3ae4,https://www.careeradmw.com/jobs/private-chef,Private Chef,Bluestar Tourism,posted,2026-10-20T14:23:23.750475,379,CareerAdMW
+ac83e9164556c2e7,https://www.careeradmw.com/jobs/chefs-bakerspastry-chefs-deli-controllers-and-bakers-controllers,"Chefs, Bakers/Pastry Chefs, Deli Controllers and Bakers Controllers",Bluestar Tourism,posted,2026-10-20T14:23:38.080161,713,CareerAdMW
+c28cab6815edd3e4,https://www.careeradmw.com/jobs/principal-1791967528,Principal,PROGRESSIVE HEALTHCARE INSTITUTE,posted,2026-10-20T14:23:40.894328,225,CareerAdMW
+abf745e1474b7758,https://www.careeradmw.com/jobs/communications-officer-1791967214,Communications Officer,LIFE MINISTRY MALAWI,duplicate,2026-10-20T14:23:42.713896,,CareerAdMW
+ffc746debdafc1df,https://www.careeradmw.com/jobs/justice-and-peace-desk-intern,JUSTICE AND PEACE DESK INTERN,CATHOLIC COMMISSION FOR JUSTICE AND PEACE (CCJP),duplicate,2026-10-20T14:23:44.502178,,CareerAdMW
+87bcd4d6e1e34245,https://www.careeradmw.com/jobs/sales-manager-1791957580,SALES MANAGER,TRIDENT SECURITY COMPANY LIMITED,posted,2026-10-20T14:23:47.201348,363,CareerAdMW
+b31cd95e488ca2a7,https://www.careeradmw.com/jobs/it-consultant,IT CONSULTANT,TRIDENT SECURITY COMPANY LIMITED,posted,2026-10-20T14:23:59.019378,714,CareerAdMW
+cd63bf0d3491189b,https://www.careeradmw.com/jobs/esg-officer,ESG Officer,The Malawi Agricultural and Industrial Investment Corporation (MAIIC) Plc,posted,2026-10-20T14:24:02.014197,385,CareerAdMW
+9ead22a5d6d1dd92,https://www.careeradmw.com/jobs/country-lead-market-insights,Country Lead: Market Insights,COCA-COLA BEVERAGES AFRICA,duplicate,2026-10-20T14:24:03.891798,,CareerAdMW
+9a38e201f2febd89,https://www.careeradmw.com/jobs/government-relations-lead-malawi,Government Relations Lead – Malawi,BURN,posted,2026-10-20T14:24:14.926724,715,CareerAdMW
+1dd3033424b40994,https://www.careeradmw.com/jobs/director-of-education-and-training,Director of Education and Training,Nurses and Midwives Council of Malawi (NMCM),duplicate,2026-10-20T14:24:16.827249,,CareerAdMW
+19c5bfc281dfdc55,https://www.careeradmw.com/jobs/director-of-professional-practice-and-conduct,Director of Professional Practice and Conduct,Nurses and Midwives Council of Malawi (NMCM),duplicate,2026-10-20T14:24:18.687527,,CareerAdMW
+35678f0911f35d84,https://www.careeradmw.com/jobs/temporary-finance-officer,Temporary Finance Officer,Nurses and Midwives Council of Malawi (NMCM),duplicate,2026-10-20T14:24:20.477661,,CareerAdMW
+d5f876771067d2c8,https://www.careeradmw.com/jobs/human-resources-and-administration-officer-1791915559,HUMAN RESOURCES AND ADMINISTRATION OFFICER,SUCOMA SACCO,posted,2026-10-20T14:24:23.454977,365,CareerAdMW
+aeaf4b1a71537ca5,https://www.careeradmw.com/jobs/purchase-clerk-1-post,Purchase Clerk (1 Post),Shayona Cement Corporation,posted,2026-10-20T14:24:36.446312,716,CareerAdMW
+70ce4c4c56aec3ec,https://www.careeradmw.com/jobs/finance-intern-2540,Finance Intern,Catholic Relief Services (CRS),posted,2026-10-20T14:24:39.190099,367,CareerAdMW
+9c3fea4434370454,https://www.careeradmw.com/jobs/deputy-finance-manager-field-only,Deputy Finance Manager – Field Only,Catholic Relief Services (CRS),posted,2026-10-20T14:24:42.053116,369,CareerAdMW
+689b76ae3ffec620,https://www.careeradmw.com/jobs/hse-compliance-officer-1-position,HSE Compliance Officer (1 Position),Illovo Sugar (Malawi) plc,posted,2026-10-20T14:24:52.975889,717,CareerAdMW
+e72d01670cfff384,https://www.careeradmw.com/jobs/health-safety-officer-1-position,Health & Safety Officer (1 Position),ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:25:02.379522,718,CareerAdMW
+0840509e13505a17,https://www.careeradmw.com/jobs/anesthesia-clinical-officers-2,Anesthesia Clinical Officers (2),Baylor Foundation Malawi (BFM),posted,2026-10-20T14:25:05.525189,600,CareerAdMW
+11c50a63d258602f,https://www.careeradmw.com/jobs/medical-officers-3,Medical Officers (3),Baylor Foundation Malawi (BFM),posted,2026-10-20T14:25:08.469309,598,CareerAdMW
+1ae81a3a7758e437,https://www.careeradmw.com/jobs/construction-coordinator-quantity-surveying-focus,CONSTRUCTION COORDINATOR – QUANTITY SURVEYING FOCUS,LET’S BUILD FOUNDATION,posted,2026-10-20T14:25:11.482319,606,CareerAdMW
+9ddc64a1aac762cf,https://www.careeradmw.com/jobs/position-bodyguard,POSITION: BODYGUARD,U.S. Embassy Lilongwe,posted,2026-10-20T14:25:21.813415,719,CareerAdMW
+79797ff89bd37ad6,https://www.careeradmw.com/jobs/regional-sales-manager-agricultural-sector,REGIONAL SALES MANAGER – AGRICULTURAL SECTOR,AGVENTURE RESOURCES LIMITED,posted,2026-10-20T14:25:31.778999,720,CareerAdMW
+bcf2b6f15483d61c,https://www.careeradmw.com/jobs/service-supervisor,SERVICE SUPERVISOR,Workforce Recruitment Services,posted,2026-10-20T14:25:41.733878,721,CareerAdMW
+94c031100fde09fd,https://www.careeradmw.com/jobs/district-field-officer-agricultural-sales-marketing-and-field-operations-5-posts,"DISTRICT FIELD OFFICER – AGRICULTURAL SALES, MARKETING AND FIELD OPERATIONS (5 POSTS)",AGVENTURE RESOURCES LIMITED,posted,2026-10-20T14:25:52.008215,722,CareerAdMW
+e14bd55df9cc9699,https://www.careeradmw.com/jobs/multiple-positions-1791899164,MULTIPLE POSITIONS,BDO MALAWI,posted,2026-10-20T14:25:54.828669,381,CareerAdMW
+21058451dc37d5f1,https://www.careeradmw.com/jobs/food-safety-quality-officer,Food Safety & Quality Officer,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:26:07.116688,723,CareerAdMW
+cafaa0e428b0e388,https://www.careeradmw.com/jobs/programme-officer-investment-facilitation-and-infrastructure,PROGRAMME OFFICER – INVESTMENT FACILITATION AND INFRASTRUCTURE,EUROPEAN UNION IN MALAWI,posted,2026-10-20T14:26:10.247487,353,CareerAdMW
+497a9f7ff8d43180,https://www.careeradmw.com/jobs/sales-and-marketing-representatives,SALES AND MARKETING REPRESENTATIVES,MIKOZI WORKSHOP,posted,2026-10-20T14:26:21.737889,724,CareerAdMW
+c73bce79104c0d38,https://www.careeradmw.com/jobs/clinic-nurse-1-position,Clinic Nurse (1 Position),The Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:26:33.850959,725,CareerAdMW
+8be90bf87456e2ef,https://www.careeradmw.com/jobs/pharmacy-technician-1-position-1791826507,Pharmacy Technician (1 Position),The Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:26:43.495348,726,CareerAdMW
+52c97b7308c32c4f,https://www.careeradmw.com/jobs/psychosocial-counsellor-1-position,Psychosocial Counsellor (1 Position),The Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:26:52.209017,727,CareerAdMW
+9613258d79fa8a83,https://www.careeradmw.com/jobs/hiv-diagnostic-assistants,HIV Diagnostic Assistants,The Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:26:55.181853,616,CareerAdMW
+80a7ed1a7d96129c,https://www.careeradmw.com/jobs/clinical-officer-1791826154,Clinical Officer,The Malawi AIDS Counselling and Resource Organization (MACRO),posted,2026-10-20T14:26:57.964370,618,CareerAdMW
+ef204d00fa5ab850,https://www.careeradmw.com/jobs/malawi-case-investigation-senior-coordinator,MALAWI CASE INVESTIGATION SENIOR COORDINATOR,One Acre Fund,duplicate,2026-10-20T14:26:59.791582,,CareerAdMW
+c62f048a8cfbe19c,https://www.careeradmw.com/jobs/media-production-officer-country-media-person,MEDIA PRODUCTION OFFICER (COUNTRY MEDIA PERSON),Muslim Hands Malawi,duplicate,2026-10-20T14:27:01.609728,,CareerAdMW
+84fb5aad711d2e26,https://www.careeradmw.com/jobs/various-vacancies-1791808020,Various Vacancies,SPEEDY’S FOOD INDUSTRIES LTD,posted,2026-10-20T14:27:13.947735,728,CareerAdMW
+461785693e92c82a,https://www.careeradmw.com/jobs/auto-electrician-1791807184,Auto Electrician,Kawandama Hills Plantation,posted,2026-10-20T14:27:16.584976,630,CareerAdMW
+d3cf09016e642739,https://www.careeradmw.com/jobs/truck-driver-1791807098,Truck Driver,Kawandama Hills Plantation,posted,2026-10-20T14:27:19.289625,628,CareerAdMW
+4f48011415714c06,https://www.careeradmw.com/jobs/head-of-security,Head of Security,Kawandama Hills Plantation,posted,2026-10-20T14:27:22.012749,626,CareerAdMW
+0824e21d76e61122,https://www.careeradmw.com/jobs/deal-origination-investment-specialist,Deal Origination & Investment Specialist,Export Development Fund (EDF),posted,2026-10-20T14:27:24.826082,351,CareerAdMW
+32e494551c14928d,https://www.careeradmw.com/jobs/general-fitter,General Fitter,Choice Products Limited,posted,2026-10-20T14:27:27.651295,417,CareerAdMW
+1aaf01326e78a582,https://www.careeradmw.com/jobs/transport-officer,Transport Officer,Choice Products Limited,posted,2026-10-20T14:27:30.393966,622,CareerAdMW
+bd2dbff4575d91dc,https://www.careeradmw.com/jobs/assistant-accountant-1791798798,Assistant Accountant,Choice Products Limited,posted,2026-10-20T14:27:33.341802,621,CareerAdMW
+b3b5bb97e6ef10bd,https://www.careeradmw.com/jobs/office-assistant-1791798026,Office Assistant,National AIDS Commission (NAC),duplicate,2026-10-20T14:27:35.168608,,CareerAdMW
+5218bc999e249905,https://www.careeradmw.com/jobs/driver-3,Driver (3),National AIDS Commission (NAC),posted,2026-10-20T14:27:37.948259,620,CareerAdMW
+e9976cba26d22e15,https://www.careeradmw.com/jobs/administrative-assistant-1791797908,Administrative Assistant,National AIDS Commission (NAC),duplicate,2026-10-20T14:27:39.788385,,CareerAdMW
+9bc6dde83dbaca55,https://www.careeradmw.com/jobs/coordination-and-capacity-building-officer,Coordination and Capacity Building Officer,National AIDS Commission (NAC),duplicate,2026-10-20T14:27:41.629032,,CareerAdMW
+96e277761325ef43,https://www.careeradmw.com/jobs/head-of-administration-and-human-resource,Head of Administration and Human Resource,National AIDS Commission (NAC),posted,2026-10-20T14:27:44.443332,341,CareerAdMW
+13a8f5e526f14ab2,https://www.careeradmw.com/jobs/head-of-procurement-and-disposal,Head of Procurement and Disposal,National AIDS Commission (NAC),duplicate,2026-10-20T14:27:46.277247,,CareerAdMW
+caaa13b12a5bf966,https://www.careeradmw.com/jobs/catering-instructor,CATERING INSTRUCTOR,One Heart Malawi Vocational Training Center,posted,2026-10-20T14:28:00.601537,729,CareerAdMW
+53d4b7ca49820993,https://www.careeradmw.com/jobs/ministry-resource-mobilization-officer,MINISTRY RESOURCE MOBILIZATION OFFICER,CHIEF'S MINISTRY,duplicate,2026-10-20T14:28:02.437695,,CareerAdMW
+cdd3f58e5f94538b,https://www.careeradmw.com/jobs/tiktok-and-facebook-content-creator-brand-ambassador,TIKTOK AND FACEBOOK CONTENT CREATOR / BRAND AMBASSADOR,CULTURAL PUBLISHING LIMITED,posted,2026-10-20T14:28:18.844116,730,CareerAdMW
+a577e5a076365896,https://www.careeradmw.com/jobs/haukeland-house-manager,Haukeland House Manager,Lilongwe Institute of Orthopaedics and Neurosurgery (LION),posted,2026-10-20T14:28:21.920048,644,CareerAdMW
+005de6a837d7bef5,https://www.careeradmw.com/jobs/multiple-vacancies-1791439888,MULTIPLE VACANCIES,ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:28:24.777344,694,CareerAdMW
+1fb5b548faf42154,https://www.careeradmw.com/jobs/multiple-vacancies-18-positions,MULTIPLE VACANCIES (18 POSITIONS),LILONGWE WATER BOARD,posted,2026-10-20T14:28:35.748031,731,CareerAdMW
+a615accd43eabcf9,https://www.careeradmw.com/jobs/loans-and-grants-disbursement-manager,Loans and Grants Disbursement Manager,THE HIGHER EDUCATION STUDENTS LOANS AND GRANTS BOARD (HESLGB),posted,2026-10-20T14:28:38.467787,315,CareerAdMW
+bb86c7a87dbcb1b2,https://www.careeradmw.com/jobs/policy-advocacy-research-communications-officers-talent-pool,"POLICY, ADVOCACY, RESEARCH & COMMUNICATIONS OFFICERS – TALENT POOL",QUB SOLUTIONS,posted,2026-10-20T14:28:50.458421,732,CareerAdMW
+edda9607e392cb98,https://www.careeradmw.com/jobs/deputy-farm-manager-cattle,DEPUTY FARM MANAGER (CATTLE),Precision Recruitment International,posted,2026-10-20T14:28:53.206291,273,CareerAdMW
+7190fffea67f064d,https://www.careeradmw.com/jobs/project-officer-1791262441,PROJECT OFFICER,Catholic Relief Services (CRS),posted,2026-10-20T14:28:56.029413,211,CareerAdMW
+0417d537abd71491,https://www.careeradmw.com/jobs/counsellor-htc,COUNSELLOR HTC,Illovo Sugar (Malawi) plc,posted,2026-10-20T14:28:58.765199,656,CareerAdMW
+a7f5b402c4036152,https://www.careeradmw.com/jobs/tender-advertisement-provision-of-service,TENDER ADVERTISEMENT: PROVISION OF SERVICE,Organization for Sustainable Socio-Economic Development Initiative (OSSEDI),posted,2026-10-20T14:29:12.640588,733,CareerAdMW
+1ea38a6af42864db,https://www.careeradmw.com/jobs/leather-technician-assistants-4,LEATHER TECHNICIAN ASSISTANTS (4),SMEDCO,posted,2026-10-20T14:29:24.069932,734,CareerAdMW
+987666e589bd5ca8,https://www.careeradmw.com/jobs/senior-leather-technician,SENIOR LEATHER TECHNICIAN,SMEDCO,posted,2026-10-20T14:29:32.610637,735,CareerAdMW
+71f85362ef360e7e,https://www.careeradmw.com/jobs/accounts-manager,ACCOUNTS MANAGER,TRIDENT SECURITY COMPANY LIMITED,posted,2026-10-20T14:29:40.677917,736,CareerAdMW
+c4bcf806bb07f6f8,https://www.careeradmw.com/jobs/control-room-operator,CONTROL ROOM OPERATOR,TRIDENT SECURITY COMPANY LIMITED,posted,2026-10-20T14:29:50.982473,737,CareerAdMW
+b9df3ad3fb59afca,https://www.careeradmw.com/jobs/part-time-consultant-gynaecologistobstetrician,Part-Time Consultant Gynaecologist/Obstetrician,Likuni Mission Hospital (LMH),posted,2026-10-20T14:29:53.664903,667,CareerAdMW
+ba3f4067453b3029,https://www.careeradmw.com/jobs/%F0%9D%97%98%F0%9D%98%85%F0%9D%97%B2%F0%9D%97%B0%F0%9D%98%82%F0%9D%98%81%F0%9D%97%B6%F0%9D%98%83%F0%9D%97%B2-%F0%9D%97%94%F0%9D%98%80%F0%9D%98%80%F0%9D%97%B6%F0%9D%98%80%F0%9D%98%81%F0%9D%97%AE%F0%9D%97%BB%F0%9D%98%81-%F0%9D%97%A3%F0%9D%97%BF%F0%9D%97%B2%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2%F0%9D%97%BB%F0%9D%98%81%F0%9D%98%80-%F0%9D%97%A2%F0%9D%97%B3%F0%9D%97%B3%F0%9D%97%B6%F0%9D%97%B0%F0%9D%97%B2,𝗘𝘅𝗲𝗰𝘂𝘁𝗶𝘃𝗲 𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 – 𝗣𝗿𝗲𝘀𝗶𝗱𝗲𝗻𝘁’𝘀 𝗢𝗳𝗳𝗶𝗰𝗲,Confédération Africaine de Football (CAF),posted,2026-10-20T14:29:56.573396,737,CareerAdMW
+27ed2d67c884b26f,https://www.careeradmw.com/jobs/multiple-vacancies-1791011780,MULTIPLE VACANCIES,ILLOVO SUGAR (MALAWI) PLC,duplicate,2026-10-20T14:29:58.382036,,CareerAdMW
+9cb7dcf3febb031a,https://www.careeradmw.com/jobs/various-off-crop-positions,VARIOUS OFF-CROP POSITIONS,ILLOVO SUGAR (MALAWI) PLC,posted,2026-10-20T14:30:01.255891,669,CareerAdMW
+85c744d10cef1eeb,https://www.careeradmw.com/jobs/multiple-vacancies-1791011248,MULTIPLE VACANCIES,RAB PROCESSORS LTD,posted,2026-10-20T14:30:06.255619,694,CareerAdMW
+5b4eb88dea5ba938,https://www.careeradmw.com/jobs/%F0%9D%97%96%F0%9D%97%AE%F0%9D%97%B9%F0%9D%97%B9-%F0%9D%97%B3%F0%9D%97%BC%F0%9D%97%BF-%F0%9D%97%96%F0%9D%97%BC%F0%9D%97%BB%F0%9D%98%80%F0%9D%98%82%F0%9D%97%B9%F0%9D%98%81%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B0%F0%9D%98%86-%F0%9D%97%B3%F0%9D%97%BC%F0%9D%97%BF-%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2-%F0%9D%97%A3%F0%9D%97%BF%F0%9D%97%BC%F0%9D%98%83%F0%9D%97%B6%F0%9D%98%80%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB-%F0%9D%97%BC%F0%9D%97%B3-%F0%9D%97%98%F0%9D%98%85%F0%9D%98%81%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%BB%F0%9D%97%AE%F0%9D%97%B9-%F0%9D%97%94%F0%9D%98%82%F0%9D%97%B1%F0%9D%97%B6%F0%9D%98%81-%F0%9D%97%A6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B0%F0%9D%97%B2%F0%9D%98%80,𝗖𝗮𝗹𝗹 𝗳𝗼𝗿 𝗖𝗼𝗻𝘀𝘂𝗹𝘁𝗮𝗻𝗰𝘆 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗣𝗿𝗼𝘃𝗶𝘀𝗶𝗼𝗻 𝗼𝗳 𝗘𝘅𝘁𝗲𝗿𝗻𝗮𝗹 𝗔𝘂𝗱𝗶𝘁 𝗦𝗲𝗿𝘃𝗶𝗰𝗲𝘀,Ungweru Organisation,posted,2026-10-20T14:30:10.456233,737,CareerAdMW
+f13ef03695e01eba,https://www.careeradmw.com/jobs/deputy-registrar-marketing-and-communication,Deputy Registrar – Marketing and Communication,MALAWI UNIVERSITY OF BUSINESS AND APPLIED SCIENCES (MUBAS),posted,2026-10-20T14:30:14.130545,251,CareerAdMW
+2bb2736f1bae63ab,https://www.careeradmw.com/jobs/head-of-information-communication-and-technology,Head of Information Communication and Technology,MALAWI UNIVERSITY OF BUSINESS AND APPLIED SCIENCES (MUBAS),duplicate,2026-10-20T14:30:16.029459,,CareerAdMW
+048abbeb52c9616f,https://www.careeradmw.com/jobs/head-of-research-and-innovation,Head of Research and Innovation,MALAWI UNIVERSITY OF BUSINESS AND APPLIED SCIENCES (MUBAS),duplicate,2026-10-20T14:30:17.900433,,CareerAdMW
+97010489bee838ac,https://www.careeradmw.com/jobs/head-of-academic-quality-assurance,Head of Academic Quality Assurance,MALAWI UNIVERSITY OF BUSINESS AND APPLIED SCIENCES (MUBAS),duplicate,2026-10-20T14:30:19.735616,,CareerAdMW
+41bfe6e7b51709f7,https://www.careeradmw.com/jobs/legal-clerk,Legal Clerk,MALAWI REVENUE AUTHORITY (MRA),posted,2026-10-20T14:30:32.044033,738,CareerAdMW
+beecd25eb70c7dd1,https://www.careeradmw.com/jobs/business-operations-manager,BUSINESS OPERATIONS MANAGER,CONTINENTAL PROPERTIES LIMITED (CPL),posted,2026-10-20T14:30:44.162223,739,CareerAdMW
+45d0b28e5cdbad46,https://www.careeradmw.com/jobs/customer-service-officer-ticket-seller,CUSTOMER SERVICE OFFICER / TICKET SELLER,ULEMU BUS SERVICES,posted,2026-10-20T14:30:46.851052,249,CareerAdMW
+d10802a10da4e898,https://www.careeradmw.com/jobs/digital-document-management-intern-10-posts,DIGITAL DOCUMENT MANAGEMENT INTERN (10 POSTS),Lilongwe City Council,posted,2026-10-20T14:30:55.321451,740,CareerAdMW
+623ffebf619f56ff,https://www.careeradmw.com/jobs/student-advisors,STUDENT ADVISORS,UNICAF,posted,2026-10-20T14:31:05.890828,741,CareerAdMW
+aa03d283f8d14702,https://www.careeradmw.com/jobs/accounts-assistant-1790775323,ACCOUNTS ASSISTANT,BETIKA MALAWI,posted,2026-10-20T14:31:08.726840,193,CareerAdMW
+2a19ec20668c818b,https://www.careeradmw.com/jobs/human-resource-and-administration-manager,HUMAN RESOURCE AND ADMINISTRATION MANAGER,Malawi School of Government (MSG),posted,2026-10-20T14:31:11.530322,689,CareerAdMW
+a8ecb1e6778b3341,https://www.careeradmw.com/jobs/marketers,MARKETERS,GOLD MOUNTAIN MEDIA,posted,2026-10-20T14:31:24.109111,742,CareerAdMW
+96f514203795d458,https://www.careeradmw.com/jobs/financial-audit-manager,Financial Audit Manager,Roads Fund Administration (RFA),posted,2026-10-20T14:31:35.377125,743,CareerAdMW
+b7376dd9ea71d19d,https://www.careeradmw.com/jobs/senior-policy-manager-embedded-labs-program,"SENIOR POLICY MANAGER, EMBEDDED LABS PROGRAM",INNOVATIONS FOR POVERTY ACTION (IPA),posted,2026-10-20T14:31:45.140658,744,CareerAdMW
+51c345f9630d375a,https://www.careeradmw.com/jobs/sales-account-manager,SALES ACCOUNT MANAGER,NFT CONSULT LTD,posted,2026-10-20T14:31:55.636218,745,CareerAdMW
+6a533bd816255149,https://www.careeradmw.com/jobs/sales-team-members-female,SALES TEAM MEMBERS (FEMALE),FOX LIMITED,posted,2026-10-20T14:32:05.280945,746,CareerAdMW
+8f27a6e7a8d286d1,https://www.careeradmw.com/jobs/customer-experience-executive,CUSTOMER EXPERIENCE EXECUTIVE,BETIKA,posted,2026-10-20T14:32:16.718559,747,CareerAdMW
+4efc53b67965e01c,https://www.careeradmw.com/jobs/assistant-instructors-automobile-mechanics-and-general-fitting,Assistant Instructors (Automobile Mechanics and General Fitting),Nasawa Technical College,posted,2026-10-20T14:32:25.511664,748,CareerAdMW
+e060f1d7bd13efa9,https://www.careeradmw.com/jobs/principal-1790180164,Principal,Hillview International School,duplicate,2026-10-20T14:32:27.362411,,CareerAdMW
+abced5a520f3a3dc,https://www.careeradmw.com/jobs/baker,Baker,GOMEZ FOODS LIMITED,posted,2026-10-20T14:32:35.883921,749,CareerAdMW
+2852b5f6bbcb699d,https://www.careeradmw.com/jobs/multiple-vacancies-1790159421,Multiple Vacancies,MUA MISSION HOSPITAL,posted,2026-10-20T14:32:38.482096,694,CareerAdMW
+b6ea5f7679765886,https://www.careeradmw.com/jobs/safeguarding-officer-wca-and-esa,SAFEGUARDING OFFICER – WCA AND ESA,CARE,posted,2026-10-20T14:32:41.257708,215,CareerAdMW
+e5710c90d9bc149a,https://www.careeradmw.com/jobs/head-of-new-business-development-nbd,HEAD OF NEW BUSINESS DEVELOPMENT (NBD),Save the Children,posted,2026-10-20T14:32:51.925454,750,CareerAdMW
+c306aab89a4452e0,https://www.careeradmw.com/jobs/multiple-vacancies-1790061726,Multiple Vacancies,CARE,posted,2026-10-20T14:32:54.666063,694,CareerAdMW
+c1ce643cf96fc260,https://www.careeradmw.com/jobs/program-manager-2,Program Manager (2),GiveDirectly,posted,2026-10-20T14:33:03.840416,751,CareerAdMW
+5208ed129ab938f6,https://www.careeradmw.com/jobs/driver-and-mechanic-ecb-project,DRIVER AND MECHANIC – ECB PROJECT,World Vision,posted,2026-10-20T14:33:12.612593,752,CareerAdMW
+611e0cb6600f9552,https://www.careeradmw.com/jobs/data-administrator,DATA ADMINISTRATOR,Strategic Sales and Merchandising Services Limited,posted,2026-10-20T14:33:22.281682,207,CareerAdMW
+fb32af306ae1be53,https://www.careeradmw.com/jobs/case-management-analyst-ecb-project,CASE MANAGEMENT ANALYST – ECB PROJECT,World Vision,posted,2026-10-20T14:33:32.144514,753,CareerAdMW
+dd0dde61208d260a,https://www.careeradmw.com/jobs/agribusiness-development-officer,Agribusiness Development Officer,Youth Net and Counselling (YONECO),posted,2026-10-20T14:33:34.814665,205,CareerAdMW
+c291fea522a4e412,https://www.careeradmw.com/jobs/bidding-assistant-tenders,Bidding Assistant – Tenders,Outple,duplicate,2026-10-20T14:33:36.626131,,CareerAdMW
+d947d24bb594a33c,https://www.careeradmw.com/jobs/factory-machine-operator,Factory Machine Operator,PRIVATE,posted,2026-10-20T14:33:49.292047,754,CareerAdMW
+4aa8b03f0d8a7433,https://www.careeradmw.com/jobs/client-service-executive,Client Service Executive,ETG,duplicate,2026-10-20T14:33:51.155266,,CareerAdMW
+71718fd7f3a9e47b,https://www.careeradmw.com/jobs/malawi-extension-lead,Malawi Extension Lead,One Acre Fund,duplicate,2026-10-20T14:33:52.983180,,CareerAdMW
+d8afd3e4a275b35a,https://www.careeradmw.com/jobs/project-officer-2271,Project Officer,World Vision,posted,2026-10-20T14:33:55.655500,211,CareerAdMW
+80181522a3907f84,https://www.careeradmw.com/jobs/teachers-1790009145,Teachers,FACE-PROJECT MINISTRY,duplicate,2026-10-20T14:33:57.473770,,CareerAdMW
+7b57b77f88dd8a69,https://www.careeradmw.com/jobs/territory-sales-manager-malawi,Territory Sales Manager – Malawi,BURN,duplicate,2026-10-20T14:33:59.324456,,CareerAdMW
+18249627021cadcd,https://www.careeradmw.com/jobs/manager-malawi-infrastructure,"Manager, Malawi Infrastructure",SPLASH INTERNATIONAL,posted,2026-10-20T14:34:08.492537,755,CareerAdMW
+24aa58f43a8771f2,https://www.careeradmw.com/jobs/health-program-technical-advisor,Health Program Technical Advisor,Opportunity International,posted,2026-10-20T14:34:21.229096,756,CareerAdMW
+c5e3609bce38ae99,https://www.careeradmw.com/jobs/monitoring-evaluation-learning-associate,"Monitoring, Evaluation, & Learning Associate",Opportunity International,posted,2026-10-20T14:34:30.742051,757,CareerAdMW
+851855a1b74358a9,https://www.careeradmw.com/jobs/project-technical-lead-climate-resilient-healthcare-and-wellbeing-for-communities-in-southern-malawi,"Project Technical Lead, Climate-resilient Healthcare and Wellbeing for Communities in Southern Malawi",Save the Children,posted,2026-10-20T14:34:40.009116,758,CareerAdMW
+554f53fbbd3b0c9f,https://www.careeradmw.com/jobs/country-program-manager,Country Program Manager,Pure Earth,posted,2026-10-20T14:34:49.596790,759,CareerAdMW
+bad9228560fd5d36,https://www.careeradmw.com/jobs/finance-director-1789549861,Finance Director,G4S,posted,2026-10-20T14:35:01.883659,760,CareerAdMW
+d29d9191f1918c94,https://www.careeradmw.com/jobs/mobile-supervisor,Mobile Supervisor,G4S,posted,2026-10-20T14:35:11.831099,761,CareerAdMW
+e9d20d07eb018078,https://www.careeradmw.com/jobs/enumerators-1789461898,Enumerators,International Organization for Migration (IOM),posted,2026-10-20T14:35:22.985527,762,CareerAdMW
+933f37b458b1c4a8,https://www.careeradmw.com/jobs/junior-advisor-communications-value-chain-development,JUNIOR ADVISOR (COMMUNICATIONS & VALUE CHAIN DEVELOPMENT),GIZ MALAWI,posted,2026-10-20T14:35:32.966188,763,CareerAdMW
+d067afb91e144e2e,https://www.careeradmw.com/jobs/various-positions-1789131547,Various Positions,Sunbird Tourism Plc.,posted,2026-10-20T14:35:35.633599,523,CareerAdMW
+d7778805a4728e1d,https://www.careeradmw.com/jobs/investment-manager,INVESTMENT MANAGER,LifeCo Asset Management Limited,posted,2026-10-20T14:35:47.076787,764,CareerAdMW
+15552126fc76b459,https://www.careeradmw.com/jobs/project-director-every-child-belongs-project,Project Director- Every Child Belongs Project,World Vision International,posted,2026-10-20T14:35:56.634459,765,CareerAdMW
+22420d72b446f616,https://www.careeradmw.com/jobs/finance-administration-manager-1789105922,Finance & Administration Manager,Abt Global,posted,2026-10-20T14:36:07.756695,766,CareerAdMW
+e058dc7ce235686e,https://www.careeradmw.com/jobs/supply-chain-advisor,Supply Chain Advisor,Abt Global,posted,2026-10-20T14:36:17.220523,767,CareerAdMW
+2cb8552e483cdd63,https://www.careeradmw.com/jobs/chief-of-party,Chief of Party,Abt Global,posted,2026-10-20T14:36:27.455141,768,CareerAdMW
+4eb5628716a0b120,https://www.careeradmw.com/jobs/administration-assistant-1789062504,ADMINISTRATION ASSISTANT,Pact,posted,2026-10-20T14:36:36.262578,769,CareerAdMW
+35718dd217b00b56,https://www.careeradmw.com/jobs/global-health-security-ghs-technical-advisor-i-zoonoses-amr,GLOBAL HEALTH SECURITY (GHS) TECHNICAL ADVISOR I – ZOONOSES & AMR,FHI 360,posted,2026-10-20T14:36:46.031174,770,CareerAdMW
+c975b8d24742071c,https://www.careeradmw.com/jobs/marketing-officer-1788949375,Marketing Officer,CIC Insurance Company,posted,2026-10-20T14:36:54.916291,771,CareerAdMW
+0c433c6f686ee108,https://www.careeradmw.com/jobs/claims-analyst,Claims Analyst,CIC Insurance Company,posted,2026-10-20T14:37:02.458537,772,CareerAdMW
+77db4d4e31221be9,https://www.careeradmw.com/jobs/internal-audit-assistant,Internal Audit Assistant,CIC Insurance Company,posted,2026-10-20T14:37:09.509705,773,CareerAdMW
+5ec3900bb686f35b,https://www.careeradmw.com/jobs/shop-operators,Shop Operators,World Bicycle Relief,posted,2026-10-20T14:37:19.484421,774,CareerAdMW
+d6f8a513491c97eb,https://www.careeradmw.com/jobs/clinical-officer,CLINICAL OFFICER,JCCC Private Clinic,posted,2026-10-20T14:37:22.096778,618,CareerAdMW
+4cef2c330fc5c624,https://www.careeradmw.com/jobs/multiple-vacancies-1788937408,Multiple Vacancies,Shacon Ltd,posted,2026-10-20T14:37:25.094493,694,CareerAdMW
+27264e9b2091d297,https://www.careeradmw.com/jobs/field-officer-1788933931,Field Officer,Good Neighbors Malawi,posted,2026-10-20T14:37:27.755411,190,CareerAdMW
+37d2519586c650c6,https://www.careeradmw.com/jobs/executive-director-1788933765,EXECUTIVE DIRECTOR,WOMEN LAWYERS ASSOCIATION (WLA),posted,2026-10-20T14:37:30.621903,22,CareerAdMW
+fbfe284b80d69e65,https://www.careeradmw.com/jobs/customer-support-representative,Customer Support Representative,Wave Mobile Money Inc.,posted,2026-10-20T14:37:40.374097,775,CareerAdMW
+9fb9a64a1c2a5cb4,https://www.careeradmw.com/jobs/multiple-vacancies-1788878877,MULTIPLE VACANCIES,African Institute for Development Policy (AFIDEP),posted,2026-10-20T14:37:43.067570,694,CareerAdMW
+72f46127b707baf6,https://www.careeradmw.com/jobs/materials-measurement-engineer,Materials / Measurement Engineer,UNIK CONSTRUCTION ENGINEERING (M) LTD,posted,2026-10-20T14:37:51.234654,776,CareerAdMW
+0bbda41ad623ebff,https://www.careeradmw.com/jobs/board-director,BOARD DIRECTOR,Africa Sun Power Limited (AFSP),posted,2026-10-20T14:38:03.395586,777,CareerAdMW
+e9e9ec1bcb729846,https://www.careeradmw.com/jobs/part-time-comic-book-artist-illustrator,PART-TIME COMIC BOOK ARTIST / ILLUSTRATOR,Cultural Comics,posted,2026-10-20T14:38:13.569273,778,CareerAdMW
+f57c6cbceacab8dd,https://www.careeradmw.com/jobs/receptionist-1788851595,RECEPTIONIST,BLUEBERRY TRAVEL MALAWI,posted,2026-10-20T14:38:16.363407,231,CareerAdMW
+68c5e1635d4623c1,https://www.careeradmw.com/jobs/postgraduate-clinical-research-assistant-2-posts,Postgraduate Clinical Research Assistant (2 posts),Kamuzu University of Health Sciences (KUHeS),posted,2026-10-20T14:38:25.132915,779,CareerAdMW
+73276a10dd727006,https://www.careeradmw.com/jobs/regional-compliance-manager-1788849387,Regional Compliance Manager,WELTHUNGERHILFE,posted,2026-10-20T14:38:41.885081,780,CareerAdMW
+e5cce47dd33f453b,https://www.careeradmw.com/jobs/associate-supply-chain-sexual-reproductive-maternal-newborn-health,"Associate, Supply Chain, Sexual Reproductive Maternal Newborn Health",CLINTON HEALTH ACCESS INITIATIVE (CHAI) / LAST MILE HEALTH (LMH),posted,2026-10-20T14:38:52.907549,781,CareerAdMW
+74f70def9ed5194d,https://www.careeradmw.com/jobs/sales-intern-1788803863,Sales Intern,Carway International Limited,posted,2026-10-20T14:39:02.981354,782,CareerAdMW
+c763465da124bae2,https://www.careeradmw.com/jobs/senior-construction-associate-shelter,Senior Construction Associate (Shelter),International Organization for Migration (IOM),posted,2026-10-20T14:39:11.785827,783,CareerAdMW
+05377d97a44f9705,https://www.careeradmw.com/jobs/headteacher,Headteacher,Al-Bayaan Foundation and Education Centre,posted,2026-10-20T14:39:22.586891,784,CareerAdMW
+4b32260d1a4ca19a,https://www.careeradmw.com/jobs/cookhousekeeper,Cook/Housekeeper,Alliance One Tobacco (Malawi) Limited,posted,2026-10-20T14:39:31.937826,785,CareerAdMW
+11c0725c6d247d2f,https://www.careeradmw.com/jobs/accountant-1788519859,ACCOUNTANT,CENTRE FOR COMMUNITY EMPOWERMENT INITIATIVES (CCEI),posted,2026-10-20T14:39:34.661194,483,CareerAdMW
+b7f12722669e5492,https://www.careeradmw.com/jobs/accounts-assistant-1788505450,Accounts Assistant,PRIVATE,posted,2026-10-20T14:39:37.401830,193,CareerAdMW
+c354fc68b8bf74e7,https://www.careeradmw.com/jobs/data-analyst-and-service-care,Data Analyst and Service Care,PRIVATE,posted,2026-10-20T14:39:47.546283,786,CareerAdMW
+e434a29331c26bb1,https://www.careeradmw.com/jobs/sales-and-marketing,Sales and Marketing,PRIVATE,posted,2026-10-20T14:39:55.729017,787,CareerAdMW
+b445fa168c8da8f6,https://www.careeradmw.com/jobs/settlement-reconciliation-executive,Settlement & Reconciliation Executive,Airtel Malawi Plc,posted,2026-10-20T14:40:09.671581,788,CareerAdMW
+4214b6381f559479,https://www.careeradmw.com/jobs/business-analyst-project-delivery,Business Analyst & Project Delivery,Airtel Malawi Plc,posted,2026-10-20T14:40:18.870597,789,CareerAdMW
+6d07b93e61ad3dc1,https://www.careeradmw.com/jobs/global-graphic-designer,Global Graphic Designer,Partners in Health (PIH),posted,2026-10-20T14:40:29.572183,790,CareerAdMW
+99a2c98b843f4946,https://www.careeradmw.com/jobs/plant-operator-2,Plant Operator (2),Partners in Health (PIH),posted,2026-10-20T14:40:38.090335,791,CareerAdMW
+557ef53a7e00f21c,https://www.careeradmw.com/jobs/country-director-1788504349,Country Director,Healthy Learners,posted,2026-10-20T14:40:49.536560,792,CareerAdMW
+fcfdcd34e6b5d507,https://www.careeradmw.com/jobs/heart-of-house-specialist-1788504204,Heart of House Specialist,Protea Hotel Blantyre Ryalls,posted,2026-10-20T14:40:59.376428,793,CareerAdMW
+ebc5727e6f7ea54d,https://www.careeradmw.com/jobs/guest-experience-expert,Guest Experience Expert,Protea Hotel Blantyre Ryalls,posted,2026-10-20T14:41:08.657477,794,CareerAdMW
+3e67b60be2918e0c,https://www.careeradmw.com/jobs/operations-manager-1788503823,Operations Manager,GardaWorld,posted,2026-10-20T14:41:20.437245,795,CareerAdMW
+4a3aa37f50778b85,https://www.careeradmw.com/jobs/investigation-officer,Investigation Officer,GardaWorld,posted,2026-10-20T14:41:28.956213,796,CareerAdMW
+785ed94bb7508d55,https://www.careeradmw.com/jobs/multiple-vacancies-1788426377,MULTIPLE VACANCIES,Pact,posted,2026-10-20T14:41:31.845588,694,CareerAdMW
+8f81a4a79a3958f4,https://www.careeradmw.com/jobs/multiple-vacancies-1788426111,MULTIPLE VACANCIES,Catholic Relief Services (CRS),posted,2026-10-20T14:41:34.643393,694,CareerAdMW
+52847133ac516c8b,https://www.careeradmw.com/jobs/multiple-vacancies-1788425673,MULTIPLE VACANCIES,Liwiro Finance Limited,posted,2026-10-20T14:41:37.364844,694,CareerAdMW
+ff3cf31082c6ccd9,https://www.careeradmw.com/jobs/2027-graduate-development-programme,2027 Graduate Development Programme,First Capital Bank,posted,2026-10-20T14:41:45.983204,797,CareerAdMW
+64606fb9cadde4a7,https://www.careeradmw.com/jobs/digital-channel-manager,DIGITAL CHANNEL MANAGER,Airtel Malawi Plc,posted,2026-10-20T14:41:56.282403,798,CareerAdMW
+02430d2489b4e2da,https://www.careeradmw.com/jobs/head-human-resources,"HEAD, HUMAN RESOURCES",Ecobank,posted,2026-10-20T14:42:07.479084,799,CareerAdMW
+d828a7f5ba1db1f7,https://www.careeradmw.com/jobs/multiple-vacancies-1788370642,MULTIPLE VACANCIES,UNICEF Malawi,posted,2026-10-20T14:42:10.191020,694,CareerAdMW
+1131c67127888efd,https://www.careeradmw.com/jobs/maternal-and-child-health-nurse,MATERNAL AND CHILD HEALTH NURSE,Partners In Health,posted,2026-10-20T14:42:12.916431,357,CareerAdMW
+ec2e4ec8518007e4,https://www.careeradmw.com/jobs/sales-consultant,SALES CONSULTANT,OMNIA AFRICA MALAWI,posted,2026-10-20T14:42:21.517920,800,CareerAdMW
+a4a2f4b40fb75091,https://www.careeradmw.com/jobs/program-manager-for-social-services,Program Manager for Social Services,Catholic Relief Services (CRS),posted,2026-10-20T14:42:30.082724,801,CareerAdMW
+6cb62bd73f6a9683,https://www.careeradmw.com/jobs/budgeting-and-reporting-assistant,Budgeting and Reporting Assistant,Save the Children,posted,2026-10-20T14:42:39.311314,802,CareerAdMW
+1a8b6f534de429c7,https://www.careeradmw.com/jobs/regional-compliance-manager,REGIONAL COMPLIANCE MANAGER,WELTHUNGERHILFE,duplicate,2026-10-20T14:42:41.149480,,CareerAdMW
+005eab527855a9d9,https://www.careeradmw.com/jobs/multiple-executive-vacancies-1788345051,MULTIPLE EXECUTIVE VACANCIES,MALAWI NATIONAL EXAMINATIONS BOARD,posted,2026-10-20T14:42:52.613857,803,CareerAdMW
+931834212de382b7,https://www.careeradmw.com/jobs/project-manager-1788344890,PROJECT MANAGER,HELIOS TOWERS,posted,2026-10-20T14:43:02.737976,804,CareerAdMW
+6f1e0b861751e843,https://www.careeradmw.com/jobs/fresh-foods-manager,FRESH FOODS MANAGER,Shopwise,posted,2026-10-20T14:43:11.787822,805,CareerAdMW
+d93eae1f02c32e98,https://www.careeradmw.com/jobs/accounts-assistant-1788344300,ACCOUNTS ASSISTANT,Atlanto Security Limited,posted,2026-10-20T14:43:14.530806,193,CareerAdMW
+4f77fbe7aac22743,https://www.careeradmw.com/jobs/project-manager-1788344200,PROJECT MANAGER,VISION PAINT & BUILDING SERVICES (VPBS),posted,2026-10-20T14:43:17.144422,804,CareerAdMW
+1f5e986c636c18d1,https://www.careeradmw.com/jobs/multiple-vacancies-1788275022,MULTIPLE VACANCIES,Outple,posted,2026-10-20T14:43:19.833038,694,CareerAdMW
+6867a5c0add8c97f,https://www.careeradmw.com/jobs/multiple-vacancies-1788274751,MULTIPLE VACANCIES,Woodlands Hotel & Resort,posted,2026-10-20T14:43:22.611208,694,CareerAdMW
+805de00144045f97,https://www.careeradmw.com/jobs/waiter,WAITER,Woodlands Hotel & Resort,posted,2026-10-20T14:43:40.789592,806,CareerAdMW
+7877208af5394fb3,https://www.careeradmw.com/jobs/ict-web-development-intern,ICT & WEB DEVELOPMENT INTERN,LIBERTY AFFILIATES,posted,2026-10-20T14:43:57.393888,807,CareerAdMW
+ca92992b69a2d24b,https://www.careeradmw.com/jobs/multiple-vacancies-1788196171,MULTIPLE VACANCIES,Protea Hotel by Marriott Lilongwe Ryalls,posted,2026-10-20T14:44:00.466605,694,CareerAdMW
+4edd00ce87a70c8c,https://www.careeradmw.com/jobs/multiple-vacancies-1788033520,MULTIPLE VACANCIES,Catholic Relief Services (CRS),duplicate,2026-10-20T14:44:02.298731,,CareerAdMW
+7dc0ae2ad40f20f8,https://www.careeradmw.com/jobs/multiple-vacancies-1788033408,MULTIPLE VACANCIES,Airtel Malawi Plc,posted,2026-10-20T14:44:05.303812,694,CareerAdMW
+289dc72b9971a7ce,https://www.careeradmw.com/jobs/manager-financial-crime-compliance,"MANAGER, FINANCIAL CRIME COMPLIANCE",Standard Bank Malawi,posted,2026-10-20T14:44:17.006406,808,CareerAdMW
+24670b589dfc6319,https://www.careeradmw.com/jobs/multiple-vacancies-1787899669,MULTIPLE VACANCIES,IGNITE ENERGY ACCESS,posted,2026-10-20T14:44:19.745391,694,CareerAdMW
+0f5eb58589a80bb2,https://www.careeradmw.com/jobs/agent-operations-regional-lead,Agent Operations Regional Lead,Wave Mobile Money Inc.,posted,2026-10-20T14:44:28.357440,809,CareerAdMW
+1fdce2f7efa90d90,https://www.careeradmw.com/jobs/multiple-vacancies-1787854166,MULTIPLE VACANCIES,ALMA TEACHER TRAINING COLLEGE,posted,2026-10-20T14:44:31.085545,694,CareerAdMW
+6b56052f8547fc90,https://www.careeradmw.com/jobs/project-implementation-manager-pim,PROJECT IMPLEMENTATION MANAGER (PIM),SEED AND KNOWLEDGE INITIATIVE (SKI),posted,2026-10-20T14:44:38.763063,810,CareerAdMW
+1565cf637527c73e,https://www.careeradmw.com/jobs/digital-loan-officer,DIGITAL LOAN OFFICER,Swift Digital Finance Ltd,posted,2026-10-20T14:44:46.657320,811,CareerAdMW
+473b5880ed869acb,https://www.careeradmw.com/jobs/brand-manager,BRAND MANAGER,Sana Cash and Carry,posted,2026-10-20T14:44:55.366708,812,CareerAdMW
+c91cb11b6e3fc4e6,https://www.careeradmw.com/jobs/internal-audit-manager-1787851206,Internal Audit Manager,Britam Insurance Company Malawi Limited,posted,2026-10-20T14:45:07.234725,813,CareerAdMW
+2a0f71639c2a435a,https://www.careeradmw.com/jobs/financial-director,FINANCIAL DIRECTOR,G4S,posted,2026-10-20T14:45:16.533553,814,CareerAdMW
+7ea2d35f8f6ba209,https://www.careeradmw.com/jobs/multiple-consultant-vacancies,MULTIPLE CONSULTANT VACANCIES,LANDESA,posted,2026-10-20T14:45:25.699816,815,CareerAdMW
+986f16142e74aca9,https://www.careeradmw.com/jobs/senior-program-manager-spm,Senior Program Manager (SPM),CLINTON HEALTH ACCESS INITIATIVE (CHAI) / LAST MILE HEALTH (LMH),posted,2026-10-20T14:45:35.216564,816,CareerAdMW
+03e3568bebf6a343,https://www.careeradmw.com/jobs/monitoring-evaluation-accountability-and-learning-meal-intern,"Monitoring, Evaluation, Accountability and Learning (MEAL) Intern",Self Help Africa,posted,2026-10-20T14:45:45.019455,817,CareerAdMW
+f0ed11da04d119bb,https://www.careeradmw.com/jobs/district-wash-officers,District WASH Officers,Self Help Africa,posted,2026-10-20T14:45:53.759696,818,CareerAdMW
+4eeb95450bfc570d,https://www.careeradmw.com/jobs/wash-project-manager,Wash Project Manager,Self Help Africa,posted,2026-10-20T14:46:02.205609,819,CareerAdMW
+01d9eaa261dc5633,https://www.careeradmw.com/jobs/audit-associates,AUDIT ASSOCIATES,GRANT THORNTON,posted,2026-10-20T14:46:04.919615,413,CareerAdMW
+96be5f4b75e694cb,https://www.careeradmw.com/jobs/project-manager,Project Manager,MAMALAND (A MOTA-ENGIL GROUP COMPANY),posted,2026-10-20T14:46:07.538882,804,CareerAdMW
+6068388bb9ec3ac9,https://www.careeradmw.com/jobs/post-doctoral-research-associate,POST-DOCTORAL RESEARCH ASSOCIATE,LIVERPOOL SCHOOL OF TROPICAL MEDICINE (LSTM),posted,2026-10-20T14:46:16.749745,820,CareerAdMW
+8181fe4c3f877e4c,https://www.careeradmw.com/jobs/malawi-mel-lead,MALAWI MEL LEAD,One Acre Fund,posted,2026-10-20T14:46:25.019158,821,CareerAdMW
+8503913ab43792e0,https://www.careeradmw.com/jobs/multiple-positions-1787591302,Multiple Positions,PRIVATE,posted,2026-10-20T14:46:27.637368,381,CareerAdMW
+a9aa5582d59cac3b,https://www.careeradmw.com/jobs/multiple-positions-1787591141,Multiple Positions,Mulani Organics,posted,2026-10-20T14:46:30.461297,381,CareerAdMW
+4e72bf2cb8de34a0,https://www.careeradmw.com/jobs/campus-director,CAMPUS DIRECTOR,MAMALAND (A MOTA-ENGIL GROUP COMPANY),posted,2026-10-20T14:46:42.271626,822,CareerAdMW
+d29d01f7769b0050,https://www.careeradmw.com/jobs/programme-specialist-me-no-c,"PROGRAMME SPECIALIST, M&E (NO-C)",UNFPA,posted,2026-10-20T14:46:52.627074,823,CareerAdMW
+81c6cb2c28163804,https://www.careeradmw.com/jobs/multiple-executive-vacancies,MULTIPLE EXECUTIVE VACANCIES,GREENBELT AUTHORITY (GBA),posted,2026-10-20T14:46:55.619826,803,CareerAdMW
+e041837d7175803c,https://www.careeradmw.com/jobs/multiple-vacancies-1787295106,MULTIPLE VACANCIES,The Malawi Agricultural and Industrial Investment Corporation (MAIIC) Plc,posted,2026-10-20T14:46:58.351888,694,CareerAdMW
+f92e28988469ee2b,https://www.careeradmw.com/jobs/multi-county-chief-of-party-ecb-project,Multi-County Chief of Party- ECB Project,World Vision International,posted,2026-10-20T14:47:07.186828,824,CareerAdMW
+6da48a790ea507bd,https://www.careeradmw.com/jobs/finance-officer-1787155815,FINANCE OFFICER,Nutrition International,posted,2026-10-20T14:47:18.207516,825,CareerAdMW
+a1713241e1e27c24,https://www.careeradmw.com/jobs/programme-officer-animal-health-p-3,PROGRAMME OFFICER (ANIMAL HEALTH) – P-3,Food and Agriculture Organization (FAO),posted,2026-10-20T14:47:27.656384,826,CareerAdMW
+f74fdb44c4f22044,https://www.careeradmw.com/jobs/mel-cycle-specialist,MEL CYCLE SPECIALIST,ONE WATER VILLAGE,posted,2026-10-20T14:47:37.665414,827,CareerAdMW
+728d812b21c2fef1,https://www.careeradmw.com/jobs/marketing-sales-genius-1787144757,Marketing & Sales Genius,EasyBooks Solutions,posted,2026-10-20T14:47:47.137649,828,CareerAdMW
+e1a1052fba7375fe,https://www.careeradmw.com/jobs/pension-administration-officer,PENSION ADMINISTRATION OFFICER,Vanguard Life Assurance Company Limited,posted,2026-10-20T14:47:56.093033,829,CareerAdMW
+80936605a81e48e7,https://www.careeradmw.com/jobs/accountability-and-safeguarding-coordinator,ACCOUNTABILITY AND SAFEGUARDING COORDINATOR,World Relief Malawi,posted,2026-10-20T14:48:06.610137,830,CareerAdMW
+20b05b3ec67dca00,https://www.careeradmw.com/jobs/direct-sales-agent-civil-servant-loan-product-1787144118,DIRECT SALES AGENT – CIVIL SERVANT LOAN PRODUCT,Liwiro Finance Limited,posted,2026-10-20T14:48:16.661324,831,CareerAdMW
+67a9e3bfefff986b,https://www.careeradmw.com/jobs/direct-sales-agent-civil-servant-loan-product-1787144006,DIRECT SALES AGENT – CIVIL SERVANT LOAN PRODUCT,Liwiro Finance Limited,posted,2026-10-20T14:48:19.367896,831,CareerAdMW
+bfd3b14827b8d76f,https://www.careeradmw.com/jobs/finance-and-administration-manager-1787072836,Finance and Administration Manager,Development Media International (DMI),posted,2026-10-20T14:48:30.717447,832,CareerAdMW
+097067b76f24ebe2,https://www.careeradmw.com/jobs/zonal-business-manager,Zonal Business Manager,Airtel Malawi Plc,posted,2026-10-20T14:48:38.851537,833,CareerAdMW
+935b1d9da32cb9fd,https://www.careeradmw.com/jobs/associate-data-specialist,Associate Data Specialist,United Nations Resident Coordination Office,posted,2026-10-20T14:48:48.032742,834,CareerAdMW
+c3bdb40e539fb05b,https://www.careeradmw.com/jobs/refrigeration-air-conditioning-intern-1-position,REFRIGERATION & AIR CONDITIONING INTERN (1 POSITION),TOPWORKS ENGINEERING LIMITED,posted,2026-10-20T14:49:04.352516,835,CareerAdMW
+a3c9138d5e6cb534,https://www.careeradmw.com/jobs/automobile-engineering-motor-vehicle-mechanics-intern-2-positions,AUTOMOBILE ENGINEERING / MOTOR VEHICLE MECHANICS INTERN (2 POSITIONS),TOPWORKS ENGINEERING LIMITED,posted,2026-10-20T14:49:13.009793,836,CareerAdMW
+acc9ab848b6d09d2,https://www.careeradmw.com/jobs/englishchichewa-teacher,English/Chichewa Teacher,Marymount Catholic Secondary School,posted,2026-10-20T14:49:22.053113,837,CareerAdMW
+a836a73b32e13315,https://www.careeradmw.com/jobs/field-engineer,Field Engineer,Bespat Human Capital Management,posted,2026-10-20T14:49:31.266309,838,CareerAdMW
+f365c74125792d48,https://www.careeradmw.com/jobs/triple-elimination-technical-lead,TRIPLE ELIMINATION TECHNICAL LEAD,Pact,posted,2026-10-20T14:49:40.584006,839,CareerAdMW
+fe25774bf65340c9,https://www.careeradmw.com/jobs/senior-technical-manager,SENIOR TECHNICAL MANAGER,Pact,posted,2026-10-20T14:49:50.363716,840,CareerAdMW
+8e143d6f9ef0825b,https://www.careeradmw.com/jobs/hiv-diagnostic-assistant-hda,HIV DIAGNOSTIC ASSISTANT (HDA),Waka Private Clinic,posted,2026-10-20T14:49:59.352528,841,CareerAdMW
+94f0c444061d4813,https://www.careeradmw.com/jobs/executive-chef-1786991569,EXECUTIVE CHEF,Protea Hotel by Marriott Lilongwe Ryalls,posted,2026-10-20T14:50:11.551715,842,CareerAdMW
+11bf3e1717bf2a51,https://www.careeradmw.com/jobs/accounts-assistant-1786987750,Accounts Assistant,RAB PROCESSORS LTD,posted,2026-10-20T14:50:14.312545,193,CareerAdMW
+d7a57749b3af216f,https://www.careeradmw.com/jobs/marketing-and-graphic-design-assistant,MARKETING AND GRAPHIC DESIGN ASSISTANT,PlantCatalyst Africa,posted,2026-10-20T14:50:25.963559,843,CareerAdMW
+4a0bdba46afd0043,https://www.careeradmw.com/jobs/executive-sous-chef,Executive Sous Chef,THE Makokola Retreat,posted,2026-10-20T14:50:34.693891,844,CareerAdMW
+ab2f2f64f9129102,https://www.careeradmw.com/jobs/senior-ict-officer-systems-programmer-1-post,Senior ICT Officer (Systems Programmer) – 1 post,The Catholic University of Malawi,posted,2026-10-20T14:50:44.848759,845,CareerAdMW
+12764145bd359bc7,https://www.careeradmw.com/jobs/assistant-store-keeper,Assistant Store Keeper,Sable Farming Company Limited,posted,2026-10-20T14:50:54.831233,846,CareerAdMW
+25227cfea0d37893,https://www.careeradmw.com/jobs/multiple-vacancies-9-positions,MULTIPLE VACANCIES (9 POSITIONS),MALAWI CATERING SERVICES LIMITED,posted,2026-10-20T14:51:05.872085,847,CareerAdMW
+10d531f2094e26bc,https://www.careeradmw.com/jobs/supply-logistics-specialist-p-3,"SUPPLY & LOGISTICS SPECIALIST, P-3",UNICEF Malawi,posted,2026-10-20T14:51:15.636131,848,CareerAdMW
+1d1df7a62b6dab39,https://www.careeradmw.com/jobs/billing-accountant,BILLING ACCOUNTANT,GardaWorld,posted,2026-10-20T14:51:24.648681,849,CareerAdMW
+20476623830dc95a,https://www.careeradmw.com/jobs/operations-manager-1786714607,OPERATIONS MANAGER,Cedar Estate,posted,2026-10-20T14:51:27.770776,795,CareerAdMW
+1aca80bfad154740,https://www.careeradmw.com/jobs/operations-assistant,Operations Assistant,Innovations for Poverty Action (IPA) Malawi,posted,2026-10-20T14:51:39.397095,850,CareerAdMW
+3c0910e09ea2eb48,https://www.careeradmw.com/jobs/multiple-teaching-vacancies,MULTIPLE TEACHING VACANCIES,Carthage Private Secondary School,posted,2026-10-20T14:51:48.251599,851,CareerAdMW
+6772c8efc79ce7bb,https://www.careeradmw.com/jobs/marketing-executive,MARKETING EXECUTIVE,BLUEBERRY TRAVEL MALAWI,posted,2026-10-20T14:51:58.533340,852,CareerAdMW
+aabda1829efc77f7,https://www.careeradmw.com/jobs/administrative-officer,ADMINISTRATIVE OFFICER,Right To Care,posted,2026-10-20T14:52:10.665023,853,CareerAdMW
+7f5215e0588dd867,https://www.careeradmw.com/jobs/temporary-banking-support-associate,TEMPORARY BANKING SUPPORT ASSOCIATE,AMG GLOBAL,posted,2026-10-20T14:52:20.900167,854,CareerAdMW
+220e5faf1ca6286c,https://www.careeradmw.com/jobs/territory-manager,TERRITORY MANAGER,Mount Meru Petroleum Limited,posted,2026-10-20T14:52:29.696976,855,CareerAdMW
+524b41e8928f731f,https://www.careeradmw.com/jobs/sales-and-marketing-representative-1786690542,SALES AND MARKETING REPRESENTATIVE,Giraffe Powa Limited,posted,2026-10-20T14:52:38.739302,856,CareerAdMW
+5890c0b8d3c7a52b,https://www.careeradmw.com/jobs/sales-and-marketing-personnel,SALES AND MARKETING PERSONNEL,Doorbell Services,posted,2026-10-20T14:52:47.828267,857,CareerAdMW
+31acd167ef97fdf0,https://www.careeradmw.com/jobs/internal-audit-manager-1786690212,Internal Audit Manager,NICO Holdings Plc,posted,2026-10-20T14:52:50.546126,813,CareerAdMW
+385f9eb0d64625ce,https://www.careeradmw.com/jobs/occupational-medical-doctor,Occupational Medical Doctor,Nacala Logistics,posted,2026-10-20T14:53:00.187755,858,CareerAdMW
+779176b0d3164909,https://www.careeradmw.com/jobs/legal-officer-1786689777,Legal Officer,FINCA Malawi,posted,2026-10-20T14:53:11.621731,859,CareerAdMW
+0f446654409757bd,https://www.careeradmw.com/jobs/consultant-digital-health,"Consultant, Digital Health",Last Mile Health,posted,2026-10-20T14:53:20.807947,860,CareerAdMW
+a88ddbc507a3c0d9,https://www.careeradmw.com/jobs/earthworks-foreman-1786608989,EARTHWORKS FOREMAN,H.E. Jackson Engineering Ltd (HEJ),posted,2026-10-20T14:53:30.016075,861,CareerAdMW
+f7c894f93e7b6870,https://www.careeradmw.com/jobs/receptionist-1786608545,Receptionist,VICTORIA HOTEL,posted,2026-10-20T14:53:32.910992,231,CareerAdMW
+5735ec428413d8bf,https://www.careeradmw.com/jobs/front-office-supervisor,FRONT OFFICE SUPERVISOR,VICTORIA HOTEL,posted,2026-10-20T14:53:41.946591,862,CareerAdMW
+a7a00854b9f7eb34,https://www.careeradmw.com/jobs/lead-talent-acquisition,LEAD TALENT ACQUISITION,Airtel Malawi Plc,posted,2026-10-20T14:53:51.425147,863,CareerAdMW
+b0adbcac7f7900a9,https://www.careeradmw.com/jobs/ncr-atleos-atm-field-service-customer-support-engineer,NCR ATLEOS ATM FIELD SERVICE / CUSTOMER SUPPORT ENGINEER,GESTETNER LTD (RICOTEC),posted,2026-10-20T14:54:03.158335,864,CareerAdMW
+e2f4eaa528083d5f,https://www.careeradmw.com/jobs/multiple-vacancies-1786519640,MULTIPLE VACANCIES,MUDI SACCO LTD,posted,2026-10-20T14:54:12.933303,694,CareerAdMW
+c648b74a72f28d92,https://www.careeradmw.com/jobs/assistant-financial-controller-1786517941,Assistant Financial Controller,Wave Mobile Money Inc.,posted,2026-10-20T14:54:23.624012,865,CareerAdMW
+1bb9dd970177d913,https://www.careeradmw.com/jobs/farm-operations-officer,FARM OPERATIONS OFFICER,AMAZING B PROJECTS,posted,2026-10-20T14:54:36.812539,866,CareerAdMW
+2e76987fc8d5db69,https://www.careeradmw.com/jobs/legal-officer-1786438327,LEGAL OFFICER,FINCA Malawi,duplicate,2026-10-20T14:54:38.647874,,CareerAdMW
+8af60253228901e8,https://www.careeradmw.com/jobs/mobile-deployment-engineer-ios-android-project-based,MOBILE DEPLOYMENT ENGINEER – iOS & ANDROID (PROJECT-BASED),Niveosystems,posted,2026-10-20T14:54:47.230355,867,CareerAdMW
+318ca114f287e4a9,https://www.careeradmw.com/jobs/study-opportunity,STUDY OPPORTUNITY,ZOMBA INTERNATIONAL COLLEGE,posted,2026-10-20T14:54:57.495215,868,CareerAdMW
+1c46e51ad19e5dd4,https://www.careeradmw.com/jobs/call-for-applications-september-2026-intake-now-open,CALL FOR APPLICATIONS: September 2026 Intake Now Open!,Lilongwe Institute of Science and Technology,posted,2026-10-20T14:55:09.832215,869,CareerAdMW
+00f62466fc98d6f7,https://www.careeradmw.com/jobs/call-for-prequalification-of-suppliers-training-materials,CALL FOR PREQUALIFICATION OF SUPPLIERS – TRAINING MATERIALS,Don Bosco Youth Technical Institute,posted,2026-10-20T14:55:20.343005,870,CareerAdMW
+89073a5b15e1be4b,https://www.careeradmw.com/jobs/digital-health-consultant,DIGITAL HEALTH CONSULTANT,Last Mile Health,posted,2026-10-20T14:55:29.052728,871,CareerAdMW
+90a7da470eb57d9c,https://www.careeradmw.com/jobs/case-investigation-senior-coordinator,CASE INVESTIGATION SENIOR COORDINATOR,One Acre Fund,posted,2026-10-20T14:55:40.867649,872,CareerAdMW
+ba50332c1b10080f,https://www.careeradmw.com/jobs/deputy-country-director-operations,Deputy Country Director (Operations),GiveDirectly,posted,2026-10-20T14:55:49.429017,873,CareerAdMW
+673443c7146c876a,https://www.careeradmw.com/jobs/national-health-spending-efficiency-analysis-consultant,NATIONAL HEALTH SPENDING EFFICIENCY ANALYSIS CONSULTANT,UNICEF Malawi,posted,2026-10-20T14:55:58.006575,874,CareerAdMW
+dee79a32c1768a1f,https://www.careeradmw.com/jobs/operations-manager-1785945988,Operations Manager,Recruitment Machines,posted,2026-10-20T14:56:00.756869,795,CareerAdMW
+3e2aa39d2eba7163,https://www.careeradmw.com/jobs/factory-manager-pharmaceuticals,FACTORY MANAGER (PHARMACEUTICALS),CROWN PHARMACEUTICALS AND RESEARCH LABORATORY,posted,2026-10-20T14:56:10.146863,875,CareerAdMW
+04904a2907246fd5,https://www.careeradmw.com/jobs/loan-officer-civil-servants,Loan Officer (Civil Servants),Masters Finance Ltd,posted,2026-10-20T14:56:21.654189,876,CareerAdMW
+e64c2470b6a81d82,https://www.careeradmw.com/jobs/executive-assistant-1785942398,Executive Assistant,Masters Finance Ltd,posted,2026-10-20T14:56:32.578411,877,CareerAdMW
+794667333ee58129,https://www.careeradmw.com/jobs/postdoctoral-research-associate,Postdoctoral Research Associate,MALAWI LIVERPOOL WELLCOME PROGRAMME,posted,2026-10-20T14:56:42.460119,878,CareerAdMW
+2e16e179f9fe98ad,https://www.careeradmw.com/jobs/biostatistician,Biostatistician.,MALAWI LIVERPOOL WELLCOME PROGRAMME,posted,2026-10-20T14:56:50.937956,879,CareerAdMW
+10907934717702b8,https://www.careeradmw.com/jobs/credit-and-product-operations-officer,Credit and Product Operations Officer,Swift Digital Finance Ltd,posted,2026-10-20T14:57:00.900257,880,CareerAdMW
+5c0fe62f57b75264,https://www.careeradmw.com/jobs/partnerships-manager,Partnerships Manager,Water Mission,posted,2026-10-20T14:57:11.608166,881,CareerAdMW
+64ec683f2a95d2fb,https://www.careeradmw.com/jobs/business-registration-assistant,Business Registration Assistant,Izebuy,posted,2026-10-20T14:57:20.481538,882,CareerAdMW
+111f337828eb8803,https://www.careeradmw.com/jobs/intermediate-front-end-engineer-partner-dashboard,INTERMEDIATE FRONT-END ENGINEER — PARTNER DASHBOARD,Hyve Mobile,posted,2026-10-20T14:57:29.786337,883,CareerAdMW
+eb8a7f337b22b069,https://www.careeradmw.com/jobs/procurement-officer-1785903130,PROCUREMENT OFFICER,GiveDirectly,posted,2026-10-20T14:57:39.901893,884,CareerAdMW
+22b869a72437c419,https://www.careeradmw.com/jobs/logistics-and-inventory-management-officer,LOGISTICS AND INVENTORY MANAGEMENT OFFICER,GiveDirectly,posted,2026-10-20T14:57:52.122797,885,CareerAdMW
+6d0dbd984fd13aec,https://www.careeradmw.com/jobs/external-auditor-malawi-value-chains-project-1785902897,EXTERNAL AUDITOR – MALAWI VALUE CHAINS PROJECT,Adam Smith International,posted,2026-10-20T14:58:06.900089,886,CareerAdMW
+65e4d50710a1abf9,https://www.careeradmw.com/jobs/temporary-student-recruitment-agents,TEMPORARY STUDENT RECRUITMENT AGENTS,Carthage Private Secondary School,posted,2026-10-20T14:58:15.309792,887,CareerAdMW
+74afcbf3db2935e4,https://www.careeradmw.com/jobs/female-sales-content-marketing-specialist,Female Sales & Content Marketing Specialist,Dream Weave,posted,2026-10-20T14:58:27.932449,888,CareerAdMW
+6c8afe4a75bc70ab,https://www.careeradmw.com/jobs/corporate-senior-legal-advisor,Corporate Senior Legal Advisor,Standard Bank Malawi,posted,2026-10-20T14:58:36.625811,889,CareerAdMW
+130b45a06f054976,https://www.careeradmw.com/jobs/orthopedic-clinical-officer-k,Orthopedic Clinical Officer (K),Holy Family Mission Hospital,posted,2026-10-20T14:58:46.970472,890,CareerAdMW
+e182da2bc9320581,https://www.careeradmw.com/jobs/temporary-compliance-officer,TEMPORARY COMPLIANCE OFFICER,The Smallholder Farmers Fertilizer Revolving Fund of Malawi (SFFRFM,posted,2026-10-20T14:58:56.954451,891,CareerAdMW
+66f4a45072f0aa2b,https://www.careeradmw.com/jobs/temporary-sales-clerk,TEMPORARY SALES CLERK,The Smallholder Farmers Fertilizer Revolving Fund of Malawi (SFFRFM,posted,2026-10-20T14:59:06.954642,892,CareerAdMW
+eedc723108639b52,https://www.careeradmw.com/jobs/teaching-positions-languages-and-sciences,TEACHING POSITIONS (LANGUAGES AND SCIENCES),MCHEREZO CHRISTIAN ACADEMY,posted,2026-10-20T14:59:20.292370,893,CareerAdMW
+da3b57f18f085e61,https://www.careeradmw.com/jobs/country-director-1785518648,Country Director,SPLASH INTERNATIONAL,posted,2026-10-20T14:59:29.758197,792,CareerAdMW
+9b5cd90ffbefcdd2,https://www.careeradmw.com/jobs/english-teacher-secondary-school,English Teacher (Secondary School),Joyce Banda Foundation school,posted,2026-10-20T14:59:38.848421,894,CareerAdMW
+541002d135118855,https://www.careeradmw.com/jobs/business-studies-accounting-teacher-secondary-school,Business Studies & Accounting Teacher (Secondary School),Joyce Banda Foundation school,posted,2026-10-20T14:59:48.710579,895,CareerAdMW
+6951e066749e92d0,https://www.careeradmw.com/jobs/partnership-facilitator,Partnership Facilitator,Compassion International,posted,2026-10-20T14:59:58.421562,896,CareerAdMW
+fbb631c0fecc9ef9,https://www.careeradmw.com/jobs/malawi-trees-execution-coordinator-fixed-term,MALAWI TREES EXECUTION COORDINATOR (FIXED-TERM),One Acre Fund,posted,2026-10-20T15:00:10.422536,897,CareerAdMW
+c3b5e1520140ff9e,https://www.careeradmw.com/jobs/country-project-lead,Country Project Lead,LIVING GOODS,posted,2026-10-20T15:00:22.248735,898,CareerAdMW
+2e3cf6fe3622dc3e,https://www.careeradmw.com/jobs/country-project-lead-malawi,COUNTRY PROJECT LEAD – MALAWI,LIVING GOODS,posted,2026-10-20T15:00:32.409544,899,CareerAdMW
+7719eb2a3206ac98,https://www.careeradmw.com/jobs/tax-associate,Tax Associate,EY Malawi,posted,2026-10-20T15:00:44.027305,900,CareerAdMW
+4e9b1f117cc64235,https://www.careeradmw.com/jobs/advisor-health-financing,"Advisor, Health Financing",Last Mile Health,posted,2026-10-20T15:00:53.634362,901,CareerAdMW
+b69119caff9a016a,https://www.careeradmw.com/jobs/national-coordiantor-child-protection,National Coordiantor - Child Protection,Plan International,posted,2026-10-20T15:01:05.633573,902,CareerAdMW
+428c160d859d186f,https://www.careeradmw.com/jobs/recoveries-manager,Recoveries Manager,The Malawi Enterprise Development Fund Limited (MEDF),posted,2026-10-20T15:01:17.057320,903,CareerAdMW
+bb63bdae3b3765e0,https://www.careeradmw.com/jobs/operations-manager-1785255409,Operations Manager,The Malawi Enterprise Development Fund Limited (MEDF),posted,2026-10-20T15:01:19.783159,795,CareerAdMW
+d2337015e1507d14,https://www.careeradmw.com/jobs/chief-finance-officer-1785255327,Chief Finance Officer,The Malawi Enterprise Development Fund Limited (MEDF),posted,2026-10-20T15:01:29.118518,904,CareerAdMW
+8126a6ea23447676,https://www.careeradmw.com/jobs/chief-procurement-and-asset-disposal-officer-mf4,Chief Procurement and Asset Disposal Officer (MF4),Liwiro Finance Limited,posted,2026-10-20T15:01:38.138523,905,CareerAdMW
+03a21717e9890bce,https://www.careeradmw.com/jobs/delivery-manager,DELIVERY MANAGER,Hyve Mobile,posted,2026-10-20T15:01:45.586127,906,CareerAdMW
+4523d2f0f22e3426,https://www.careeradmw.com/jobs/senior-laravel-engineer,SENIOR LARAVEL ENGINEER,Hyve Mobile,posted,2026-10-20T15:01:53.370197,907,CareerAdMW
+3d459a77c26f9a3b,https://www.careeradmw.com/jobs/roaming-interconnect-product-manager,Roaming & Interconnect Product Manager,Airtel Malawi Plc,posted,2026-10-20T15:02:06.167773,908,CareerAdMW
+f6e01bfd6db83526,https://www.careeradmw.com/jobs/social-expert,Social Expert,Unik Construction Engineering Malawi Ltd,posted,2026-10-20T15:02:17.158685,909,CareerAdMW
+b6c1030ad7f3bef3,https://www.careeradmw.com/jobs/accounts-assistant-1785211870,Accounts Assistant,Unik Construction Engineering Malawi Ltd,posted,2026-10-20T15:02:20.551572,193,CareerAdMW
+2ee26c07f3f86a2d,https://www.careeradmw.com/jobs/product-development-specialist,PRODUCT DEVELOPMENT SPECIALIST,Airtel Malawi Plc,posted,2026-10-20T15:02:31.674376,910,CareerAdMW
+d8b027fe07f04408,https://www.careeradmw.com/jobs/field-officer-24-positions,FIELD OFFICER (24 POSITIONS),INNOVATIONS FOR POVERTY ACTION (IPA),posted,2026-10-20T15:02:41.436889,911,CareerAdMW
+a05a51edd3819e30,https://www.careeradmw.com/jobs/usage-retention-executive,Usage & Retention Executive,Airtel Malawi Plc,posted,2026-10-20T15:02:50.675443,912,CareerAdMW
+c9b7164fbcb1f820,https://www.careeradmw.com/jobs/senior-administrative-assistant,Senior Administrative Assistant,Compassion International,posted,2026-10-20T15:02:58.855977,913,CareerAdMW
+19b139018310b7c8,https://www.careeradmw.com/jobs/sales-service-representative-1784825796,SALES & SERVICE REPRESENTATIVE,VITALITE Group Malawi,posted,2026-10-20T15:03:09.808172,914,CareerAdMW
+274e721710e3946b,https://www.careeradmw.com/jobs/project-assistant,PROJECT ASSISTANT,LUANAR-Lilongwe University of Agriculture and Natural Resources,posted,2026-10-20T15:03:20.126561,915,CareerAdMW
+c6b2e09dc1614fa5,https://www.careeradmw.com/jobs/chief-financial-officer-cfo,CHIEF FINANCIAL OFFICER (CFO),Liwiro Finance Limited,posted,2026-10-20T15:03:30.152850,916,CareerAdMW
+3041ab77b8b49015,https://www.careeradmw.com/jobs/cleaner,CLEANER,UNICAF,posted,2026-10-20T15:03:32.942254,409,CareerAdMW
+a378e9d022597f1b,https://www.careeradmw.com/jobs/operations-manager-1784724749,OPERATIONS MANAGER,UNICAF,posted,2026-10-20T15:03:35.738860,795,CareerAdMW
+72f55051b738b4e3,https://www.careeradmw.com/jobs/it-manager,IT MANAGER,UNICAF,posted,2026-10-20T15:03:47.617598,917,CareerAdMW
+98fe44a91baa2ebc,https://www.careeradmw.com/jobs/receptionist-1784724543,RECEPTIONIST,UNICAF,posted,2026-10-20T15:03:50.469429,231,CareerAdMW
+e33681348805a47a,https://www.careeradmw.com/jobs/technology-risk-manager-assurance,"TECHNOLOGY RISK MANAGER, ASSURANCE",EY Malawi,posted,2026-10-20T15:04:02.081844,918,CareerAdMW
+ddbfac310839699d,https://www.careeradmw.com/jobs/project-officer-4-positions,PROJECT OFFICER (4 POSITIONS),Smile Life Insurance Company Limited,posted,2026-10-20T15:04:15.159815,919,CareerAdMW
+90a0bbfb44a6489e,https://www.careeradmw.com/jobs/external-auditor-malawi-value-chains-project,EXTERNAL AUDITOR – MALAWI VALUE CHAINS PROJECT,Adam Smith International,duplicate,2026-10-20T15:04:17.045263,,CareerAdMW
+239bb51b4ca8b1d9,https://www.careeradmw.com/jobs/program-rotational-analyst,PROGRAM ROTATIONAL ANALYST,One Acre Fund,posted,2026-10-20T15:04:24.367538,920,CareerAdMW
+27dcde1a86425e14,https://www.careeradmw.com/jobs/assistant-financial-controller,ASSISTANT FINANCIAL CONTROLLER,Wave Mobile Money Inc.,duplicate,2026-10-20T15:04:26.178320,,CareerAdMW
+97b4254db8d085f0,https://www.careeradmw.com/jobs/national-director,NATIONAL DIRECTOR,Compassion International,posted,2026-10-20T15:04:35.877442,546,CareerAdMW
+d273b3319e68f42e,https://www.careeradmw.com/jobs/senior-buyer,SENIOR BUYER,Lotus Africa Limited,posted,2026-10-20T15:04:46.766953,921,CareerAdMW
+6a24c0488f769e72,https://www.careeradmw.com/jobs/finance-officer-1507,FINANCE OFFICER,Save the Children,posted,2026-10-20T15:04:49.502978,825,CareerAdMW
+eeb2ab47a2e85697,https://www.careeradmw.com/jobs/innovation-specialist-health-bundle-up-nutrition-for-small-and-sick-newborns,INNOVATION SPECIALIST (HEALTH) – BUNDLE UP! NUTRITION FOR SMALL AND SICK NEWBORNS,Save the Children,posted,2026-10-20T15:04:59.404260,922,CareerAdMW
+6dbb5988ad964dbd,https://www.careeradmw.com/jobs/automotive-electricians-2-posts,AUTOMOTIVE ELECTRICIANS (2 POSTS),Zagaf Transport,posted,2026-10-20T15:05:12.291670,923,CareerAdMW
+39af00fafbb20074,https://www.careeradmw.com/jobs/board-members-voluntary-positions,BOARD MEMBERS (VOLUNTARY POSITIONS),Patsinde,posted,2026-10-20T15:05:23.530019,924,CareerAdMW
+d3ba14d8da121bb1,https://www.careeradmw.com/jobs/assistant-accountant-billing,ASSISTANT ACCOUNTANT – BILLING,G4S,posted,2026-10-20T15:05:34.107618,925,CareerAdMW
+deffc2d28c109a83,https://www.careeradmw.com/jobs/fitters-4-posts,FITTERS (4 POSTS),Zagaf Transport,posted,2026-10-20T15:05:42.820990,926,CareerAdMW
+ff9783b0f14a4620,https://www.careeradmw.com/jobs/medical-administrative-officer,MEDICAL ADMINISTRATIVE OFFICER,Beit CURE Children’s Hospital,posted,2026-10-20T15:05:52.764443,927,CareerAdMW
+fa4b512554577a1d,https://www.careeradmw.com/jobs/facility-maintenance-coordinator,FACILITY MAINTENANCE COORDINATOR,Beit CURE Children’s Hospital,posted,2026-10-20T15:06:03.753028,928,CareerAdMW
+e7de13bd3341be98,https://www.careeradmw.com/jobs/assistant-human-resource-manager-1784133080,ASSISTANT HUMAN RESOURCE MANAGER,Unik Construction Engineering Malawi Ltd,posted,2026-10-20T15:06:13.917102,929,CareerAdMW
+c04f65f7fb8ccf75,https://www.careeradmw.com/jobs/product-matching-associate,PRODUCT MATCHING ASSOCIATE,Tiderise Technologies Inc.,posted,2026-10-20T15:06:25.074695,930,CareerAdMW
+a8304589d2e9c5e0,https://www.careeradmw.com/jobs/technical-advisor-i-cooperative-development,TECHNICAL ADVISOR I – COOPERATIVE DEVELOPMENT,Catholic Relief Services (CRS),posted,2026-10-20T15:06:34.623648,931,CareerAdMW
+e76223f8d29df4c6,https://www.careeradmw.com/jobs/sales-service-representative,SALES & SERVICE REPRESENTATIVE,VITALITE Malawi,posted,2026-10-20T15:06:37.276980,914,CareerAdMW
+9e00e5c28a3da3e5,https://www.careeradmw.com/jobs/audit-manager,AUDIT MANAGER,EY Malawi,posted,2026-10-20T15:06:49.089326,932,CareerAdMW
+862859d8a8da575a,https://www.careeradmw.com/jobs/regional-lead,REGIONAL LEAD,Wave Mobile Money Inc.,posted,2026-10-20T15:06:59.439301,933,CareerAdMW
+a1a1e18e49eb8d91,https://www.careeradmw.com/jobs/wash-field-facilitator-water-supply-and-sustainability,WASH FIELD FACILITATOR (WATER SUPPLY AND SUSTAINABILITY),Self Help Africa,posted,2026-10-20T15:07:12.166053,934,CareerAdMW
+c775a9c738118b65,https://www.careeradmw.com/jobs/manager-strategy-and-transactions-ey-parthenon,MANAGER – STRATEGY AND TRANSACTIONS – EY-PARTHENON,EY Malawi,posted,2026-10-20T15:07:21.913202,935,CareerAdMW
+b4401a7523dab5d2,https://www.careeradmw.com/jobs/audit-associate-assurance,"AUDIT ASSOCIATE, ASSURANCE",EY Malawi,posted,2026-10-20T15:07:32.423064,936,CareerAdMW
+c7d847df8373d65a,https://www.careeradmw.com/jobs/various-positions-1380,VARIOUS POSITIONS,Mount View International Primary School,posted,2026-10-20T15:07:35.094663,523,CareerAdMW
+69f6c61c5d057fe9,https://www.careeradmw.com/jobs/factory-maintenance-manager,FACTORY MAINTENANCE MANAGER,Easy Pack Limited,posted,2026-10-20T15:07:45.373019,937,CareerAdMW
+a59b060c5298167c,https://www.careeradmw.com/jobs/contract-officer,CONTRACT OFFICER,Coin Security Services,posted,2026-10-20T15:07:54.967838,938,CareerAdMW
+c42e28d2a7080b14,https://www.careeradmw.com/jobs/various-positions-1783520021,VARIOUS POSITIONS,Mphiro Civils Ltd,posted,2026-10-20T15:07:57.588321,523,CareerAdMW
+6dff3cb88894a070,https://www.careeradmw.com/jobs/various-positions-1783519917,VARIOUS POSITIONS,Marvel Group of Companies,posted,2026-10-20T15:08:00.301392,523,CareerAdMW
+f0475129196b5d6b,https://www.careeradmw.com/jobs/procurement-graduate-trainee,PROCUREMENT GRADUATE TRAINEE,Portland Cement Malawi Limited,posted,2026-10-20T15:08:11.243431,939,CareerAdMW
+84888b49d19e673c,https://www.careeradmw.com/jobs/teacher-all-subjects,TEACHER (ALL SUBJECTS),Eagles Rising High School,posted,2026-10-20T15:08:19.901768,940,CareerAdMW
+d462f691beae0b8b,https://www.careeradmw.com/jobs/matron,MATRON,Eagles Rising High School,posted,2026-10-20T15:08:28.646202,941,CareerAdMW
+2cbfc746ffe4397e,https://www.careeradmw.com/jobs/boarding-master-1783519253,BOARDING MASTER,Eagles Rising High School,posted,2026-10-20T15:08:36.468825,942,CareerAdMW
+a47f79b20c911120,https://www.careeradmw.com/jobs/various-positions-1783487420,VARIOUS POSITIONS,Amaryllis Hospitality Group,posted,2026-10-20T15:08:39.496607,523,CareerAdMW
+6a7981d943276eb3,https://www.careeradmw.com/jobs/meal-officer-monitoring-evaluation-accountability-and-learning,"MEAL OFFICER (MONITORING, EVALUATION, ACCOUNTABILITY AND LEARNING)",Save a Life,posted,2026-10-20T15:08:48.817329,943,CareerAdMW
+abf3c26f33c9a1e9,https://www.careeradmw.com/jobs/project-field-facilitators,PROJECT FIELD FACILITATOR(S),Save the Children,posted,2026-10-20T15:08:58.388894,944,CareerAdMW
+abb31423e2d4f27f,https://www.careeradmw.com/jobs/project-coordinator-tikuma-education-project,PROJECT COORDINATOR – TIKUMA EDUCATION PROJECT,Save the Children,posted,2026-10-20T15:09:07.399492,945,CareerAdMW
+3f35dbad6eec7863,https://www.careeradmw.com/jobs/accounts-assistant-1783156191,ACCOUNTS ASSISTANT,Save the Children,posted,2026-10-20T15:09:10.491259,193,CareerAdMW
+e3cea01877e5ea80,https://www.careeradmw.com/jobs/finance-and-administrative-assistant,FINANCE AND ADMINISTRATIVE ASSISTANT,INTERNATIONAL POTATO CENTER (CIP),posted,2026-10-20T15:09:21.853527,946,CareerAdMW
+594b91f41cfd93f4,https://www.careeradmw.com/jobs/senior-research-associate-in-market-development-and-monitoring-evaluation,SENIOR RESEARCH ASSOCIATE IN MARKET DEVELOPMENT AND MONITORING & EVALUATION,INTERNATIONAL POTATO CENTER (CIP),posted,2026-10-20T15:09:30.211334,947,CareerAdMW
+a4fa806330fe9126,https://www.careeradmw.com/jobs/industrial-welder,INDUSTRIAL WELDER,BEARING CENTRE LIMITED,posted,2026-10-20T15:09:39.972879,948,CareerAdMW
+ca32d15eba392d81,https://www.careeradmw.com/jobs/watershed-restorationland-restoration-technical-advisor,WATERSHED RESTORATION/LAND RESTORATION TECHNICAL ADVISOR,Catholic Relief Services (CRS),posted,2026-10-20T15:09:54.858517,949,CareerAdMW
+c8f45ce8af5cd7c8,https://www.careeradmw.com/jobs/consultant-integrated-mnh-training-guidelines-review,CONSULTANT – INTEGRATED MNH TRAINING GUIDELINES REVIEW,Pact,posted,2026-10-20T15:10:04.867699,950,CareerAdMW
+eb4966e6cad166fc,https://www.careeradmw.com/jobs/accounts-officer,ACCOUNTS OFFICER,The Church of Central Africa Presbyterian (CCAP) Blantyre Synod,posted,2026-10-20T15:10:07.640688,528,CareerAdMW
+d5f578f3025ef2cb,https://www.careeradmw.com/jobs/failure-analysis-engineer-electronics,FAILURE ANALYSIS ENGINEER – ELECTRONICS,Sun King,posted,2026-10-20T15:10:17.319695,951,CareerAdMW
+ffc3158a7ab10755,https://www.careeradmw.com/jobs/area-collection-executive,Area Collection Executive,Sun King,posted,2026-10-20T15:10:27.713732,952,CareerAdMW
+a98ba165eb11ddbe,https://www.careeradmw.com/jobs/after-sales-erp-associate-sap,AFTER SALES – ERP ASSOCIATE (SAP),Sun King,posted,2026-10-20T15:10:38.384092,953,CareerAdMW
+c74bd8c5b40467d4,https://www.careeradmw.com/jobs/finance-and-operations-director,FINANCE AND OPERATIONS DIRECTOR,Pact,posted,2026-10-20T15:10:48.419411,954,CareerAdMW
+53735a9c778f050b,https://www.careeradmw.com/jobs/accountant-1782828675,Accountant,EDU AND WORK CONNEC,posted,2026-10-20T15:10:51.195213,483,CareerAdMW
+74171c13b7ceeef6,https://www.careeradmw.com/jobs/teachers-primary-secondary-and-teaching-assistants,TEACHERS (PRIMARY & SECONDARY) AND TEACHING ASSISTANTS,Growing Star Montessori Nursery and Primary School,posted,2026-10-20T15:10:59.785090,955,CareerAdMW
+e9e2a39502c5224c,https://www.careeradmw.com/jobs/country-sales-manager-civil-servant-loan-product,COUNTRY SALES MANAGER – CIVIL SERVANT LOAN PRODUCT,Liwiro Finance Limited,posted,2026-10-20T15:11:11.240625,956,CareerAdMW
+22b48035995bd59d,https://www.careeradmw.com/jobs/security-control-centre-manager,SECURITY CONTROL CENTRE MANAGER,G4S,posted,2026-10-20T15:11:20.007750,957,CareerAdMW
+402150d8a12ca02f,https://www.careeradmw.com/jobs/application-support-specialist,APPLICATION SUPPORT SPECIALIST,Standard Bank Malawi,posted,2026-10-20T15:11:29.043531,958,CareerAdMW
+1c88ffff36390ea7,https://www.careeradmw.com/jobs/data-management-support-monitoring-and-evaluation,DATA MANAGEMENT SUPPORT: MONITORING AND EVALUATION,United Nations Volunteers (UNV),posted,2026-10-20T15:11:38.746793,959,CareerAdMW
+31e93c61c423d98e,https://www.careeradmw.com/jobs/interns-memis-helpdesk-support,INTERNS – MEMIS HELPDESK SUPPORT,PATH,posted,2026-10-20T15:11:47.120403,960,CareerAdMW
+39833d902dd54d6f,https://www.careeradmw.com/jobs/freelance-customer-engagement-sales-consultants,FREELANCE CUSTOMER ENGAGEMENT & SALES CONSULTANTS,First Capital Bank,posted,2026-10-20T15:11:54.877458,961,CareerAdMW
+7f8bf1467a4d1393,https://www.careeradmw.com/jobs/warehouse-manager,WAREHOUSE MANAGER,Home and Curtains Kings Malawi,posted,2026-10-20T15:12:05.626930,962,CareerAdMW
+b5bb12d5696e350d,https://www.careeradmw.com/jobs/various-vacancies-1782314893,VARIOUS VACANCIES,CCAP Nkhoma Synod Health Department,posted,2026-10-20T15:12:08.444046,728,CareerAdMW
+c62a3fca4ce96e50,https://www.careeradmw.com/jobs/program-manager-i-emergency-response-and-recovery-esaro,"PROGRAM MANAGER I, EMERGENCY RESPONSE AND RECOVERY, ESARO",Catholic Relief Services (CRS),posted,2026-10-20T15:12:16.079802,963,CareerAdMW
+17ef2fff12f410f4,https://www.careeradmw.com/jobs/various-consultancy-roles,VARIOUS CONSULTANCY ROLES,DAI,posted,2026-10-20T15:12:25.278528,964,CareerAdMW
+d5d955ec5e779c5b,https://www.careeradmw.com/jobs/human-resources-assistant-1781951108,HUMAN RESOURCES ASSISTANT,Shopwise Trading Limited,posted,2026-10-20T15:12:34.038988,965,CareerAdMW
+2e7e8eed7196b133,https://www.careeradmw.com/jobs/security-operations-analyst,SECURITY OPERATIONS ANALYST,GardaWorld Malawi Ltd,posted,2026-10-20T15:12:42.560071,966,CareerAdMW
+d59890e401fb3baa,https://www.careeradmw.com/jobs/account-manager-1781948398,ACCOUNT MANAGER,GardaWorld Malawi Ltd,posted,2026-10-20T15:12:51.337421,967,CareerAdMW
+6d84811947c1a61d,https://www.careeradmw.com/jobs/customer-service-executive,CUSTOMER SERVICE EXECUTIVE,GardaWorld Malawi Ltd,posted,2026-10-20T15:13:00.101330,968,CareerAdMW
+0d7cd2d8071ccf4d,https://www.careeradmw.com/jobs/construction-specialist,CONSTRUCTION SPECIALIST,United Nations Volunteers (UNV),posted,2026-10-20T15:13:09.947400,969,CareerAdMW
+dc87ad48d0596e35,https://www.careeradmw.com/jobs/chief-clinical-technician-1781946909,CHIEF CLINICAL TECHNICIAN,St. Robert Health Centre,posted,2026-10-20T15:13:20.505831,970,CareerAdMW
+ecd625151d1cd272,https://www.careeradmw.com/jobs/technician,TECHNICIAN,KDG Investments,posted,2026-10-20T15:13:30.330871,971,CareerAdMW
+cff134418ff2a396,https://www.careeradmw.com/jobs/digital-marketing-officer,DIGITAL MARKETING OFFICER,UNICAF,posted,2026-10-20T15:13:40.101140,972,CareerAdMW
+5d4d25f5856c60de,https://www.careeradmw.com/jobs/assistant-ict-officer,Assistant ICT Officer,Britam Insurance Company Malawi Limited,posted,2026-10-20T15:13:48.849978,973,CareerAdMW
+116b4e91b6785e50,https://www.careeradmw.com/jobs/business-administration-manager,Business Administration Manager,World Vision,posted,2026-10-20T15:13:56.969620,974,CareerAdMW
+ac484eaabfe7ecb9,https://www.careeradmw.com/jobs/operations-internal-auditor,Operations Internal Auditor,Mukuru,posted,2026-10-20T15:14:06.608666,975,CareerAdMW
+3eb348bcab395ff9,https://www.careeradmw.com/jobs/analyst-partnership-management,Analyst-Partnership Management,World Vision,posted,2026-10-20T15:14:15.609265,976,CareerAdMW
+b18c36efe7147477,https://www.careeradmw.com/jobs/reporting-analyst,Reporting Analyst,World Vision,posted,2026-10-20T15:14:25.748290,977,CareerAdMW
+9b1bd883e236a3fc,https://www.careeradmw.com/jobs/finance-budget-analyst,Finance Budget Analyst,World Vision,posted,2026-10-20T15:14:35.119436,978,CareerAdMW
+1d78b43a147574f9,https://www.careeradmw.com/jobs/financial-management-analyst,Financial Management Analyst,World Vision,posted,2026-10-20T15:14:45.259356,979,CareerAdMW
+7820f58e7a19d4fe,https://www.careeradmw.com/jobs/senior-dtm-associate,Senior DTM Associate,International Organization for Migration (IOM),posted,2026-10-20T15:15:04.165319,980,CareerAdMW
+27e1c67be4ae26a1,https://www.careeradmw.com/jobs/finance-officer-1781085369,Finance Officer,Wasabi Capital Limited,posted,2026-10-20T15:15:07.682957,825,CareerAdMW
+63756842057df829,https://www.careeradmw.com/jobs/journalist,Journalist,Malawi Cables Online,posted,2026-10-20T15:15:17.459471,981,CareerAdMW
+fba0564108a377fb,https://www.careeradmw.com/jobs/anesthesiologist,Anesthesiologist,AIC CURE Children's Hospital Malawi,posted,2026-10-20T15:15:28.867982,982,CareerAdMW
+f14d0feef95b3d19,https://www.careeradmw.com/jobs/chef-de-partie,Chef de Partie,Protea Hotel Blantyre Ryalls,posted,2026-10-20T15:15:37.445446,983,CareerAdMW
+facc408d8e6b32c9,https://www.careeradmw.com/jobs/heart-of-house-specialist,Heart of House Specialist,Protea Hotel Blantyre Ryalls,duplicate,2026-10-20T15:15:39.368341,,CareerAdMW
+5bf0cebc0fb63ecd,https://www.careeradmw.com/jobs/bundle-up-project-assistant,Bundle Up! Project Assistant,Save the Children,posted,2026-10-20T15:15:49.401670,984,CareerAdMW
+109cfaa209cb3ac5,https://www.careeradmw.com/jobs/communications-specialist,Communications Specialist,Save the Children,posted,2026-10-20T15:15:59.185412,985,CareerAdMW
+b9e7f0344b2eb7c2,https://www.careeradmw.com/jobs/multiple-positions-1780997253,Multiple Positions,WOW Industries,posted,2026-10-20T15:16:01.952930,381,CareerAdMW
+698392b59da7ef69,https://www.careeradmw.com/jobs/corporate-sales-specialist,Corporate Sales Specialist,IT Centre Ltd – Group,posted,2026-10-20T15:16:13.288718,986,CareerAdMW
+961d8e3026d4f581,https://www.careeradmw.com/jobs/teachers-1780981715,Teachers,New Era School,posted,2026-10-20T15:16:15.981675,197,CareerAdMW
+35c781fdadabef2d,https://www.careeradmw.com/jobs/country-manager-1780894021,Country Manager,DHL International Malawi Ltd,posted,2026-10-20T15:16:25.798429,987,CareerAdMW
+ae4becc5dc746bfc,https://www.careeradmw.com/jobs/child-protection-officer,Child Protection Officer,UNOPS (United Nations Office for Project Services),posted,2026-10-20T15:16:36.950367,988,CareerAdMW
+47af9c0229401def,https://www.careeradmw.com/jobs/social-and-behavior-change-sbc-specialist,Social and Behavior Change (SBC) Specialist,UNOPS (United Nations Office for Project Services),posted,2026-10-20T15:16:46.225405,989,CareerAdMW
+52c9880c598c8297,https://www.careeradmw.com/jobs/reports-officer,Reports Officer,UNOPS (United Nations Office for Project Services),posted,2026-10-20T15:16:55.047708,990,CareerAdMW
+6cbe427860fc1b9f,https://www.careeradmw.com/jobs/project-officer-1780665138,Project Officer,World Vision,posted,2026-10-20T15:16:57.734642,211,CareerAdMW
+89d83ad64fe7d62b,https://www.careeradmw.com/jobs/field-facilitator-3-positions,Field Facilitator (3 Positions),World Vision,posted,2026-10-20T15:17:15.704231,991,CareerAdMW
+b4f0164f5cbdc8e2,https://www.careeradmw.com/jobs/office-assistant-1780663864,Office Assistant,Save the Children,posted,2026-10-20T15:17:19.509498,349,CareerAdMW
+295b2488ae10fa39,https://www.careeradmw.com/jobs/data-scientist,Data Scientist,Standard Bank Malawi,posted,2026-10-20T15:17:28.036175,992,CareerAdMW
+0670895c38c29b8b,https://www.careeradmw.com/jobs/customer-consultant,Customer Consultant,Standard Bank Malawi,posted,2026-10-20T15:17:38.404631,993,CareerAdMW
+01856116f1911643,https://www.careeradmw.com/jobs/administrator-operations-people-culture,"Administrator, Operations, People & Culture",Standard Bank Malawi,posted,2026-10-20T15:17:48.247338,994,CareerAdMW
+cd63bdfe54d1f126,https://www.careeradmw.com/jobs/head-master-secondary-school,Head Master – Secondary School,Omar Faroq Trust,posted,2026-10-20T15:17:57.424349,995,CareerAdMW
+2e4e39a0e2796e7b,https://www.careeradmw.com/jobs/social-policy-specialist-pfm,Social Policy Specialist (PFM),UNOPS (United Nations Office for Project Services),posted,2026-10-20T15:18:08.225847,996,CareerAdMW
+8f34695d86807424,https://www.careeradmw.com/jobs/officer-program,Officer Program,EVIDENCE ACTION,posted,2026-10-20T15:18:19.531486,997,CareerAdMW
+913d5cd1f771227d,https://www.careeradmw.com/jobs/waiters-waitresses-1780489970,Waiters & Waitresses,Genovese Backyard,posted,2026-10-20T15:18:28.111039,998,CareerAdMW
+8420f4c4dc16740d,https://www.careeradmw.com/jobs/quality-assurance-manager-1780478621,QUALITY ASSURANCE MANAGER,CROWN PHARMACEUTICALS AND RESEARCH LABORATORY,posted,2026-10-20T15:18:36.835883,999,CareerAdMW
+09b04a69c21fd30b,https://www.careeradmw.com/jobs/monitoring-and-evaluation-specialist,Monitoring and Evaluation Specialist,UNOPS (United Nations Office for Project Services),posted,2026-10-20T15:18:45.317409,1000,CareerAdMW
+a20177b70f6dae4d,https://www.careeradmw.com/jobs/program-support-specialist,Program Support Specialist,Compassion International,posted,2026-10-20T15:18:53.819631,1001,CareerAdMW
+cfc3fcaa87e842fb,https://www.careeradmw.com/jobs/access-to-finance-and-grants-specialist,Access to Finance and Grants Specialist,UNDP (United Nations Development Programme),posted,2026-10-20T15:19:05.418646,1002,CareerAdMW
+b125666c4bc83b4d,https://www.careeradmw.com/jobs/accounts-assistant-1780318410,Accounts Assistant,Kuwala Schools,posted,2026-10-20T15:19:08.161194,193,CareerAdMW
+dd30d063b4df112f,https://www.careeradmw.com/jobs/primary-school-teacher,Primary School Teacher,Kuwala Schools,posted,2026-10-20T15:19:16.971464,1003,CareerAdMW
+31e64f77ca9634a6,https://www.careeradmw.com/jobs/finance-and-operations-manager-1780045470,Finance and Operations Manager,Pact,posted,2026-10-20T15:19:25.781808,1004,CareerAdMW
+4586fd6df05df3dd,https://www.careeradmw.com/jobs/district-triple-elimination-technical-officer,District Triple Elimination Technical Officer,Pact,posted,2026-10-20T15:19:37.020158,1005,CareerAdMW
+9b22cdbd645e984e,https://www.careeradmw.com/jobs/project-officer-meal-advocacy,Project Officer (MEAL & Advocacy),Save the Children,posted,2026-10-20T15:19:45.361793,1006,CareerAdMW
+65cead45ca42fede,https://www.careeradmw.com/jobs/human-resources-associate-manager,Human Resources Associate Manager,GiveDirectly,posted,2026-10-20T15:19:53.983744,1007,CareerAdMW
+ab760c0d2eb248e5,https://www.careeradmw.com/jobs/the-program-manager-research,"The Program Manager, Research",GiveDirectly,posted,2026-10-20T15:20:10.489508,1008,CareerAdMW
+5cfd3c310dc0c15a,https://www.careeradmw.com/jobs/braii-guy-griller,Braii Guy / Griller,Kebab Sisters,posted,2026-10-20T15:20:20.520681,1009,CareerAdMW
+fc29fd27a3f24642,https://www.careeradmw.com/jobs/finance-and-operations-manager,Finance and Operations Manager,SPLASH INTERNATIONAL,posted,2026-10-20T15:20:23.410510,1004,CareerAdMW
+2e907e4787e2dfd4,https://www.careeradmw.com/jobs/operations-coordinator-gcf-supported-programme,Operations Coordinator – GCF Supported Programme,Save the Children,posted,2026-10-20T15:20:32.076441,1010,CareerAdMW
+1b785d505dfb6512,https://www.careeradmw.com/jobs/climate-technical-advisor-gcf-supported-programme,Climate Technical Advisor – GCF Supported Programme,Save the Children,posted,2026-10-20T15:20:41.126428,1011,CareerAdMW
+5706a576e9cb0034,https://www.careeradmw.com/jobs/multiple-positions-1779786855,Multiple positions,Kindness Acts Campsites,posted,2026-10-20T15:20:43.832287,381,CareerAdMW
+4d2f3e6ae4390748,https://www.careeradmw.com/jobs/consultant-1779784071,Consultant,UN Women,posted,2026-10-20T15:20:52.739012,1012,CareerAdMW
+2c37ea4f47b0517a,https://www.careeradmw.com/jobs/application-database-officer,Application & Database Officer,National Switch Limited,posted,2026-10-20T15:21:04.744145,1013,CareerAdMW
+df41057e801cea10,https://www.careeradmw.com/jobs/cards-operations-officer,CARDS OPERATIONS OFFICER,National Switch Limited,posted,2026-10-20T15:21:14.183464,1014,CareerAdMW
+c262533c3f8e616b,https://www.careeradmw.com/jobs/risk-and-compliance-officer,RISK AND COMPLIANCE OFFICER,National Switch Limited,posted,2026-10-20T15:21:23.365840,1015,CareerAdMW
+dc3b1dedf2bff7a2,https://www.careeradmw.com/jobs/welfare-officer,Welfare Officer,GardaWorld,posted,2026-10-20T15:21:31.829079,1016,CareerAdMW
+75204aec72ce8c38,https://www.careeradmw.com/jobs/account-manager,Account Manager,Huawei,posted,2026-10-20T15:21:34.667830,967,CareerAdMW
+a4015d4a021d248c,https://www.careeradmw.com/jobs/receptionisttill-operator,Receptionist/Till operator,Mr P Pharmacy,posted,2026-10-20T15:21:45.216979,1017,CareerAdMW
+cbe8b6fc192ee560,https://www.careeradmw.com/jobs/nurse,Nurse,Mr P Pharmacy,posted,2026-10-20T15:21:53.265422,1018,CareerAdMW
+d4c181af6b7e2fc9,https://www.careeradmw.com/jobs/pharmacy-assistant,pharmacy Assistant,Mr P Pharmancy,posted,2026-10-20T15:21:55.980903,652,CareerAdMW
+c58bb34f186d37cd,https://www.careeradmw.com/jobs/pharmacy-technician-2-positions,pharmacy-technician-2-positions,Mr P Pharmacy,posted,2026-10-20T15:22:04.721687,1019,CareerAdMW
+ae57b804a007b0ef,https://www.careeradmw.com/jobs/air-conditioning-refrigeration-tutor,Air-Conditioning & Refrigeration Tutor,LUSO TECHNICAL COLLEGE,posted,2026-10-20T15:22:15.195305,1020,CareerAdMW
+1a6d9f40f958924a,https://www.careeradmw.com/jobs/national-consultant,National Consultant,UNFPA,posted,2026-10-20T15:22:23.435087,1021,CareerAdMW
+bd95364435aff7e9,https://www.careeradmw.com/jobs/people-operations-associate,People Operations Associate,Wave Mobile Money Inc.,posted,2026-10-20T15:22:32.371168,1022,CareerAdMW
+69cf868e36fcc9da,https://www.careeradmw.com/jobs/field-officer,Field Officer,GiveDirectly,posted,2026-10-20T15:22:34.996072,190,CareerAdMW
+fae8e660d6cbc33e,https://www.careeradmw.com/jobs/full-stack-developer-intern,FULL STACK DEVELOPER INTERN,Dream Weave,posted,2026-10-20T15:22:41.820489,1023,CareerAdMW
+bf95758dce2cfb33,https://www.careeradmw.com/jobs/mobile-developer-intern,MOBILE DEVELOPER INTERN,Dream Weave,posted,2026-10-20T15:22:49.323086,1024,CareerAdMW
+8fc4806c1bc4cef7,https://www.careeradmw.com/jobs/excavator-driver,Excavator Driver,Workforce Recruitment Services,posted,2026-10-20T15:22:57.028073,1025,CareerAdMW
+4286736880098438,https://www.careeradmw.com/jobs/national-amr-technical-coordinator,National AMR Technical Coordinator,Palladium,posted,2026-10-20T15:23:07.223165,1026,CareerAdMW
+5147ebe8dfac5c6b,https://www.careeradmw.com/jobs/secretary-receptionist,SECRETARY / RECEPTIONIST,TJM & ASSOCIATES,posted,2026-10-20T15:23:17.805325,1027,CareerAdMW
+5df3dbff3a70e48d,https://www.careeradmw.com/jobs/bss-engineer,BSS Engineer,Airtel Malawi Plc,posted,2026-10-20T15:23:25.785704,1028,CareerAdMW
+651723dc02f8f311,https://www.careeradmw.com/jobs/secondary-school-teacher-1779267821,SECONDARY SCHOOL TEACHER,JOYCE BANDA FOUNDATION SCHOOLS,posted,2026-10-20T15:23:34.732049,1029,CareerAdMW
+6b233580938e55a1,https://www.careeradmw.com/jobs/project-director,Project Director,Save the Children,posted,2026-10-20T15:23:44.191643,1030,CareerAdMW
+132a144a2b58ff86,https://www.careeradmw.com/jobs/traffic-management-oficer-mf,TRAFFIC MANAGEMENT OFICER (M/F),MOTA-ENGIL MALAWI,posted,2026-10-20T15:23:53.709764,1031,CareerAdMW
+d099affa5cec72dd,https://www.careeradmw.com/jobs/senior-retailmax-support-executive,Senior RetailMax Support Executive,RetailMax,posted,2026-10-20T15:24:05.826716,1032,CareerAdMW
+02c7547da887d748,https://www.careeradmw.com/jobs/executive-housekeeper-i,Executive Housekeeper I,Protea Hotel by Marriott Lilongwe Ryalls,posted,2026-10-20T15:24:14.602607,1033,CareerAdMW
+f03d3ab5a385c4df,https://www.careeradmw.com/jobs/coordinator-marketing,Coordinator – Marketing,Protea Hotel by Marriott Lilongwe Ryalls,posted,2026-10-20T15:24:24.409228,1034,CareerAdMW
+eca06ee03ff67731,https://www.careeradmw.com/jobs/manager-accounting,Manager-Accounting,Protea Hotel by Marriott Lilongwe Ryalls,posted,2026-10-20T15:24:32.451470,1035,CareerAdMW
+09d0a1eb9bb0a33c,https://www.careeradmw.com/jobs/the-national-camp-coordination-camp-management-cccm-officer,The National Camp Coordination & Camp Management (CCCM) Officer,International Organization for Migration (IOM),posted,2026-10-20T15:24:40.624579,1036,CareerAdMW
+066c409d2aa27425,https://www.careeradmw.com/jobs/clinical-health-officer,CLINICAL HEALTH OFFICER,Our AIM Foundation,posted,2026-10-20T15:24:49.624547,1037,CareerAdMW
+377a2f773c6c70d5,https://www.careeradmw.com/jobs/driver-at-right-to-care,Driver at Right to care,Right To Care,posted,2026-10-20T15:24:57.470769,1038,CareerAdMW
+b8449389b05ece6b,https://www.careeradmw.com/jobs/hiv-testing-services-hts-lead,HIV Testing Services (HTS) Lead,Right To Care,posted,2026-10-20T15:25:09.493109,1039,CareerAdMW
+df2d0322a86b2599,https://www.careeradmw.com/jobs/the-hiv-care-and-treatment-lead,The HIV Care and Treatment Lead,Right To Care,posted,2026-10-20T15:25:26.206881,1040,CareerAdMW
+7598315060d1c3c3,https://www.careeradmw.com/jobs/it-intern,IT Intern,BURN,posted,2026-10-20T15:25:36.793827,1041,CareerAdMW
+4f281a4c6ec8a65a,https://www.careeradmw.com/jobs/restaurant-supervisor,Restaurant Supervisor,Umodzi Holdings Limited,posted,2026-10-20T15:25:45.899797,1042,CareerAdMW
+5655b6943c457896,https://www.careeradmw.com/jobs/strategic-mel-advisor,Strategic MEL Advisor,Expression of Interest,posted,2026-10-20T15:25:57.470651,1043,CareerAdMW
+43041a75968d19e3,https://www.careeradmw.com/jobs/sous-chef-at-marriott-international,Sous Chef at Marriott International,Marriott International,posted,2026-10-20T15:26:07.969658,1044,CareerAdMW
+72c20bec175ee1af,https://www.careeradmw.com/jobs/manager-banquets,Manager-Banquets,Marriott International,posted,2026-10-20T15:26:18.383604,1045,CareerAdMW
+467158f478b016c5,https://www.careeradmw.com/jobs/manager-rooms-operation,Manager-Rooms Operation,Marriott International,posted,2026-10-20T15:26:27.916559,1046,CareerAdMW
+5862bc7ac85ddcc3,https://www.careeradmw.com/jobs/human-resources-cordinator,Human Resources Cordinator,Marriott International,posted,2026-10-20T15:26:37.446269,1047,CareerAdMW
+c19421903cb9ace6,https://www.careeradmw.com/jobs/manager-front-desk,Manager-Front Desk,Marriott International,posted,2026-10-20T15:26:49.079740,1048,CareerAdMW
+96e858c930bf4d76,https://www.careeradmw.com/jobs/manager-engineering,Manager-Engineering,Marriott International,posted,2026-10-20T15:26:59.407437,1049,CareerAdMW
+c51718c385c652b3,https://www.careeradmw.com/jobs/kitchen-assistant,Kitchen Assistant,CURE International,posted,2026-10-20T15:27:09.580838,1050,CareerAdMW
+4a65bb589cf6d1cb,https://www.careeradmw.com/jobs/territory-sales-manager,Territory Sales Manager,Airtel Malawi Plc,posted,2026-10-20T15:27:20.644826,1051,CareerAdMW
+a9b9ddcd42be8fe7,https://www.careeradmw.com/jobs/strategic-engagement-officer,Strategic Engagement Officer,African Health Facilitation Bridge (AHFB),posted,2026-10-20T15:27:29.486930,1052,CareerAdMW
+f8d7d6631d1759b4,https://www.careeradmw.com/jobs/deputy-chief-of-party-commodity-and-school-feeding-malawi,DEPUTY CHIEF OF PARTY – COMMODITY AND SCHOOL FEEDING – MALAWI,CARE,posted,2026-10-20T15:27:39.437947,1053,CareerAdMW
+ac93400fac3f8c6c,https://www.careeradmw.com/jobs/human-resource-manager,Human Resource Manager,GiveDirectly,posted,2026-10-20T15:27:42.259614,331,CareerAdMW
+07cb5f2b38e82276,https://www.careeradmw.com/jobs/the-programme-interns,The Programme Interns,UNFPA,posted,2026-10-20T15:27:51.737493,1054,CareerAdMW
+4e1a80e43bdaa61a,https://www.careeradmw.com/jobs/regional-security-officer,Regional Security Officer,G4S,posted,2026-10-20T15:27:59.909592,1055,CareerAdMW
+cea7b9bfc2fb2e95,https://www.careeradmw.com/jobs/cashier-at-g4s,Cashier at G4S,G4S,posted,2026-10-20T15:28:10.703806,1056,CareerAdMW
+3428ac64cc99e434,https://www.careeradmw.com/jobs/atm-management-services-supervisor,ATM Management Services Supervisor,G4S,posted,2026-10-20T15:28:18.588667,1057,CareerAdMW
+4b46bd659abd9b8c,https://www.careeradmw.com/jobs/project-cordinator,Project Cordinator,G4S,posted,2026-10-20T15:28:26.071295,1058,CareerAdMW
+3f1d7857158742be,https://www.careeradmw.com/jobs/research-assistantsenumerators,Research Assistants/Enumerators,Amref Health Africa,posted,2026-10-20T15:28:35.368031,1059,CareerAdMW
+8c27c61e99bb602b,https://www.careeradmw.com/jobs/the-disease-control-surveillance-assistant,The Disease Control Surveillance Assistant,Amref Health Africa,posted,2026-10-20T15:28:43.955433,1060,CareerAdMW
+59c0c7e2b8a6979e,https://www.careeradmw.com/jobs/accountant-1778042900,Accountant,CURE International,posted,2026-10-20T15:28:46.561610,483,CareerAdMW
+18914df4fae709a6,https://www.careeradmw.com/jobs/surgery-scheduler,SURGERY SCHEDULER,POTHAWIRA HEALTH CENTER,posted,2026-10-20T15:28:57.327343,1061,CareerAdMW
+01dedcdb5513ca69,https://www.careeradmw.com/jobs/human-rights-and-rule-of-law-intern,HUMAN RIGHTS AND RULE OF LAW INTERN,United Nations Development Programme (UNDP),posted,2026-10-20T15:29:08.648442,1062,CareerAdMW
+30b8e7a898f18d99,https://www.careeradmw.com/jobs/sexual-and-reproductive-rights-officer,SEXUAL AND REPRODUCTIVE RIGHTS OFFICER,VILLAGE REACH,posted,2026-10-20T15:29:20.766732,1063,CareerAdMW
+b73fb4c1b95c3410,https://www.careeradmw.com/jobs/executive-chef,EXECUTIVE CHEF,Protea Hotel by Marriott Lilongwe Ryalls,duplicate,2026-10-20T15:29:22.632687,,CareerAdMW
+e10b478968a3227c,https://www.careeradmw.com/jobs/seasonal-tipping-threshing-operator,SEASONAL TIPPING & THRESHING OPERATOR,Limbe Leaf Tobacco Company Limited,posted,2026-10-20T15:29:32.899795,1064,CareerAdMW
+05d2e49d2796d254,https://www.careeradmw.com/jobs/education-and-equity-director,EDUCATION AND EQUITY DIRECTOR,Ascent Soccer,posted,2026-10-20T15:29:41.802974,1065,CareerAdMW
+9027d428056e1d46,https://www.careeradmw.com/jobs/multiple-positions-1777493042,MULTIPLE POSITIONS,Vital Strategies,posted,2026-10-20T15:29:44.569634,381,CareerAdMW
+e4956a21d284fd3e,https://www.careeradmw.com/jobs/regional-esg-officer-communications-manager,Regional ESG Officer & Communications Manager,Precision Recruitment International,posted,2026-10-20T15:29:53.335153,1066,CareerAdMW
+1f3438345c82ee03,https://www.careeradmw.com/jobs/data-specialist,DATA SPECIALIST,UNITED NATIONS VOLUNTEERS,posted,2026-10-20T15:30:01.421631,1067,CareerAdMW
+e9f0aa25b3005583,https://www.careeradmw.com/jobs/receptionlinkage-and-retention-counselor,RECEPTION/LINKAGE AND RETENTION COUNSELOR,AIDS Healthcare Foundation (AHF),posted,2026-10-20T15:30:15.160650,1068,CareerAdMW
+982133f66eefbc0a,https://www.careeradmw.com/jobs/bidding-assistant,BIDDING ASSISTANT,PRIVATE,posted,2026-10-20T15:30:24.811892,1069,CareerAdMW
+03f6a527afda39e5,https://www.careeradmw.com/jobs/procurement-and-logistics-officer,PROCUREMENT AND LOGISTICS OFFICER,Pact,duplicate,2026-10-20T15:30:26.679436,,CareerAdMW
+f51136cc64bf6d2a,https://www.careeradmw.com/jobs/grants-officer,GRANTS OFFICER,Pact,posted,2026-10-20T15:30:41.330614,1070,CareerAdMW
+6555d716bf13c7ca,https://www.careeradmw.com/jobs/finance-officer-1775271487,FINANCE OFFICER,Pact,posted,2026-10-20T15:30:44.116704,825,CareerAdMW
+4e1f527546850f7f,https://www.careeradmw.com/jobs/district-administration-assistant,DISTRICT ADMINISTRATION ASSISTANT,Pact,posted,2026-10-20T15:30:52.233656,1071,CareerAdMW
+10f19ac55a682d51,https://www.careeradmw.com/jobs/administration-coordinator,ADMINISTRATION COORDINATOR,Pact,posted,2026-10-20T15:31:01.055701,1072,CareerAdMW
+8b51d57cad2500aa,https://www.careeradmw.com/jobs/district-office-assistant,DISTRICT OFFICE ASSISTANT,Pact,posted,2026-10-20T15:31:10.310639,1073,CareerAdMW
+650f35de8cb74ff8,https://www.careeradmw.com/jobs/administration-assistant,ADMINISTRATION ASSISTANT,Pact,posted,2026-10-20T15:31:13.144296,769,CareerAdMW
+a124ffa264df1e29,https://www.careeradmw.com/jobs/innovations-manager,INNOVATIONS MANAGER,Save the Children,posted,2026-10-20T15:31:21.507831,1074,CareerAdMW
+adc543295278763a,https://www.careeradmw.com/jobs/country-manager,COUNTRY MANAGER,DHL International Malawi Ltd,duplicate,2026-10-20T15:31:23.371523,,CareerAdMW
+e9fba478a36d25e2,https://www.careeradmw.com/jobs/sales-executives,SALES EXECUTIVES,FOVEA SECURITY SERVICES,posted,2026-10-20T15:31:26.063706,534,CareerAdMW
+7e6ea5fef2cc6fb9,https://www.careeradmw.com/jobs/african-youth-negotiators-fellowship,African Youth Negotiators Fellowship,African Youth Negotiators Fellowship (AYNF),posted,2026-10-20T15:31:35.481647,1075,CareerAdMW
+34540b2a46ae4085,https://www.careeradmw.com/jobs/layer-farm-manager,Layer Farm Manager,KELFOODS,posted,2026-10-20T15:31:44.710210,1076,CareerAdMW
+9996792d45ec13c2,https://www.careeradmw.com/jobs/sales-associate,Sales Associate,Earn Mwachangu,posted,2026-10-20T15:31:54.083266,1077,CareerAdMW
+fbcf9381bbe357a4,https://www.careeradmw.com/jobs/finance-manager,Finance Manager,Recruitment matters,posted,2026-10-20T15:32:02.562518,1078,CareerAdMW
+be519fefbab679e7,https://www.careeradmw.com/jobs/project-lead-national-water-compact-delivery-accelerator-wateraid,PROJECT LEAD – NATIONAL WATER COMPACT DELIVERY ACCELERATOR (WATERAID),WaterAid,posted,2026-10-20T15:32:11.088401,1079,CareerAdMW
+9de72e2749fd4b5e,https://www.careeradmw.com/jobs/credit-controllerofficer,Credit Controller/Officer,GardaWorld,posted,2026-10-20T15:32:20.882386,1080,CareerAdMW
+87ef660828559c84,https://www.careeradmw.com/jobs/procurement-officer-1774437198,Procurement Officer,GardaWorld,posted,2026-10-20T15:32:23.906545,884,CareerAdMW
+9a51bf4a9566b6b4,https://www.careeradmw.com/jobs/key-account-manager,KEY ACCOUNT MANAGER,Airtel Malawi Plc,posted,2026-10-20T15:32:31.914457,1081,CareerAdMW
+6c5db4f2720272df,https://www.careeradmw.com/jobs/field-work-supervisors,FIELD WORK SUPERVISORS,EVIDENCE BASED SOLUTIONS,posted,2026-10-20T15:32:40.249641,1082,CareerAdMW
+ad5435a86d9477e1,https://www.careeradmw.com/jobs/senior-software-engineer,Senior Software Engineer,UNICAF,posted,2026-10-20T15:32:47.494937,1083,CareerAdMW
+35d7a9b60565eb10,https://www.careeradmw.com/jobs/computer-trainers-2,COMPUTER TRAINERS (2),Great Destiny school of computer,posted,2026-10-20T15:32:56.294670,1084,CareerAdMW
+08532f2a17dfdd7a,https://www.careeradmw.com/jobs/internal-audit-manager,INTERNAL AUDIT MANAGER,Christian Health Association of Malawi (CHAM),posted,2026-10-20T15:32:58.952376,813,CareerAdMW
+e3e5cdd97f3ee96c,https://www.careeradmw.com/jobs/various-positions,VARIOUS POSITIONS,CITY PHARMACY (CITY MALL),posted,2026-10-20T15:33:02.028170,523,CareerAdMW
+25d03db8fda06e5e,https://www.careeradmw.com/jobs/human-resources-manager,HUMAN RESOURCES MANAGER,AD Consult International,posted,2026-10-20T15:33:14.425578,1085,CareerAdMW
+68a8a87f5fbeeab5,https://www.careeradmw.com/jobs/large-format-dtf-operator,Large Format & DTF Operator,Mika Ink Limited,posted,2026-10-20T15:33:23.553512,1086,CareerAdMW
+02b3e4d194334f3e,https://www.careeradmw.com/jobs/sales-intern,SALES INTERN,Mika Ink Limited,posted,2026-10-20T15:33:26.206988,782,CareerAdMW
+7a17d34cf1237359,https://www.linkedin.com/jobs/view/4472708797/,Commissioned Financial Advisor,Old Mutual South Africa,posted,2026-10-20T15:33:52.005775,241,LinkedIn
+b4b27b72496d166f,https://www.linkedin.com/jobs/view/4478649826/,Driver,Evidence Action,posted,2026-10-20T15:33:56.180254,335,LinkedIn
+ab594b8debfcf328,https://www.linkedin.com/jobs/view/4481557459/,Driver,World Vision,posted,2026-10-20T15:34:00.637817,335,LinkedIn
+8c29daf6cc506d01,https://www.linkedin.com/jobs/view/4481551965/,Field Facilitator,World Vision,posted,2026-10-20T15:34:11.973420,1087,LinkedIn
