@@ -1,3 +1,39 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+mw.py — Multi-source Malawi job scraper + (optional) paraphrase + WordPress posting
+
+SOURCES (each one is isolated: if a source is blocked / down / returns nothing
+(403, 404, 5xx, timeouts, empty listings) it is logged and SKIPPED, and the run
+continues with the next source):
+
+    jobsearchmalawi  -> https://jobsearchmalawi.com   (XML sitemap)
+    careersmw        -> https://careersmw.com         (WP REST API / sitemap / homepage)
+    careeradmw       -> https://www.careeradmw.com    (paginated /jobs listing)
+    linkedin         -> LinkedIn guest jobs API       (location = Malawi by default)
+
+ENV VARS
+    WP_BASE_URL, WP_USERNAME, WP_APP_PASSWORD   WordPress target (posting skipped if user/pass missing)
+    INTERNAL_BOT_KEY                            Cloudflare allow-list header (X-Internal-Auth)
+    MISTRAL_API_KEY                             optional; paraphrasing only runs when set
+    ENABLE_PARAPHRASE=0                         force paraphrasing off even if key is set
+    SOURCES=jobsearchmalawi,careersmw,careeradmw,linkedin
+    MAX_JOBS=0                                  total new jobs cap for the run (0 = unlimited)
+    MAX_JOBS_PER_SOURCE=0                       new jobs cap per source (0 = unlimited)
+    REQUEST_DELAY=1.5   REQUEST_TIMEOUT=25
+    RESOLVE_APPLY_URLS=1   RESOLVE_DELAY=0.5
+    SOURCE_MAX_CONSECUTIVE_ERRORS=8             abort a source after N errors in a row
+    CAREERADMW_MAX_PAGES=60   CAREERSMW_MAX_PAGES=40
+    LINKEDIN_LOCATION=Malawi
+    LINKEDIN_KEYWORDS=                          comma separated, empty = all jobs
+    LINKEDIN_TIME_RANGE=r604800                 r86400 = 24h, r604800 = 7d, r2592000 = 30d
+    LINKEDIN_MAX_PAGES=0                        0 = unlimited (LinkedIn caps at ~40 pages)
+    LINKEDIN_DEFAULT_EXPIRY_DAYS=30             estimated deadline when none is found
+
+CLI
+    python mw.py --sources careersmw,careeradmw
+"""
+
 import os
 import re
 import csv
@@ -10,6 +46,7 @@ import logging
 import argparse
 from collections import Counter
 from datetime import datetime, timedelta
+from html import escape as html_escape
 from urllib.parse import (urljoin, urlparse, urlsplit, urlunsplit, parse_qsl,
                           urlencode, unquote, quote_plus)
 
@@ -80,19 +117,13 @@ _FLAGGED_FIELDS = ["Job ID", "Job URL", "Job Title", "Company Name",
                    "Reason", "Timestamp", "Source"]
 
 # ── WordPress ────────────────────────────────────────────────────────────────
-# WP_BASE_URL must be the SITE root that hosts the job post type,
-# e.g. https://malawi.mimusjobs.com  (no trailing slash, no /wp-json)
-_raw_wp_url = os.environ.get("WP_BASE_URL", "").strip()
-if "/wp-json" in _raw_wp_url:
-    _raw_wp_url = _raw_wp_url.split("/wp-json")[0]
-WP_URL      = _raw_wp_url.rstrip("/")
+WP_URL      = os.environ.get("WP_BASE_URL", "").rstrip("/")
 WP_USER     = os.environ.get("WP_USERNAME", "")
 WP_PASSWORD = os.environ.get("WP_APP_PASSWORD", "")
 INTERNAL_BOT_KEY = os.environ.get("INTERNAL_BOT_KEY", "")
-WP_JOB_ENDPOINT = os.environ.get("WP_JOB_ENDPOINT", "job-listings").strip("/ ")
 WP_BASE      = WP_URL
-WP_API_BASE  = f"{WP_BASE}/wp-json/wp/v2"     # may be replaced by probe_wp_api()
-WP_JOBS_URL  = f"{WP_API_BASE}/{WP_JOB_ENDPOINT}"
+WP_API_BASE  = f"{WP_BASE}/wp-json/wp/v2"     # reassigned by probe_wp_api() if needed
+WP_JOBS_URL  = f"{WP_API_BASE}/job-listings"
 WP_MEDIA_URL = f"{WP_API_BASE}/media"
 
 # Cloudflare Bot Fight Mode allow-list header, only attached to requests to the WP host
@@ -114,8 +145,6 @@ MISTRAL_API_KEY = os.environ.get("MISTRAL_API_KEY", "")
 MISTRAL_MODEL   = "mistral-small-latest"
 MISTRAL_URL     = "https://api.mistral.ai/v1/chat/completions"
 ENABLE_PARAPHRASE = os.environ.get("ENABLE_PARAPHRASE", "1") != "0"
-MISTRAL_MIN_INTERVAL = float(os.environ.get("MISTRAL_MIN_INTERVAL", "1.3"))  # seconds between calls
-MISTRAL_MAX_RETRIES  = int(os.environ.get("MISTRAL_MAX_RETRIES", "5"))
 
 JOB_TYPE_MAPPING = {
     "full-time": "full-time", "full time": "full-time", "fulltime": "full-time",
@@ -172,8 +201,6 @@ TRACKING_PARAM_PREFIXES = ("utm_",)
 TRACKING_PARAM_EXACT = {"fbclid", "gclid", "msclkid", "mc_cid", "mc_eid", "ref", "referrer"}
 
 EMAIL_PATTERN    = re.compile(r"[A-Za-z0-9.+_%-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}")
-# a bare email, optionally followed by ?subject=... (mailto-style query)
-EMAIL_WITH_QUERY_RE = re.compile(r"^(?:mailto:)?([A-Za-z0-9.+_%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})(?:\?.*)?$", re.I)
 META_REFRESH_PAT = re.compile(
     r'<meta[^>]+http-equiv=["\']refresh["\'][^>]*content=["\'][^"\'>]*url=([^"\'>]+)', re.I)
 JS_REDIRECT_PAT  = re.compile(
@@ -271,6 +298,92 @@ def clean_description(text):
     for pattern in BOILERPLATE_PATTERNS:
         text = pattern.sub("", text)
     return re.sub(r"[ \t]+", " ", text).strip()
+
+# ── Paragraph formatting ─────────────────────────────────────────────────────
+
+_SECTION_HEADINGS = [
+    "About the role", "About the Role", "About the job", "About us", "About Us",
+    "About the company", "Job Summary", "Job summary", "Job Purpose", "Purpose of the job",
+    "Duties and Responsibilities", "Duties & Responsibilities", "Key Responsibilities",
+    "Responsibilities", "Main Duties", "Skills and Experience", "Skills & Experience",
+    "Qualifications and Experience", "Qualifications", "Requirements", "Key Requirements",
+    "Minimum Requirements", "Personal Attributes", "Competencies", "How to Apply",
+    "How to apply", "Application Procedure", "Method of Application",
+]
+_HEAD_RE = re.compile(
+    r"(?<![A-Za-z])(" + "|".join(re.escape(h) for h in
+                                 sorted(_SECTION_HEADINGS, key=len, reverse=True)) + r")\b\s*:?\s*")
+
+# Words that typically begin a new duty/requirement bullet in run-on text
+_BULLET_STARTERS = (
+    "Responsible", "Communicate", "Stock", "Reporting", "Report", "Training", "Train", "Sales",
+    "Work", "Identify", "Regional", "Gather", "Market", "Other", "Experience", "Knowledge",
+    "Strong", "High", "Excellent", "Enthusiastic", "Proven", "Qualified", "Ensure", "Manage",
+    "Develop", "Prepare", "Conduct", "Coordinate", "Monitor", "Maintain", "Provide", "Support",
+    "Lead", "Implement", "Oversee", "Assist", "Participate", "Perform", "Demonstrated",
+    "Ability", "Bachelor", "Diploma", "Degree", "Certificate", "Minimum", "Must", "Good",
+    "Proficiency", "Computer", "Fluency", "Self",
+)
+_BULLET_SPLIT_RE = re.compile(
+    r"(?<=[a-z0-9\)\.,;:])\s+(?=(?:%s)\b)" % "|".join(_BULLET_STARTERS))
+_SENT_SPLIT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z•\-\d])")
+
+def _is_heading(line):
+    s = line.strip().rstrip(":").strip()
+    return bool(s) and len(s.split()) <= 6 and s in _SECTION_HEADINGS
+
+def format_paragraphs(text):
+    """Turn a wall of text into paragraphs / headings / '• ' bullet lines separated by blank lines."""
+    if not text:
+        return text
+    text = text.replace("\r", "")
+    # headings get their own block (blank line before AND after)
+    text = _HEAD_RE.sub(lambda m: f"\n\n{m.group(1)}\n\n", text)
+    text = re.sub(r"[ \t]*[•●▪◦■]\s*", "\n• ", text)          # inline bullet glyphs
+    blocks = [b.strip() for b in re.split(r"\n\s*\n", text) if b.strip()]
+    out = []
+    for block in blocks:
+        lines = [l.strip() for l in block.split("\n") if l.strip()]
+        if len(lines) > 1 or len(block) <= 350 or _is_heading(block):
+            out.append("\n".join(lines))                      # already structured / short
+            continue
+        sentences = _SENT_SPLIT_RE.split(block)
+        run_on = [s for s in sentences if len(s) > 250]
+        if run_on and len(sentences) <= 3:                    # no punctuation: duty/requirement list
+            items = []
+            for s in sentences:
+                items.extend(p.strip() for p in _BULLET_SPLIT_RE.split(s) if p.strip())
+            if len(items) >= 3:
+                out.append("\n".join("• " + i.lstrip("•- ").strip() for i in items))
+                continue
+        para, buf = [], ""                                    # normal prose: ~3 sentences per paragraph
+        for s in sentences:
+            if buf and (len(buf) + len(s) > 450):
+                para.append(buf)
+                buf = s
+            else:
+                buf = f"{buf} {s}".strip()
+        if buf:
+            para.append(buf)
+        out.extend(para)
+    return "\n\n".join(out)
+
+def text_to_html(text):
+    """Paragraph text -> <h3>/<p>/<ul><li> HTML for WordPress."""
+    if not text:
+        return ""
+    parts = []
+    for block in re.split(r"\n\s*\n", text.strip()):
+        lines = [l.strip() for l in block.split("\n") if l.strip()]
+        if not lines:
+            continue
+        if len(lines) == 1 and _is_heading(lines[0]):
+            parts.append(f"<h3>{html_escape(lines[0].rstrip(':'))}</h3>")
+        elif all(l.startswith("• ") for l in lines):
+            parts.append("<ul>" + "".join(f"<li>{html_escape(l[2:].strip())}</li>" for l in lines) + "</ul>")
+        else:
+            parts.append("<p>" + "<br>".join(html_escape(l.lstrip("• ").strip()) for l in lines) + "</p>")
+    return "\n".join(parts)
 
 def extract_deadline_from_text(text):
     if not text:
@@ -479,14 +592,10 @@ def resolve_apply_url(raw, base):
 
 def resolve_application_contact(raw_apply_url, description, raw_anchor_text="", base=JSM_BASE):
     result = {"apply_url": "", "apply_email": "", "apply_raw": raw_apply_url}
-    # Email (optionally with a ?subject=... query) -> never try to fetch it as a URL
-    if raw_apply_url:
-        m = EMAIL_WITH_QUERY_RE.match(raw_apply_url.strip())
-        if m:
-            result["apply_email"] = clean_email(m.group(1))
-            if result["apply_email"]:
-                return result
-    if raw_apply_url and raw_apply_url.lower().startswith(("http://", "https://")) and RESOLVE_APPLY_URLS:
+    if raw_apply_url and re.match(r"^[A-Za-z0-9.+_-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", raw_apply_url):
+        result["apply_email"] = clean_email(raw_apply_url)
+        return result
+    if raw_apply_url and RESOLVE_APPLY_URLS:
         result["apply_url"] = resolve_apply_url(raw_apply_url, base)
     if not result["apply_url"]:
         result["apply_email"] = extract_email(raw_anchor_text) or extract_email(description)
@@ -558,7 +667,6 @@ def extract_logo_from_soup(soup, base_url, brand_re=None):
 # =============================================================================
 
 _sim_model = None
-_last_mistral_call = 0.0
 
 def _get_sim_model():
     global _sim_model
@@ -593,40 +701,20 @@ def clean_output(text):
     return re.sub(r"\n{3,}", "\n\n", text).strip()
 
 def mistral_generate(prompt, max_tokens=400, temperature=0.7):
-    """Calls Mistral with throttling and retry/back-off on 429 / 5xx."""
-    global _last_mistral_call
     if not MISTRAL_API_KEY:
         return ""
-    for attempt in range(1, MISTRAL_MAX_RETRIES + 1):
-        # throttle: keep a minimum gap between calls
-        gap = time.time() - _last_mistral_call
-        if gap < MISTRAL_MIN_INTERVAL:
-            time.sleep(MISTRAL_MIN_INTERVAL - gap)
-        try:
-            response = requests.post(
-                MISTRAL_URL,
-                headers={"Authorization": f"Bearer {MISTRAL_API_KEY}", "Content-Type": "application/json"},
-                json={"model": MISTRAL_MODEL, "messages": [{"role": "user", "content": prompt}],
-                      "max_tokens": max_tokens, "temperature": temperature},
-                timeout=30)
-            _last_mistral_call = time.time()
-            if response.status_code == 429 or response.status_code >= 500:
-                retry_after = response.headers.get("Retry-After", "")
-                try:
-                    wait = float(retry_after)
-                except ValueError:
-                    wait = min(4 * (2 ** (attempt - 1)), 60)   # 4, 8, 16, 32, 60
-                log_.warning(f"Mistral HTTP {response.status_code} — waiting {wait:.0f}s "
-                             f"(attempt {attempt}/{MISTRAL_MAX_RETRIES})")
-                time.sleep(wait)
-                continue
-            response.raise_for_status()
-            return response.json()["choices"][0]["message"]["content"].strip()
-        except Exception as e:
-            _last_mistral_call = time.time()
-            log_.error(f"Mistral API error: {e}")
-            time.sleep(min(2 * attempt, 10))
-    return ""
+    try:
+        response = requests.post(
+            MISTRAL_URL,
+            headers={"Authorization": f"Bearer {MISTRAL_API_KEY}", "Content-Type": "application/json"},
+            json={"model": MISTRAL_MODEL, "messages": [{"role": "user", "content": prompt}],
+                  "max_tokens": max_tokens, "temperature": temperature},
+            timeout=30)
+        response.raise_for_status()
+        return response.json()["choices"][0]["message"]["content"].strip()
+    except Exception as e:
+        log_.error(f"Mistral API error: {e}")
+        return ""
 
 def paraphrase_title(title):
     if not ENABLE_PARAPHRASE or not MISTRAL_API_KEY:
@@ -649,40 +737,50 @@ def paraphrase_title(title):
         log(C_DIM(f"      title attempt {attempt+1}: '{result}' words={wc} sim={sim:.3f} valid={valid}"))
         if valid and sim > best_sim:
             best_sim, best_result = sim, result
-        if not raw:
-            break  # API is failing; don't burn more calls on this title
+        time.sleep(1)
     return best_result if best_result else clean
 
 def paraphrase_description(text):
+    """Paraphrase block by block, keeping headings, bullets and paragraph breaks intact."""
     if not ENABLE_PARAPHRASE or not MISTRAL_API_KEY:
         return text
     clean = sanitize_text(text)
     if not clean:
         return text
-    paragraphs = [p.strip() for p in re.split(r"\n+", clean) if p.strip()] or [clean]
+    blocks = [b.strip() for b in re.split(r"\n\s*\n", clean) if b.strip()] or [clean]
     rewritten = []
-    for i, para in enumerate(paragraphs, 1):
-        prompt = (f"Rewrite this job description paragraph professionally. "
-                  f"Keep ALL facts, requirements, and responsibilities. "
-                  f"Use different sentence structure and vocabulary. "
-                  f"Output ONLY the rewritten paragraph — no labels, no explanation.\n\n"
-                  f"Original:\n{para}")
+    for i, block in enumerate(blocks, 1):
+        if _is_heading(block):
+            rewritten.append(block)
+            continue
+        has_bullets = block.lstrip().startswith("•")
+        if has_bullets:
+            shape = 'Keep the same bullet list: one item per line, each line starting with "• ". '
+        else:
+            shape = "Keep it as a single paragraph. "
+        prompt = ("Rewrite this job description section professionally. "
+                  "Keep ALL facts, requirements, and responsibilities. "
+                  "Use different sentence structure and vocabulary. "
+                  + shape +
+                  "Output ONLY the rewritten text — no labels, no explanation.\n\n"
+                  f"Original:\n{block}")
         best_result, best_sim, accepted = None, 0.0, None
         for attempt in range(3):
-            raw    = mistral_generate(prompt, max_tokens=500, temperature=round(0.65 + attempt * 0.08, 2))
+            raw    = mistral_generate(prompt, max_tokens=700, temperature=round(0.65 + attempt * 0.08, 2))
             result = clean_output(raw).strip()
             rw     = len(result.split()) if result else 0
-            sim    = similarity_score(para, result) if result and rw >= 5 else 0.0
+            sim    = similarity_score(block, result) if result and rw >= 5 else 0.0
             valid  = bool(result) and rw >= 8 and sim >= 0.48
-            log(C_DIM(f"      para {i}/{len(paragraphs)} attempt {attempt+1}: words={rw} sim={sim:.3f} valid={valid}"))
+            if has_bullets and valid and not result.lstrip().startswith("•"):
+                valid = False
+            log(C_DIM(f"      block {i}/{len(blocks)} attempt {attempt+1}: words={rw} sim={sim:.3f} valid={valid}"))
             if valid:
                 accepted = result
                 break
             if result and sim > best_sim:
                 best_sim, best_result = sim, result
-            if not raw:
-                break  # API is failing; keep original paragraph
-        rewritten.append(accepted or (best_result if best_result and best_sim >= 0.40 else para))
+            time.sleep(1)
+        rewritten.append(accepted or (best_result if best_result and best_sim >= 0.40 else block))
     return "\n\n".join(rewritten)
 
 def paraphrase_company(text):
@@ -696,6 +794,7 @@ def paraphrase_company(text):
               f"Output ONLY the rewritten description.\n\nOriginal:\n{clean}")
     raw    = mistral_generate(prompt, max_tokens=600, temperature=0.68)
     result = clean_output(raw)
+    time.sleep(1)
     return result if result and len(result.split()) >= 10 else clean
 
 # =============================================================================
@@ -712,25 +811,17 @@ def _init_tracker():
                 log_.error(f"Could not create {path}: {e}")
 
 def load_processed_ids():
-    """Jobs whose status starts with 'failed' are NOT treated as processed,
-    so they are retried on the next run (e.g. after a WordPress outage)."""
     _init_tracker()
     ids, urls = set(), set()
-    retry = 0
     try:
         with open(PROCESSED_IDS_FILE, newline="", encoding="utf-8") as f:
             for row in csv.DictReader(f):
-                if (row.get("Status") or "").startswith("failed"):
-                    retry += 1
-                    continue
                 if row.get("Job ID"):
                     ids.add(row["Job ID"].strip())
                 if row.get("Job URL"):
                     urls.add(row["Job URL"].strip())
     except Exception as e:
         log_.error(f"Could not read tracker: {e}")
-    if retry:
-        log_.info(f"{retry} previously failed jobs will be retried this run")
     return ids, urls
 
 def _upsert_row(job_id, updates):
@@ -927,16 +1018,17 @@ def parse_jobsearchmalawi(url):
                     company_details = clean_text(sib)
                 break
 
+    # Description: keep block/line structure (html_to_text), NOT clean_text (which flattens it)
     desc_el = soup.select_one(".job_description") or soup.select_one("div.job_description")
     if desc_el:
-        description = clean_description(clean_text(desc_el))
+        description = clean_description(html_to_text(desc_el))
     else:
-        description = ""
+        description, best = "", None
         for div in soup.find_all("div"):
             t = clean_text(div)
             if len(t) > len(description) and len(t) > 200:
-                description = t
-        description = clean_description(description)
+                description, best = t, div
+        description = clean_description(html_to_text(best)) if best else ""
 
     if not deadline:
         deadline = extract_deadline_from_text(description)
@@ -1561,7 +1653,8 @@ def process_job(raw_job, source_label, processed_ids, processed_urls, seen_conte
     processed_ids.add(job_id)
     processed_urls.add(job_url)
 
-    description = raw_job.get("description", "")
+    # Structure the description into headings / paragraphs / bullets BEFORE paraphrasing
+    description = format_paragraphs(raw_job.get("description", ""))
     blurb       = raw_job.get("company_details", "")
     para_title, para_desc, para_blurb = title, description, blurb
 
@@ -1680,40 +1773,26 @@ def _wp_json(r, context=""):
         return None
 
 def probe_wp_api():
-    """Finds a working (api_base, job_endpoint) pair ON THE CONFIGURED SITE ONLY.
-    Never falls back to a parent/root domain. Verifies the job endpoint itself,
-    not just /posts. Returns (base, endpoint) or ("", "")."""
-    if not WP_BASE:
-        return "", ""
-    api_bases = list(dict.fromkeys([
+    host = urlparse(WP_BASE).netloc
+    parts = host.split(".")
+    root_host = ".".join(parts[1:]) if len(parts) > 2 else host
+    scheme = urlparse(WP_BASE).scheme or "https"
+    candidates = list(dict.fromkeys(filter(None, [
         WP_API_BASE,
-        f"{WP_BASE}/?rest_route=/wp/v2",
-    ]))
-    endpoints = list(dict.fromkeys([WP_JOB_ENDPOINT, "job-listings", "job_listing", "jobs"]))
-
-    for base in api_bases:
-        site_ok = False
-        for ep in endpoints:
-            url = f"{base}/{ep}"
-            try:
-                r = requests.get(url, params={"per_page": 1}, headers=_wp_auth_headers(),
-                                 auth=(WP_USER, WP_PASSWORD), timeout=12, verify=False)
-            except Exception as e:
-                log_.warning(f"WP probe error {url}: {e}")
-                continue
+        f"{scheme}://{root_host}/wp-json/wp/v2",
+        f"{WP_BASE.rstrip('/')}/?rest_route=/wp/v2",
+    ])))
+    for base in candidates:
+        try:
+            r = requests.get(f"{base}/posts", params={"per_page": 1}, headers=_wp_auth_headers(),
+                             auth=(WP_USER, WP_PASSWORD), timeout=10, verify=False)
             if r.status_code in (200, 401):
-                log_.info(f"✅ WP job endpoint reachable: {url} [{r.status_code}]")
-                return base, ep
-            if r.status_code in (403,):
-                log_.warning(f"WP probe {url} -> 403 (Cloudflare/WAF? check INTERNAL_BOT_KEY rule)")
-            elif r.status_code == 404:
-                log_.warning(f"WP probe {url} -> 404 (no such route)")
-            else:
-                log_.warning(f"WP probe {url} -> {r.status_code}")
-            site_ok = site_ok or r.status_code != 404
-    log_.error(f"❌ No working job endpoint on {WP_BASE}. Open {WP_API_BASE}/types in a browser "
-               f"and set WP_JOB_ENDPOINT to the post type's 'rest_base'.")
-    return "", ""
+                log_.info(f"✅ WP REST API reachable: {base} [{r.status_code}]")
+                return base
+        except Exception as e:
+            log_.debug(f"WP probe error {base}: {e}")
+    log_.error("❌ WP REST API unreachable. Check WP_BASE_URL, pretty permalinks, and /wp-json/ blocking.")
+    return ""
 
 def get_or_create_term(taxonomy_url, name):
     if not name or not name.strip():
@@ -1817,8 +1896,7 @@ def post_job_to_wordpress(job):
                     if up_data:
                         attachment_id = up_data.get("id")
                 else:
-                    log_.warning(f"Logo upload HTTP {up_r.status_code} to {WP_MEDIA_URL} "
-                                 f"for {logo_url}: {up_r.text[:150].replace(chr(10), ' ')}")
+                    log_.warning(f"Logo upload HTTP {up_r.status_code} for {logo_url}")
             else:
                 log_.warning(f"Logo download HTTP {img_r.status_code}: {logo_url}")
         except Exception as e:
@@ -1831,7 +1909,8 @@ def post_job_to_wordpress(job):
     tag_ids = [t for t in (get_or_create_term(f"{WP_API_BASE}/tags", n) for n in dict.fromkeys(tag_names)) if t]
 
     expiry_comment = f"<!-- job-expiry: {deadline} -->" if deadline else ""
-    content = description + "\n\n" + expiry_comment + build_jsonld(job)
+    # Real HTML (<h3>/<p>/<ul><li>) so WordPress shows proper paragraphs; JSON-LD keeps plain text
+    content = text_to_html(description) + "\n\n" + expiry_comment + build_jsonld(job)
 
     payload = {
         "title": title, "content": content, "slug": slug, "status": "publish",
@@ -1852,10 +1931,6 @@ def post_job_to_wordpress(job):
         try:
             r = requests.post(WP_JOBS_URL, json=payload, headers=h, auth=(WP_USER, WP_PASSWORD),
                               timeout=20, verify=False)
-            if r.status_code >= 400:
-                log_.error(f"WP post HTTP {r.status_code} to {WP_JOBS_URL}: {r.text[:200].replace(chr(10), ' ')}")
-                if r.status_code in (401, 403, 404):
-                    break  # retrying won't help
             r.raise_for_status()
             post = _wp_json(r, f"create post '{title}'")
             if not post:
@@ -2020,7 +2095,7 @@ def run_source(name, src, state, stats):
 # =============================================================================
 
 def main():
-    global WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL, WP_JOB_ENDPOINT, MAX_JOBS, MAX_JOBS_PER_SOURCE
+    global WP_API_BASE, WP_JOBS_URL, WP_MEDIA_URL, MAX_JOBS, MAX_JOBS_PER_SOURCE
 
     ap = argparse.ArgumentParser(description="Multi-source Malawi jobs scraper")
     ap.add_argument("--sources", default=os.environ.get("SOURCES", DEFAULT_SOURCES),
@@ -2043,7 +2118,6 @@ def main():
     print(f"  Resolve apply   : {'✅ enabled' if RESOLVE_APPLY_URLS else '❌ disabled'}")
     print(f"  Paraphrase      : {'✅ enabled' if (ENABLE_PARAPHRASE and MISTRAL_API_KEY) else '❌ disabled'}")
     print(f"  WordPress post  : {'✅ enabled' if (WP_USER and WP_PASSWORD and WP_BASE) else '❌ disabled'}")
-    print(f"  WordPress site  : {WP_BASE or '—'}  endpoint=/{WP_JOB_ENDPOINT}")
     print(f"  Excel export    : {'✅ enabled' if _XLSX_AVAILABLE else '❌ disabled (pip install openpyxl)'}")
     print(f"  LinkedIn        : location='{LI_LOCATION}' range={LI_TIME_RANGE} keywords={LI_KEYWORDS}")
     print(f"  HTML parser     : {_PARSER}")
@@ -2052,16 +2126,16 @@ def main():
 
     wp_ok = False
     if WP_USER and WP_PASSWORD and WP_BASE:
-        base, endpoint = probe_wp_api()
-        if base:
+        discovered = probe_wp_api()
+        if discovered:
             wp_ok = True
-            WP_API_BASE = base
-            WP_JOB_ENDPOINT = endpoint
-            WP_JOBS_URL = f"{WP_API_BASE}/{WP_JOB_ENDPOINT}"
-            WP_MEDIA_URL = f"{WP_API_BASE}/media"
-            log(C_BLUE(f"  ℹ️  Posting jobs to: {WP_JOBS_URL}"))
+            if discovered != WP_API_BASE:
+                log(C_BLUE(f"  ℹ️  WP API base corrected to: {discovered}"))
+                WP_API_BASE = discovered
+                WP_JOBS_URL = f"{WP_API_BASE}/job-listings"
+                WP_MEDIA_URL = f"{WP_API_BASE}/media"
         else:
-            log(C_RED("  ⚠️  WP posting will be skipped — job endpoint unreachable"))
+            log(C_RED("  ⚠️  WP posting will be skipped — REST API unreachable"))
 
     _init_tracker()
     processed_ids, processed_urls = load_processed_ids()
